@@ -5,12 +5,180 @@
 //  Created by Casey Kawamura on 3/31/20.
 //  Copyright © 2020 Chris Ross. All rights reserved.
 //
+//  Reworked by Jon Kido on 5/11/22.
+//  SQLite transition from api based
 
 import Foundation
+import SQLite3
 
+//MARK: Default SQL classes
+class Grade: Codable {
+    var id : String?
+    var name : String?
+    var checked : Bool = false
+    var hour : String?
+    var grade: String?
+    var point : Double = 0.0
+}
+
+class DBGrade: Codable {
+    var id : Int = 1
+    var name : String?
+    var result : String?
+    var avg : Int?
+    var avgType : Int = 4
+    var list : [Grade]?
+}
 
 class Service {
     
+    //MARK: DEFAULT SQL FUNCTIONS ------
+    var db : OpaquePointer?
+    var path : String = "myDataBaseName.sqlite"
+    init() {
+        self.db = createDB()
+        self.createTable()
+    }
+    
+    //MARK: ----- CREATE DATABASE
+    func createDB() -> OpaquePointer? {
+        let filePath = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathExtension(path)
+        
+        var db : OpaquePointer? = nil
+        
+        if sqlite3_open(filePath.path, &db) != SQLITE_OK {
+            print("There is error in creating DB")
+            return nil
+        }else {
+            print("Database has been created with path \(path)")
+            return db
+        }
+    }
+    
+    //MARK: ----- CREATE TABLE
+    func createTable()  {
+        let query = "CREATE TABLE IF NOT EXISTS your_table_name(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT, result TEXT, avg INTEGER, list TEXT);"
+        var statement : OpaquePointer? = nil
+        
+        if sqlite3_prepare_v2(self.db, query, -1, &statement, nil) == SQLITE_OK {
+            if sqlite3_step(statement) == SQLITE_DONE {
+                print("Table creation success")
+            }else {
+                print("Table creation fail")
+            }
+        } else {
+            print("Prepration fail")
+        }
+    }
+    
+    //MARK: ----- INSERT
+    func insert(name : String, result : String, avg : Int, list : [Grade]) {
+            let query = "INSERT INTO your_table_name (id, name, result, avg, list) VALUES (?, ?, ?, ?, ?);"
+            
+            var statement : OpaquePointer? = nil
+            
+            var isEmpty = false
+            if read(avg: avg).isEmpty {
+                isEmpty = true
+            }
+            
+            if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK{
+                if isEmpty {
+                 sqlite3_bind_int(statement, 1, 1)
+                }
+                sqlite3_bind_text(statement, 2, (name as NSString).utf8String, -1, nil)
+                sqlite3_bind_text(statement, 3, (result as NSString).utf8String, -1, nil)
+                sqlite3_bind_int(statement, 4, Int32(avg))
+                
+                let data = try! JSONEncoder().encode(list)
+                let listString = String(data: data, encoding: .utf8)
+                
+                sqlite3_bind_text(statement, 5, (listString! as NSString).utf8String, -1, nil)
+                
+                if sqlite3_step(statement) == SQLITE_DONE {
+                    print("Data inserted success")
+                }else {
+                    print("Data is not inserted in table")
+                }
+            } else {
+              print("Query is not as per requirement")
+            }
+            
+        }
+        
+    //MARK: ----- READ
+        func read(avg : Int) -> [DBGrade] {
+            var mainList = [DBGrade]()
+            
+            let query = "SELECT * FROM your_table_name;"
+            var statement : OpaquePointer? = nil
+            if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK{
+                while sqlite3_step(statement) == SQLITE_ROW {
+                    let id = Int(sqlite3_column_int(statement, 0))
+                    let name = String(describing: String(cString: sqlite3_column_text(statement, 1)))
+                    let result = String(describing: String(cString: sqlite3_column_text(statement, 2)))
+                    let avg = Int(sqlite3_column_int(statement, 3))
+                    let list = String(describing: String(cString: sqlite3_column_text(statement, 4)))
+
+                    let model = DBGrade()
+                    model.id = id
+                    model.name = name
+                    model.result = result
+                    model.avg = avg
+                    
+                    let data = try! JSONDecoder().decode([Grade].self, from: list.data(using: .utf8)!)
+                    
+                    model.list = data
+                    
+                    mainList.append(model)
+                }
+            }
+            return mainList
+        }
+    
+    //MARK: ----- UPDATE
+    func update(id : Int, name : String, result : String, avg : Int, list : [Grade]) {
+        let data = try! JSONEncoder().encode(list)
+        let listString = String(data: data, encoding: .utf8)
+        let query = "UPDATE grade SET name = '\(name)', result = '\(result)', avg = \(avg), list = '\(listString!)' WHERE id = \(id);"
+        var statement : OpaquePointer? = nil
+        if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK{
+            if sqlite3_step(statement) == SQLITE_DONE {
+                print("Data updated success")
+            }else {
+                print("Data is not updated in table")
+            }
+        }
+    }
+    
+    //MARK: ----- DELETE
+    func delete(id : Int) {
+        let query = "DELETE FROM grade where id = \(id)"
+        var statement : OpaquePointer? = nil
+        if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK{
+            if sqlite3_step(statement) == SQLITE_DONE {
+                print("Data delete success")
+            }else {
+                print("Data is not deleted in table")
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //MARK: OLD FUNCTIONS ------
     
     var username: String = ""
     var password: String = ""

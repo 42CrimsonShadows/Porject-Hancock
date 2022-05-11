@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B767BE5282C3D14006C3786 /* SQL_Documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B767BE4282C3D14006C3786 /* SQL_Documents.swift */; };
 		3400A23722D543AD00B3EA3A /* ActivitySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400A23622D543AC00B3EA3A /* ActivitySelection.swift */; };
 		3446B59522B8201600C785BE /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446B59422B8201600C785BE /* Formatters.swift */; };
 		34DC042522B2DA36001C70DB /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DC042322B2DA35001C70DB /* CanvasView.swift */; };
@@ -113,6 +114,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B767BE4282C3D14006C3786 /* SQL_Documents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQL_Documents.swift; sourceTree = "<group>"; };
 		1A3E28B5AE1CAA606C394F4B /* Pods_Hancock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hancock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3400A23622D543AC00B3EA3A /* ActivitySelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelection.swift; sourceTree = "<group>"; };
 		3446B59422B8201600C785BE /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			children = (
 				34DC9AB32433E3A40039D726 /* Service.swift */,
 				34DC9AB82433FFC20039D726 /* Data.Bodies.swift */,
+				0B767BE4282C3D14006C3786 /* SQL_Documents.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				34DC042622B2DA36001C70DB /* ReticleView.swift in Sources */,
 				A0A028C0227CA9F500A7C787 /* ViewController.swift in Sources */,
 				34DC042522B2DA36001C70DB /* CanvasView.swift in Sources */,
+				0B767BE5282C3D14006C3786 /* SQL_Documents.swift in Sources */,
 				A713540624ACC7CE00E6D656 /* FreeWriteViewController.swift in Sources */,
 				A0A028BC227CA9F500A7C787 /* AppDelegate.swift in Sources */,
 				A03BF89224EB3E6C00962960 /* AssessmentSelection.swift in Sources */,
