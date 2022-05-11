@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ofX-cZ-dmU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UWV-D1-EGe">
     <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="76" translatesAutoresizingMaskIntoConstraints="NO" id="PAv-Ec-jxH">
-                                <rect key="frame" x="100" y="251.5" width="824" height="713"/>
+                                <rect key="frame" x="100" y="253" width="824" height="710"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directions Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ff-Dd-Stu">
-                                        <rect key="frame" x="344.5" y="0.0" width="135.5" height="21"/>
+                                        <rect key="frame" x="355" y="0.0" width="114.5" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="1Ff-Dd-Stu" secondAttribute="height" multiplier="196:31" id="d6j-LJ-uyh"/>
                                         </constraints>
@@ -29,7 +30,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="headTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfQ-RG-IAa">
-                                        <rect key="frame" x="96" y="97" width="632.5" height="65"/>
+                                        <rect key="frame" x="144.5" y="94" width="535" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="lfQ-RG-IAa" secondAttribute="height" multiplier="79:8" id="urr-w4-pP9"/>
                                             <constraint firstAttribute="height" constant="65" id="zkG-uz-rdL"/>
@@ -42,7 +43,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ARexample" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pb4-03-3Gr">
-                                        <rect key="frame" x="71" y="238" width="682.5" height="475"/>
+                                        <rect key="frame" x="71" y="235" width="682.5" height="475"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="475" id="8Gb-U0-FIs"/>
                                         </constraints>
@@ -53,15 +54,15 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <constraint firstItem="lfQ-RG-IAa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="PAv-Ec-jxH" secondAttribute="top" constant="35" id="Y3F-Ar-fQL"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJk-j4-2T1">
-                                <rect key="frame" x="903" y="1248.5" width="71" height="47.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJk-j4-2T1">
+                                <rect key="frame" x="911" y="1254" width="63" height="42"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aJk-j4-2T1" secondAttribute="height" multiplier="3:2" id="nds-qb-PU6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <state key="normal" title="NEXT">
-                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
                                     <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -69,6 +70,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="JJv-Jb-Y9k"/>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.96078431369999995" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="JJv-Jb-Y9k" firstAttribute="trailing" secondItem="PAv-Ec-jxH" secondAttribute="trailing" constant="100" id="92e-e1-1iq"/>
@@ -80,7 +82,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="JJv-Jb-Y9k" firstAttribute="trailing" secondItem="aJk-j4-2T1" secondAttribute="trailing" constant="50" id="c4w-kU-2P8"/>
                             <constraint firstItem="aJk-j4-2T1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JJv-Jb-Y9k" secondAttribute="leading" symbolic="YES" id="yc4-OU-FAM"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="JJv-Jb-Y9k"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2J-AN-RMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -111,7 +112,8 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Glw-hu-a5U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dfJ-by-OUe" firstAttribute="top" secondItem="Glw-hu-a5U" secondAttribute="top" id="02G-vn-o3M"/>
                             <constraint firstItem="dfJ-by-OUe" firstAttribute="trailing" secondItem="Glw-hu-a5U" secondAttribute="trailing" id="0nB-EC-c6Q"/>
@@ -120,7 +122,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="s8R-n9-eu7" firstAttribute="top" secondItem="sW4-fP-TVy" secondAttribute="top" constant="20" symbolic="YES" id="bGP-PZ-FWa"/>
                             <constraint firstItem="dfJ-by-OUe" firstAttribute="leading" secondItem="Glw-hu-a5U" secondAttribute="leading" id="ze0-eT-VV0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Glw-hu-a5U"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2JO-Y2-2iB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -138,7 +139,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="1346"/>
                             </arscnView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXw-dN-ay7">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXw-dN-ay7">
                                 <rect key="frame" x="52" y="1212" width="131" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="0jx-zD-7zz"/>
@@ -178,7 +179,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </constraints>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAe-dA-dqL">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAe-dA-dqL">
                                 <rect key="frame" x="275" y="1171" width="125" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="LWH-EN-s8Q"/>
@@ -186,13 +187,13 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <state key="normal" title="Show All">
-                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
                                 </state>
                                 <connections>
                                     <action selector="showAllButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="L7J-Tm-zav"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrz-kY-Dxy">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrz-kY-Dxy">
                                 <rect key="frame" x="974" y="58" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="GO"/>
@@ -215,6 +216,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Rdc-Q4-PCO" firstAttribute="trailing" secondItem="BrB-h1-WRS" secondAttribute="trailing" id="EgC-rB-QXX"/>
@@ -231,7 +233,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
                             <constraint firstItem="eXw-dN-ay7" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="52" id="xfo-ID-2gN"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
                     <connections>
                         <outlet property="resetButton" destination="eXw-dN-ay7" id="Vk1-lY-fWw"/>
@@ -276,7 +277,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ghC-kx-OUn">
-                                <rect key="frame" x="724" y="0.0" width="300" height="100"/>
+                                <rect key="frame" x="724" y="24" width="300" height="100"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coin" translatesAutoresizingMaskIntoConstraints="NO" id="Jfi-vY-abv">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="100"/>
@@ -302,13 +303,14 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HappyFace" translatesAutoresizingMaskIntoConstraints="NO" id="Jib-iA-ZV1">
-                                <rect key="frame" x="0.0" y="0.0" width="197" height="188"/>
+                                <rect key="frame" x="0.0" y="24" width="197" height="188"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="188" id="Cij-aJ-XcH"/>
                                     <constraint firstAttribute="width" constant="197" id="Qkf-Kn-YUc"/>
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="cXE-hm-SxM"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cXE-hm-SxM" firstAttribute="bottom" secondItem="aO0-GI-co4" secondAttribute="bottom" id="19P-QO-ffx"/>
@@ -324,7 +326,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="Jib-iA-ZV1" firstAttribute="leading" secondItem="cXE-hm-SxM" secondAttribute="leading" id="xfK-9N-eGi"/>
                             <constraint firstItem="cXE-hm-SxM" firstAttribute="bottom" secondItem="S0V-F7-tnM" secondAttribute="bottom" id="yGs-f8-Fge"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="cXE-hm-SxM"/>
                     </view>
                     <connections>
                         <outlet property="CoinCountLabel" destination="1TL-C2-6tZ" id="GQK-fn-CZI"/>
@@ -357,7 +358,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="267"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxN-cy-x9n">
-                                                <rect key="frame" x="-209.5" y="162" width="1443" height="19.5"/>
+                                                <rect key="frame" x="-416.5" y="162" width="1857" height="19.5"/>
                                                 <string key="text">____________________________________________________________________________________________________________________________________________________________________________________________________________</string>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <nil key="textColor"/>
@@ -395,7 +396,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                         <rect key="frame" x="0.0" y="267" width="1024" height="832"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qeE-w1-cd2" userLabel="Form Stack">
-                                                <rect key="frame" x="362" y="226" width="300" height="380.5"/>
+                                                <rect key="frame" x="362" y="229.5" width="300" height="373.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jy-CJ-rcy" userLabel="ErrorLabel">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
@@ -403,11 +404,11 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <constraint firstAttribute="width" constant="300" id="Noh-0G-Wfb"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCg-eB-0IQ">
-                                                        <rect key="frame" x="0.0" y="60" width="300" height="33.5"/>
+                                                        <rect key="frame" x="0.0" y="60" width="300" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="300" id="Vuh-Bi-U2N"/>
                                                         </constraints>
@@ -416,7 +417,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Wyd-BM-4fX">
-                                                        <rect key="frame" x="0.0" y="103.5" width="300" height="34"/>
+                                                        <rect key="frame" x="0.0" y="100" width="300" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="300" id="GC9-Mm-04y"/>
                                                         </constraints>
@@ -425,7 +426,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                         <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ss6-ng-3dX">
-                                                        <rect key="frame" x="0.0" y="147.5" width="300" height="33.5"/>
+                                                        <rect key="frame" x="0.0" y="144" width="300" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="300" id="NYE-J8-y3H"/>
                                                         </constraints>
@@ -434,7 +435,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" clearsOnBeginEditing="YES" minimumFontSize="15" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="h5L-rN-fiH">
-                                                        <rect key="frame" x="0.0" y="191" width="300" height="34"/>
+                                                        <rect key="frame" x="0.0" y="184" width="300" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="300" id="QmW-gc-exR"/>
                                                         </constraints>
@@ -443,31 +444,31 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                         <textInputTraits key="textInputTraits" returnKeyType="continue" secureTextEntry="YES" textContentType="password"/>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j2Q-1l-d3i" userLabel="Button Stack">
-                                                        <rect key="frame" x="0.0" y="235" width="300" height="145.5"/>
+                                                        <rect key="frame" x="0.0" y="228" width="300" height="145.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPt-yu-6XE">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPt-yu-6XE">
                                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="36"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <state key="normal" title="Don't have an account? Register!">
-                                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="titleColor" systemColor="systemGreenColor"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="RegisterButton:" destination="ofX-cZ-dmU" eventType="touchUpInside" id="nRZ-eF-3Wb"/>
                                                                     <segue destination="yUW-2T-k1V" kind="presentation" identifier="toRegisterPage" id="36Q-7A-Vdg"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdK-4M-Vz9">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdK-4M-Vz9">
                                                                 <rect key="frame" x="0.0" y="46" width="300" height="30"/>
                                                                 <state key="normal" title="Forgot your password?">
-                                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="titleColor" systemColor="systemGreenColor"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="ForgotPasswordPopup:" destination="ofX-cZ-dmU" eventType="touchUpInside" id="aGE-2O-pkQ"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ax7-Yu-92G">
+                                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ax7-Yu-92G">
                                                                 <rect key="frame" x="0.0" y="86" width="300" height="59.5"/>
-                                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal">
                                                                     <attributedString key="attributedTitle">
@@ -517,7 +518,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                     <constraint firstAttribute="height" constant="259" id="J64-0r-lsL"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNM-nM-v1d">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNM-nM-v1d">
                                                 <rect key="frame" x="855" y="160" width="131" height="52"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="131" id="1mk-F5-w4z"/>
@@ -554,6 +555,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Xw-bi-pEg"/>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.96078431369999995" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="eYz-tm-oDX" firstAttribute="centerX" secondItem="PX9-DM-pSP" secondAttribute="centerX" id="6zK-qN-QHC"/>
@@ -563,7 +565,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="eYz-tm-oDX" firstAttribute="top" secondItem="PX9-DM-pSP" secondAttribute="top" id="vWQ-zn-66a"/>
                             <constraint firstItem="eYz-tm-oDX" firstAttribute="leading" secondItem="PX9-DM-pSP" secondAttribute="leading" id="zbj-ik-eyW"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="4Xw-bi-pEg"/>
                     </view>
                     <connections>
                         <outlet property="ErrorLabel" destination="3jy-CJ-rcy" id="XGA-he-EF8"/>
@@ -619,7 +620,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpS-pO-UnJ" userLabel="ErrorLabel">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="urg-4p-kPU" userLabel="FirstN Stack">
@@ -727,18 +728,18 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hr8-U4-ZWZ" userLabel="Button Stack">
                                                         <rect key="frame" x="0.0" y="324" width="300" height="130"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdQ-XL-nkN" userLabel="returntologin">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdQ-XL-nkN" userLabel="returntologin">
                                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
                                                                 <state key="normal" title="Already a user? Login!">
-                                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="titleColor" systemColor="systemGreenColor"/>
                                                                 </state>
                                                                 <connections>
                                                                     <segue destination="ofX-cZ-dmU" kind="presentation" identifier="toLogin" id="2O5-wy-OoL"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1f-uT-lNQ">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1f-uT-lNQ">
                                                                 <rect key="frame" x="0.0" y="70" width="300" height="60"/>
-                                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Register"/>
@@ -795,6 +796,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="gHf-pL-wDH"/>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.96078431369999995" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="0Hu-lR-3yp" firstAttribute="top" secondItem="vTK-V2-f2S" secondAttribute="top" id="UMN-mz-5Zq"/>
@@ -802,7 +804,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstAttribute="bottom" secondItem="0Hu-lR-3yp" secondAttribute="bottom" id="su2-EQ-hcG"/>
                             <constraint firstAttribute="trailing" secondItem="0Hu-lR-3yp" secondAttribute="trailing" id="wem-Tx-3Li"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="gHf-pL-wDH"/>
                     </view>
                     <connections>
                         <outlet property="CPassField" destination="crQ-yQ-eJA" id="yVi-lI-q7V"/>
@@ -865,7 +866,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="2jc-nu-RZb" secondAttribute="trailing" id="6eA-ga-1Vh"/>
                                             <constraint firstAttribute="bottom" secondItem="2jc-nu-RZb" secondAttribute="bottom" id="9gP-oJ-2hW"/>
@@ -955,7 +956,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                                         <rect key="frame" x="0.0" y="0.0" width="501" height="778"/>
                                                                     </imageView>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
                                                                     <constraint firstItem="bRz-Mc-zdK" firstAttribute="top" secondItem="h3S-cq-GSY" secondAttribute="top" id="LrQ-1j-8sd"/>
                                                                     <constraint firstAttribute="bottom" secondItem="bRz-Mc-zdK" secondAttribute="bottom" id="psr-Tn-YBA"/>
@@ -971,10 +972,10 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                                     </imageView>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psd-Yv-AAq" userLabel="Canvas View" customClass="CanvasView" customModule="ABC_Go_AR" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="501" height="778"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     </view>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
                                                                     <constraint firstItem="psd-Yv-AAq" firstAttribute="top" secondItem="3eX-cu-hol" secondAttribute="top" id="Cdd-J9-Y5a"/>
                                                                     <constraint firstItem="eHa-OR-39a" firstAttribute="leading" secondItem="3eX-cu-hol" secondAttribute="leading" id="Ggk-3m-Y3u"/>
@@ -1011,7 +1012,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="200"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
                                             <constraint firstItem="24G-zG-dVz" firstAttribute="leading" secondItem="30M-rs-dfz" secondAttribute="leading" id="1Br-3Z-F2C"/>
                                             <constraint firstAttribute="trailing" secondItem="24G-zG-dVz" secondAttribute="trailing" id="fSQ-Pn-JVw"/>
@@ -1026,6 +1027,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="rS7-YX-U61"/>
                         <color key="backgroundColor" red="0.67905282970000003" green="0.63564020399999999" blue="0.88588356970000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Q8I-2e-pmM" firstAttribute="leading" secondItem="tub-UL-Cnk" secondAttribute="leading" id="hHy-8z-L1M"/>
@@ -1033,7 +1035,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="Q8I-2e-pmM" firstAttribute="top" secondItem="tub-UL-Cnk" secondAttribute="top" id="nk0-EO-eDf"/>
                             <constraint firstItem="Q8I-2e-pmM" firstAttribute="trailing" secondItem="tub-UL-Cnk" secondAttribute="trailing" id="vLT-Ix-Fkp"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="rS7-YX-U61"/>
                     </view>
                     <connections>
                         <outlet property="canvasBGIV" destination="eHa-OR-39a" id="gNC-mH-Bno"/>
@@ -1097,7 +1098,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
                                             <constraint firstItem="6cO-25-GdT" firstAttribute="leading" secondItem="hW1-AM-7zt" secondAttribute="leading" id="325-Ak-WeY"/>
                                             <constraint firstItem="Sbr-d2-6Xz" firstAttribute="centerX" secondItem="6cO-25-GdT" secondAttribute="centerX" id="CB0-7X-jKv"/>
@@ -1133,7 +1134,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="changePaperPressed:" destination="2Mk-AN-UIc" eventType="touchUpInside" id="hRK-sw-cPN"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca0-2B-SPw">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca0-2B-SPw">
                                                         <rect key="frame" x="205" y="0.0" width="101" height="97"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Blank"/>
@@ -1270,14 +1271,14 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="hBh-n8-5gk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Qep-aM-q70" firstAttribute="trailing" secondItem="hBh-n8-5gk" secondAttribute="trailing" id="5IS-xB-zgd"/>
                             <constraint firstItem="Qep-aM-q70" firstAttribute="leading" secondItem="hBh-n8-5gk" secondAttribute="leading" id="Kj1-PC-eIh"/>
                             <constraint firstItem="Qep-aM-q70" firstAttribute="top" secondItem="Aik-7R-aEg" secondAttribute="top" id="eoe-9w-MOs"/>
                             <constraint firstAttribute="bottom" secondItem="Qep-aM-q70" secondAttribute="bottom" id="u8V-fx-5o3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="hBh-n8-5gk"/>
                     </view>
                     <connections>
                         <outlet property="backgroundIV" destination="Sgs-Pl-iNu" id="IC9-PY-Jbj"/>
@@ -1308,7 +1309,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3o-Mk-CSV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3o-Mk-CSV">
                                 <rect key="frame" x="0.0" y="20" width="131" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="RZx-Gi-gF4"/>
@@ -1345,7 +1346,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstItem="iG1-4u-qRs" firstAttribute="leading" secondItem="SGB-6p-W3O" secondAttribute="leading" id="DZm-aC-rLc"/>
                                             <constraint firstAttribute="trailing" secondItem="1Fa-f1-Rz9" secondAttribute="trailing" constant="98" id="EMJ-kw-1OQ"/>
@@ -1509,7 +1510,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="200"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="7f4-3M-Ram" secondAttribute="trailing" id="1ZO-zW-saD"/>
                                             <constraint firstItem="7f4-3M-Ram" firstAttribute="top" secondItem="mEp-bs-sXs" secondAttribute="top" id="CXd-28-kXn"/>
@@ -1524,6 +1525,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="2qD-bu-7p1"/>
                         <color key="backgroundColor" red="0.97935718299999996" green="0.95525664089999995" blue="0.84704262019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="s0Z-5e-d9M" firstAttribute="bottom" secondItem="Lbg-wc-MJe" secondAttribute="bottom" id="05e-QA-QXH"/>
@@ -1533,7 +1535,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="s0Z-5e-d9M" firstAttribute="top" secondItem="Lbg-wc-MJe" secondAttribute="top" id="PJR-I7-M7h"/>
                             <constraint firstItem="s0Z-5e-d9M" firstAttribute="trailing" secondItem="2qD-bu-7p1" secondAttribute="trailing" id="bfH-gh-cXc"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="2qD-bu-7p1"/>
                     </view>
                     <navigationItem key="navigationItem" id="iTf-Pv-gas"/>
                     <connections>
@@ -1614,7 +1615,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <constraint firstAttribute="bottom" secondItem="0rN-aW-7oG" secondAttribute="bottom" id="voD-cB-6c3"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCw-Yn-Wep">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCw-Yn-Wep">
                                 <rect key="frame" x="20" y="20" width="91" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qCw-Yn-Wep" secondAttribute="height" multiplier="91:55" id="h2O-1J-kTx"/>
@@ -1626,7 +1627,8 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="qVS-6P-H0M"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eQa-om-QNe" firstAttribute="bottom" secondItem="EST-sl-smT" secondAttribute="bottom" id="3Xu-xc-lhg"/>
                             <constraint firstItem="Rne-MZ-RQT" firstAttribute="trailing" secondItem="qVS-6P-H0M" secondAttribute="trailing" id="9tg-Sl-odS"/>
@@ -1638,7 +1640,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="eQa-om-QNe" firstAttribute="trailing" secondItem="qVS-6P-H0M" secondAttribute="trailing" id="g3z-3Y-oB2"/>
                             <constraint firstItem="qCw-Yn-Wep" firstAttribute="top" secondItem="qVS-6P-H0M" secondAttribute="top" constant="20" id="lvi-yG-iAz"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="qVS-6P-H0M"/>
                     </view>
                     <connections>
                         <outlet property="lowercaseTapped" destination="Mwa-s4-SoT" id="Ha1-U4-6va"/>
@@ -1696,7 +1697,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="3fj-bI-mKT" secondAttribute="trailing" id="28k-6q-sVg"/>
                                             <constraint firstAttribute="trailing" secondItem="Pf5-7T-Riu" secondAttribute="trailing" id="8yI-Xn-i1i"/>
@@ -1716,7 +1717,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YHN-gF-xrK">
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="195.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrZ-Oe-di9">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrZ-Oe-di9">
                                                         <rect key="frame" x="0.0" y="0.0" width="205" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="c">
@@ -1726,7 +1727,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="VfK-kh-kd4"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wo2-N9-aZn">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wo2-N9-aZn">
                                                         <rect key="frame" x="205" y="0.0" width="204.5" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="a">
@@ -1736,7 +1737,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="FSm-Ry-bxU"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrI-Lm-Lte">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrI-Lm-Lte">
                                                         <rect key="frame" x="409.5" y="0.0" width="205" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="d">
@@ -1746,7 +1747,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="l41-Jk-qYM"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kiv-A8-h5z">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kiv-A8-h5z">
                                                         <rect key="frame" x="614.5" y="0.0" width="204.5" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="g">
@@ -1756,7 +1757,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="O0n-ds-D07"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvN-K9-i3J">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvN-K9-i3J">
                                                         <rect key="frame" x="819" y="0.0" width="205" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="o">
@@ -1783,7 +1784,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fVe-cp-XWr">
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="195"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTt-v3-YiM">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTt-v3-YiM">
                                                         <rect key="frame" x="0.0" y="0.0" width="170.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="u">
@@ -1793,7 +1794,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="Pce-is-OTE"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nm-8n-SeU">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nm-8n-SeU">
                                                         <rect key="frame" x="170.5" y="0.0" width="171" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="s">
@@ -1803,7 +1804,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="Lax-YM-9eF"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bzh-Fs-s6G">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bzh-Fs-s6G">
                                                         <rect key="frame" x="341.5" y="0.0" width="170.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="v">
@@ -1813,7 +1814,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="Wse-7Z-K7Y"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9h-2V-ZOQ">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9h-2V-ZOQ">
                                                         <rect key="frame" x="512" y="0.0" width="170.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="w">
@@ -1823,7 +1824,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="qJZ-oV-xhh"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="err-k5-1RU">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="err-k5-1RU">
                                                         <rect key="frame" x="682.5" y="0.0" width="171" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="i">
@@ -1833,7 +1834,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="9Fs-q5-RI2"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYt-dQ-oJ9">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYt-dQ-oJ9">
                                                         <rect key="frame" x="853.5" y="0.0" width="170.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="t">
@@ -1860,7 +1861,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7Sc-rO-QcM">
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="195"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OJ-DL-XaR">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OJ-DL-XaR">
                                                         <rect key="frame" x="0.0" y="0.0" width="205" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="l">
@@ -1870,7 +1871,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="d2W-kP-VYT"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upf-YP-jy7">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upf-YP-jy7">
                                                         <rect key="frame" x="205" y="0.0" width="204.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="y">
@@ -1880,7 +1881,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="gtW-xZ-4U2"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooM-WM-Q9w">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooM-WM-Q9w">
                                                         <rect key="frame" x="409.5" y="0.0" width="205" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="k">
@@ -1890,7 +1891,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="7pB-TU-K3M"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeB-J1-1gg">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeB-J1-1gg">
                                                         <rect key="frame" x="614.5" y="0.0" width="204.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="e">
@@ -1900,7 +1901,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="K6V-dp-htJ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B25-aR-fB5">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B25-aR-fB5">
                                                         <rect key="frame" x="819" y="0.0" width="205" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="j">
@@ -1927,7 +1928,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rID-Y7-LxV">
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="195"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZ4-ql-hfL">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZ4-ql-hfL">
                                                         <rect key="frame" x="0.0" y="0.0" width="170.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="p">
@@ -1937,7 +1938,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="HON-BD-tKb"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJs-Nl-RnT">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJs-Nl-RnT">
                                                         <rect key="frame" x="170.5" y="0.0" width="171" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="r">
@@ -1947,7 +1948,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="Nyh-03-tEy"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KZ-i5-BQQ">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KZ-i5-BQQ">
                                                         <rect key="frame" x="341.5" y="0.0" width="170.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="n">
@@ -1957,7 +1958,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="2cr-7z-UTj"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQd-bT-BSi">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQd-bT-BSi">
                                                         <rect key="frame" x="512" y="0.0" width="170.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="m">
@@ -1967,7 +1968,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="Djh-t2-sCa"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCd-Tk-j0A">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCd-Tk-j0A">
                                                         <rect key="frame" x="682.5" y="0.0" width="171" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="h">
@@ -1977,7 +1978,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="mjp-4P-B85"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbh-xc-mPQ">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbh-xc-mPQ">
                                                         <rect key="frame" x="853.5" y="0.0" width="170.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="b">
@@ -2004,7 +2005,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ysy-P7-VRq">
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="195.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oED-Sv-3XB">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oED-Sv-3XB">
                                                         <rect key="frame" x="0.0" y="0.0" width="256" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="f">
@@ -2014,7 +2015,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="YHL-cf-OoJ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zT7-lG-f6X">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zT7-lG-f6X">
                                                         <rect key="frame" x="256" y="0.0" width="256" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="q">
@@ -2024,7 +2025,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="ShB-ub-6Fe"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V37-Xz-JUW">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V37-Xz-JUW">
                                                         <rect key="frame" x="512" y="0.0" width="256" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="x">
@@ -2034,7 +2035,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="bdl-bs-ghi" eventType="touchUpInside" id="mUf-rD-lqM"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eo-Vv-uI8">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eo-Vv-uI8">
                                                         <rect key="frame" x="768" y="0.0" width="256" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="z">
@@ -2062,7 +2063,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="195"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Q9m-yq-GvL" secondAttribute="bottom" id="4aC-c4-shL"/>
                                             <constraint firstItem="Q9m-yq-GvL" firstAttribute="leading" secondItem="Vje-1B-ZlN" secondAttribute="leading" id="6kD-eP-bZ1"/>
@@ -2073,6 +2074,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="y8u-TX-idx"/>
                         <color key="backgroundColor" red="0.98959583039999999" green="0.96869581940000005" blue="0.84962272640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="o1b-tV-9UK" firstAttribute="trailing" secondItem="y8u-TX-idx" secondAttribute="trailing" id="CW3-vm-oYG"/>
@@ -2080,7 +2082,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstAttribute="bottom" secondItem="o1b-tV-9UK" secondAttribute="bottom" id="gDy-yR-f2f"/>
                             <constraint firstItem="o1b-tV-9UK" firstAttribute="leading" secondItem="y8u-TX-idx" secondAttribute="leading" id="wiu-Rj-MHC"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="y8u-TX-idx"/>
                     </view>
                     <connections>
                         <segue destination="hje-Ij-A4j" kind="presentation" identifier="toLevelTwoActivity" id="NrP-LR-XCc"/>
@@ -2352,6 +2353,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="2hS-oJ-CBq"/>
                         <color key="backgroundColor" red="0.98597007989999996" green="0.96186453100000002" blue="0.84263348579999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="UOR-a8-0tx" firstAttribute="leading" secondItem="cCi-l9-Phr" secondAttribute="leading" id="7o2-Dc-tPj"/>
@@ -2363,7 +2365,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="dUX-oO-aEZ" firstAttribute="top" secondItem="cCi-l9-Phr" secondAttribute="top" id="p3U-to-pip"/>
                             <constraint firstItem="UOR-a8-0tx" firstAttribute="top" secondItem="cCi-l9-Phr" secondAttribute="top" id="xPC-b5-DTt"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="2hS-oJ-CBq"/>
                     </view>
                     <navigationItem key="navigationItem" id="UIP-nr-sbM"/>
                     <connections>
@@ -2665,6 +2666,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="vo8-tw-O10"/>
                         <color key="backgroundColor" red="0.98597007989999996" green="0.96186453100000002" blue="0.84263348579999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="aVN-38-e0d" firstAttribute="top" secondItem="mLb-oG-WOS" secondAttribute="top" id="4XY-Rj-Omy"/>
@@ -2676,7 +2678,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="aVN-38-e0d" firstAttribute="trailing" secondItem="vo8-tw-O10" secondAttribute="trailing" id="rGE-jV-GqL"/>
                             <constraint firstItem="vo8-tw-O10" firstAttribute="trailing" secondItem="csl-BO-iic" secondAttribute="trailing" id="rk3-bu-xJp"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="vo8-tw-O10"/>
                     </view>
                     <navigationItem key="navigationItem" id="EI3-v0-G3f"/>
                     <connections>
@@ -2978,6 +2979,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="DrZ-hN-eMJ"/>
                         <color key="backgroundColor" red="0.98597007989999996" green="0.96186453100000002" blue="0.84263348579999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="yHe-ID-kQr" secondAttribute="bottom" id="F3j-Lv-Mw0"/>
@@ -2989,7 +2991,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="77h-Hu-Ego" firstAttribute="top" secondItem="vt9-Fz-ebj" secondAttribute="top" id="lD7-fV-R9n"/>
                             <constraint firstItem="77h-Hu-Ego" firstAttribute="leading" secondItem="vt9-Fz-ebj" secondAttribute="leading" id="lP8-3P-dpt"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="DrZ-hN-eMJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="CME-nO-765"/>
                     <connections>
@@ -3265,7 +3266,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <constraint firstItem="rMF-fZ-Fl4" firstAttribute="top" secondItem="kXc-xy-5aF" secondAttribute="top" id="zps-fd-eli"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeq-NP-Z2d">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeq-NP-Z2d">
                                 <rect key="frame" x="0.0" y="20" width="131" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="EPX-mK-KKS"/>
@@ -3280,6 +3281,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="XuU-qT-BbD"/>
                         <color key="backgroundColor" red="0.97935718299999996" green="0.95525664089999995" blue="0.84704262019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="kXc-xy-5aF" firstAttribute="bottom" secondItem="Bau-jZ-Cko" secondAttribute="bottom" id="6iD-im-caj"/>
@@ -3289,7 +3291,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="kXc-xy-5aF" firstAttribute="trailing" secondItem="Bau-jZ-Cko" secondAttribute="trailing" id="pxS-vl-yFT"/>
                             <constraint firstItem="aeq-NP-Z2d" firstAttribute="leading" secondItem="XuU-qT-BbD" secondAttribute="leading" id="yEj-Ws-neK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="XuU-qT-BbD"/>
                     </view>
                     <navigationItem key="navigationItem" id="Z6y-uD-a3i"/>
                     <connections>
@@ -3437,7 +3438,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <constraint firstAttribute="trailing" secondItem="mgR-Gl-eDN" secondAttribute="trailing" id="vC1-b6-bi7"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fK-OH-DDU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fK-OH-DDU">
                                 <rect key="frame" x="0.0" y="20" width="131" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="131" id="Ovb-3w-9QV"/>
@@ -3452,6 +3453,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="x0t-wM-9ND"/>
                         <color key="backgroundColor" red="0.97935718299999996" green="0.95525664089999995" blue="0.84704262019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="mE2-do-JIy" firstAttribute="top" secondItem="1j2-59-Mhw" secondAttribute="top" id="14G-gz-kdS"/>
@@ -3461,7 +3463,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="9fK-OH-DDU" firstAttribute="top" secondItem="x0t-wM-9ND" secondAttribute="top" constant="20" id="ZPE-AV-g3F"/>
                             <constraint firstItem="mE2-do-JIy" firstAttribute="leading" secondItem="1j2-59-Mhw" secondAttribute="leading" id="Zs1-Vy-Atr"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="x0t-wM-9ND"/>
                     </view>
                     <navigationItem key="navigationItem" id="KCn-g2-xuk"/>
                     <connections>
@@ -3494,7 +3495,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzt-Hx-E9s">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="108"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2D-Lo-tqe">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2D-Lo-tqe">
                                                 <rect key="frame" x="8" y="19" width="131" height="52"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="Mcs-GF-Rtj"/>
@@ -3546,7 +3547,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2QT-OR-8B3">
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="248"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="wdd-pC-5CN">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="wdd-pC-5CN">
                                                         <rect key="frame" x="0.0" y="0.0" width="205" height="248"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="CHAPTER 1: I, T, L, F, E, H">
@@ -3556,7 +3557,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="cpt1Clicked:" destination="Xae-Mk-QY7" eventType="touchUpInside" id="mFm-VK-GkJ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="mU0-Bo-py6">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="mU0-Bo-py6">
                                                         <rect key="frame" x="205" y="0.0" width="204.5" height="248"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="CHAPTER 2: P, R, B, C, D, U">
@@ -3566,7 +3567,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="cpt2Clicked:" destination="Xae-Mk-QY7" eventType="touchUpInside" id="Ve3-8G-AMU"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="C1f-zT-MFg">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="C1f-zT-MFg">
                                                         <rect key="frame" x="409.5" y="0.0" width="205" height="248"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="CHAPTER 3: G, O, Q, S, J">
@@ -3576,7 +3577,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="cpt3Clicked:" destination="Xae-Mk-QY7" eventType="touchUpInside" id="tNU-hs-ODI"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="fTc-Cd-vU1">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="fTc-Cd-vU1">
                                                         <rect key="frame" x="614.5" y="0.0" width="204.5" height="248"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="CHAPTER 4: K, V, W, M, A">
@@ -3586,7 +3587,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="cpt4Clicked:" destination="Xae-Mk-QY7" eventType="touchUpInside" id="SiW-Vv-VtE"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="I7B-6s-GP3">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="I7B-6s-GP3">
                                                         <rect key="frame" x="819" y="0.0" width="205" height="248"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="CHAPTER 5: N, Z, Y, X">
@@ -3610,6 +3611,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="v16-Aa-woy"/>
                         <color key="backgroundColor" red="0.97935718299999996" green="0.95525664089999995" blue="0.84704262019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="zIv-kd-Xal" firstAttribute="leading" secondItem="v16-Aa-woy" secondAttribute="leading" id="4fR-Ca-YCF"/>
@@ -3617,7 +3619,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="zIv-kd-Xal" firstAttribute="trailing" secondItem="v16-Aa-woy" secondAttribute="trailing" id="RIG-Dd-Pvt"/>
                             <constraint firstAttribute="bottom" secondItem="zIv-kd-Xal" secondAttribute="bottom" id="l1w-dT-Lfo"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="v16-Aa-woy"/>
                     </view>
                     <navigationItem key="navigationItem" id="Gav-iL-6q4"/>
                     <connections>
@@ -3642,7 +3643,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAX-qj-h7k">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="108"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJU-6j-OVe">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJU-6j-OVe">
                                                 <rect key="frame" x="8" y="19" width="131" height="52"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="6TP-0v-phz"/>
@@ -3694,7 +3695,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fVB-Cw-NeH">
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="248"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="pc1-sx-5sx">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="pc1-sx-5sx">
                                                         <rect key="frame" x="0.0" y="0.0" width="205" height="248"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="CHAPTER 1: c, a, d, g, o">
@@ -3704,7 +3705,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="cpt6Clicked:" destination="lDZ-QH-5ri" eventType="touchUpInside" id="Gsw-91-GWF"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VyY-HI-KhB">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VyY-HI-KhB">
                                                         <rect key="frame" x="205" y="0.0" width="204.5" height="248"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="CHAPTER 2: u, s, v, w, i, t">
@@ -3714,7 +3715,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="cpt7Clicked:" destination="lDZ-QH-5ri" eventType="touchUpInside" id="SXF-wi-UjT"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sEJ-v2-LDT">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sEJ-v2-LDT">
                                                         <rect key="frame" x="409.5" y="0.0" width="205" height="248"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="CHAPTER 3: l, y, k, j, e">
@@ -3724,7 +3725,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="cpt8Clicked:" destination="lDZ-QH-5ri" eventType="touchUpInside" id="g12-Ii-fWi"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="96e-4d-cgy">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="96e-4d-cgy">
                                                         <rect key="frame" x="614.5" y="0.0" width="204.5" height="248"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="CHAPTER 4: p, r, n, m, h, b">
@@ -3734,7 +3735,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="cpt9Clicked:" destination="lDZ-QH-5ri" eventType="touchUpInside" id="WoT-TC-LIc"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="1mB-Gf-7Ql">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="1mB-Gf-7Ql">
                                                         <rect key="frame" x="819" y="0.0" width="205" height="248"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="CHAPTER 5: f, q, x, z">
@@ -3758,6 +3759,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="hQq-YJ-9zp"/>
                         <color key="backgroundColor" red="0.97935718299999996" green="0.95525664089999995" blue="0.84704262019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="55K-jV-kyn" secondAttribute="bottom" id="KUI-gr-2Qg"/>
@@ -3765,7 +3767,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="55K-jV-kyn" firstAttribute="top" secondItem="uhO-Gw-KjE" secondAttribute="top" id="yUC-aB-Xb7"/>
                             <constraint firstItem="55K-jV-kyn" firstAttribute="leading" secondItem="hQq-YJ-9zp" secondAttribute="leading" id="zuM-Vk-Glc"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="hQq-YJ-9zp"/>
                     </view>
                     <navigationItem key="navigationItem" id="Jhi-lv-qRJ"/>
                     <connections>
@@ -3790,7 +3791,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RB1-eC-rxo">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="108"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rle-XA-tpQ">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rle-XA-tpQ">
                                                 <rect key="frame" x="8" y="19" width="131" height="52"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="2Jg-RI-R3y"/>
@@ -3842,7 +3843,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Gfb-vk-13h">
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="248"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jlo-Ia-blf">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jlo-Ia-blf">
                                                         <rect key="frame" x="0.0" y="0.0" width="170.5" height="248"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="Lines">
@@ -3853,7 +3854,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <segue destination="hNX-2Z-0AR" kind="presentation" identifier="linePractice" id="hXZ-tV-gJX"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="XIy-Qq-WN7">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="XIy-Qq-WN7">
                                                         <rect key="frame" x="170.5" y="0.0" width="171" height="248"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="Letter Matching">
@@ -3864,7 +3865,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <segue destination="gku-U1-KwT" kind="presentation" identifier="letterMatching" id="q75-WB-tJm"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="U7X-Mf-Q02">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="U7X-Mf-Q02">
                                                         <rect key="frame" x="341.5" y="0.0" width="170.5" height="248"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="Letter Imitation: Uppercase">
@@ -3875,7 +3876,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <segue destination="QWY-Kv-ea9" kind="presentation" identifier="letterImitationUpper" id="FnK-jS-QSY"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="l9U-w5-ain">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="l9U-w5-ain">
                                                         <rect key="frame" x="512" y="0.0" width="170.5" height="248"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="Letter Imitation: Lowercase">
@@ -3886,7 +3887,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <segue destination="bdl-bs-ghi" kind="presentation" identifier="letterImitationLower" id="wO2-Ig-fe1"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QaP-Wg-KqC">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QaP-Wg-KqC">
                                                         <rect key="frame" x="682.5" y="0.0" width="171" height="248"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="Free Draw">
@@ -3897,7 +3898,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <segue destination="2Mk-AN-UIc" kind="presentation" identifier="freeDraw" modalPresentationStyle="fullScreen" id="tnP-bL-gq6"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="90S-Nm-dpu">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="90S-Nm-dpu">
                                                         <rect key="frame" x="853.5" y="0.0" width="170.5" height="248"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                                         <state key="normal" title="Puzzles">
@@ -3922,6 +3923,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="SHd-na-Bmg"/>
                         <color key="backgroundColor" red="0.97935718299999996" green="0.95525664089999995" blue="0.84704262019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="baK-sQ-A9X" firstAttribute="top" secondItem="81n-rZ-DQb" secondAttribute="top" id="MPW-Mi-g0C"/>
@@ -3929,7 +3931,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="baK-sQ-A9X" firstAttribute="trailing" secondItem="SHd-na-Bmg" secondAttribute="trailing" id="jAp-ff-nOl"/>
                             <constraint firstItem="baK-sQ-A9X" firstAttribute="leading" secondItem="SHd-na-Bmg" secondAttribute="leading" id="o6T-t8-zea"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="SHd-na-Bmg"/>
                     </view>
                     <navigationItem key="navigationItem" id="WsF-Sp-9lH"/>
                     <connections>
@@ -3988,7 +3989,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="iEE-O3-iEs" secondAttribute="trailing" id="J6j-AV-R6h"/>
                                             <constraint firstAttribute="bottom" secondItem="UwZ-VD-XIA" secondAttribute="bottom" id="PPH-bp-Vca"/>
@@ -4008,7 +4009,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Diu-ch-d3b">
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="195.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPS-LS-EHw">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPS-LS-EHw">
                                                         <rect key="frame" x="0.0" y="0.0" width="170.5" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="I">
@@ -4018,7 +4019,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="X0X-1R-60c"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VP-LA-QfS">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VP-LA-QfS">
                                                         <rect key="frame" x="170.5" y="0.0" width="171" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="T">
@@ -4028,7 +4029,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="MhT-C0-E4p"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRo-6I-fL9">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRo-6I-fL9">
                                                         <rect key="frame" x="341.5" y="0.0" width="170.5" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="L">
@@ -4038,7 +4039,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="QqU-t6-E8P"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSx-6K-Vcr">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSx-6K-Vcr">
                                                         <rect key="frame" x="512" y="0.0" width="170.5" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="F">
@@ -4048,7 +4049,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="CEU-rN-Z9f"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ths-qm-vbU">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ths-qm-vbU">
                                                         <rect key="frame" x="682.5" y="0.0" width="171" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="E">
@@ -4058,7 +4059,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="FEG-Jr-HEe"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMr-63-FZ9">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMr-63-FZ9">
                                                         <rect key="frame" x="853.5" y="0.0" width="170.5" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="H">
@@ -4085,7 +4086,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ah6-Jy-oGc">
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="195"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLn-0A-8g2">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLn-0A-8g2">
                                                         <rect key="frame" x="0.0" y="0.0" width="170.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="P">
@@ -4095,7 +4096,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="WAV-F1-iNr"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dT0-U3-RdO">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dT0-U3-RdO">
                                                         <rect key="frame" x="170.5" y="0.0" width="171" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="R">
@@ -4105,7 +4106,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="x7K-ex-Yog"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VW3-re-CTw">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VW3-re-CTw">
                                                         <rect key="frame" x="341.5" y="0.0" width="170.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="B">
@@ -4115,7 +4116,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="aK3-ND-xHS"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnO-eW-pII">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnO-eW-pII">
                                                         <rect key="frame" x="512" y="0.0" width="170.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="C">
@@ -4125,7 +4126,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="gQs-nd-sQF"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ea-qI-3BP">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ea-qI-3BP">
                                                         <rect key="frame" x="682.5" y="0.0" width="171" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="D">
@@ -4135,7 +4136,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="Mky-By-KX3"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbq-nV-Uwe">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbq-nV-Uwe">
                                                         <rect key="frame" x="853.5" y="0.0" width="170.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="U">
@@ -4162,7 +4163,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2t3-lC-hbS">
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="195"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57h-gM-K04">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57h-gM-K04">
                                                         <rect key="frame" x="0.0" y="0.0" width="205" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="G">
@@ -4172,7 +4173,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="k7b-W0-g8b"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrY-41-W2P">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrY-41-W2P">
                                                         <rect key="frame" x="205" y="0.0" width="204.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="O">
@@ -4182,7 +4183,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="ETY-OI-pkP"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8M-hu-Ewp">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8M-hu-Ewp">
                                                         <rect key="frame" x="409.5" y="0.0" width="205" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="Q">
@@ -4192,7 +4193,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="z5D-gH-c10"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzR-0T-6vW">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzR-0T-6vW">
                                                         <rect key="frame" x="614.5" y="0.0" width="204.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="S">
@@ -4202,7 +4203,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="siu-rE-LwF"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UJ-Ho-Dxr">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UJ-Ho-Dxr">
                                                         <rect key="frame" x="819" y="0.0" width="205" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="J">
@@ -4229,7 +4230,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dmp-KR-8FM">
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="195"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evh-mL-kjB">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evh-mL-kjB">
                                                         <rect key="frame" x="0.0" y="0.0" width="205" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="K">
@@ -4239,7 +4240,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="25k-eN-hRZ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9C-UO-6Ib">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9C-UO-6Ib">
                                                         <rect key="frame" x="205" y="0.0" width="204.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="V">
@@ -4249,7 +4250,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="jtG-aY-sCJ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exe-ur-UOp">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exe-ur-UOp">
                                                         <rect key="frame" x="409.5" y="0.0" width="205" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="W">
@@ -4259,7 +4260,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="L5h-r5-bsH"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8I-Mc-1su">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8I-Mc-1su">
                                                         <rect key="frame" x="614.5" y="0.0" width="204.5" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="M">
@@ -4269,7 +4270,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="OlQ-am-Ng6"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKj-dZ-5p4">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKj-dZ-5p4">
                                                         <rect key="frame" x="819" y="0.0" width="205" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="A">
@@ -4296,7 +4297,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jtU-bA-nPC">
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="195.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEt-Ba-EiM">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEt-Ba-EiM">
                                                         <rect key="frame" x="0.0" y="0.0" width="256" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="N">
@@ -4306,7 +4307,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="BkW-pJ-FIG"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuS-Ca-6He">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuS-Ca-6He">
                                                         <rect key="frame" x="256" y="0.0" width="256" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="Z">
@@ -4316,7 +4317,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="mDc-2B-wsc"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uao-8B-cXE">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uao-8B-cXE">
                                                         <rect key="frame" x="512" y="0.0" width="256" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="Y">
@@ -4326,7 +4327,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                             <action selector="loadLetter:" destination="QWY-Kv-ea9" eventType="touchUpInside" id="k2O-hu-hEi"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdQ-qE-7US">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdQ-qE-7US">
                                                         <rect key="frame" x="768" y="0.0" width="256" height="195.5"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="100"/>
                                                         <state key="normal" title="Z">
@@ -4354,7 +4355,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="195"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="1PL-l9-wRO" secondAttribute="bottom" id="AVe-mI-XIa"/>
                                             <constraint firstAttribute="trailing" secondItem="1PL-l9-wRO" secondAttribute="trailing" id="BHv-1b-doh"/>
@@ -4365,6 +4366,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="yTj-Hf-qxI"/>
                         <color key="backgroundColor" red="0.98959583039999999" green="0.96869581940000005" blue="0.84962272640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="bWA-0d-SyU" firstAttribute="leading" secondItem="yTj-Hf-qxI" secondAttribute="leading" id="KpM-GU-cpS"/>
@@ -4372,7 +4374,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="bWA-0d-SyU" firstAttribute="top" secondItem="MhU-TG-shv" secondAttribute="top" id="mOh-pf-iNt"/>
                             <constraint firstAttribute="bottom" secondItem="bWA-0d-SyU" secondAttribute="bottom" id="nOC-Ov-cAu"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="yTj-Hf-qxI"/>
                     </view>
                     <connections>
                         <segue destination="hje-Ij-A4j" kind="presentation" identifier="toLevelTwoActivity" id="aoi-rC-XX7"/>
@@ -4424,7 +4425,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="eXg-pi-IwC" secondAttribute="bottom" id="4xU-F0-8Dm"/>
                                             <constraint firstItem="eXg-pi-IwC" firstAttribute="leading" secondItem="Ef0-ho-OVQ" secondAttribute="leading" id="70L-1v-e8m"/>
@@ -4459,7 +4460,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6sL-CG-xuC">
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="195"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTW-Lj-wpS">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTW-Lj-wpS">
                                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="150"/>
                                                         <state key="normal" title="A - Z ">
@@ -4487,7 +4488,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="j9h-FS-P2n">
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="195"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iY8-ee-fRq">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iY8-ee-fRq">
                                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="150"/>
                                                         <state key="normal" title="b &amp; d ">
@@ -4515,7 +4516,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GFU-cE-DFX">
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="195"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5i-JQ-UJ4">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5i-JQ-UJ4">
                                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="195"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="150"/>
                                                         <state key="normal" title="p, g, &amp; q">
@@ -4559,7 +4560,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="195"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="kNY-TM-GAX" secondAttribute="bottom" id="28V-X4-SYl"/>
                                             <constraint firstItem="kNY-TM-GAX" firstAttribute="top" secondItem="eiH-Zo-JMJ" secondAttribute="top" id="6Gj-Vs-Bnd"/>
@@ -4570,6 +4571,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="K5r-nB-Dr2"/>
                         <color key="backgroundColor" red="0.98959583039999999" green="0.96869581940000005" blue="0.84962272640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="H5E-Ur-bb2" secondAttribute="bottom" id="0AW-2F-DEr"/>
@@ -4577,7 +4579,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="H5E-Ur-bb2" firstAttribute="top" secondItem="S3e-Pv-bP0" secondAttribute="top" id="AQF-No-9Mo"/>
                             <constraint firstItem="H5E-Ur-bb2" firstAttribute="leading" secondItem="K5r-nB-Dr2" secondAttribute="leading" id="GGv-T7-phO"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="K5r-nB-Dr2"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UXM-eq-zUK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4585,6 +4586,11 @@ point the device toward a flat surface to see your Augmented Reality story conte
             <point key="canvasLocation" x="674" y="1532"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="aoi-rC-XX7"/>
+        <segue reference="j5d-bO-yS9"/>
+        <segue reference="nzC-1y-dQf"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="1024.png" width="1024" height="1024"/>
         <image name="A" width="750" height="1000"/>
@@ -4660,10 +4666,23 @@ point the device toward a flat surface to see your Augmented Reality story conte
         <image name="c-.png" width="180" height="240"/>
         <image name="linedPaper1" width="2100" height="1449"/>
         <image name="paper3" width="2100" height="1449"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="aoi-rC-XX7"/>
-        <segue reference="j5d-bO-yS9"/>
-        <segue reference="nzC-1y-dQf"/>
-    </inferredMetricsTieBreakers>
 </document>
