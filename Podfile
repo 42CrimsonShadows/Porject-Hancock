@@ -6,7 +6,6 @@ target 'Hancock' do
   use_frameworks!
 
   # Pods for Hancock
-
-
-
+  pod 'Charts'
+  pod 'TinyConstraints'
 end

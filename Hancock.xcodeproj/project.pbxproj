@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0B767BE5282C3D14006C3786 /* SQL_Documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B767BE4282C3D14006C3786 /* SQL_Documents.swift */; };
+		0BFBC8BD287CEB9500D2856E /* DatabaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFBC8BC287CEB9500D2856E /* DatabaseViewController.swift */; };
+		2918CBB2CC14723488F2470B /* Pods_Hancock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3E28B5AE1CAA606C394F4B /* Pods_Hancock.framework */; };
 		3400A23722D543AD00B3EA3A /* ActivitySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400A23622D543AC00B3EA3A /* ActivitySelection.swift */; };
 		3446B59522B8201600C785BE /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446B59422B8201600C785BE /* Formatters.swift */; };
 		34DC042522B2DA36001C70DB /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DC042322B2DA35001C70DB /* CanvasView.swift */; };
@@ -115,6 +117,7 @@
 
 /* Begin PBXFileReference section */
 		0B767BE4282C3D14006C3786 /* SQL_Documents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQL_Documents.swift; sourceTree = "<group>"; };
+		0BFBC8BC287CEB9500D2856E /* DatabaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseViewController.swift; sourceTree = "<group>"; };
 		1A3E28B5AE1CAA606C394F4B /* Pods_Hancock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hancock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3400A23622D543AC00B3EA3A /* ActivitySelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelection.swift; sourceTree = "<group>"; };
 		3446B59422B8201600C785BE /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
@@ -230,6 +233,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2918CBB2CC14723488F2470B /* Pods_Hancock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +346,7 @@
 				A0DEC69B24BCBD15008A38F1 /* letterMatchingMenuViewController.swift */,
 				A00678EB22AEEB5B00846A2D /* line.swift */,
 				A08A2D3E22BEA2C50076B814 /* LaunchScreen.storyboard */,
+				0BFBC8BC287CEB9500D2856E /* DatabaseViewController.swift */,
 			);
 			path = Hancock;
 			sourceTree = "<group>";
@@ -426,6 +431,7 @@
 				A0A028B4227CA9F500A7C787 /* Sources */,
 				A0A028B5227CA9F500A7C787 /* Frameworks */,
 				A0A028B6227CA9F500A7C787 /* Resources */,
+				91D714C5FC8B9AB9C8A8F7C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -553,6 +559,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		91D714C5FC8B9AB9C8A8F7C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hancock/Pods-Hancock-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hancock/Pods-Hancock-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hancock/Pods-Hancock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		95C3917065D3EFBE5D9E63B3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -609,6 +632,7 @@
 				C99A9BE322A06C0700554D9A /* InitViewController.swift in Sources */,
 				A07974B322861DB000606889 /* StudentTableViewController.swift in Sources */,
 				A08A2D4522BED3A40076B814 /* ChapterViewController.swift in Sources */,
+				0BFBC8BD287CEB9500D2856E /* DatabaseViewController.swift in Sources */,
 				A0F8879E252B73870002B0F1 /* CreditsPageViewController.swift in Sources */,
 				A02BCC3B22A86EA70059E3D8 /* activityViewController.swift in Sources */,
 				A7E62789249AAC560031126F /* LevelTwoActivityViewController.swift in Sources */,
