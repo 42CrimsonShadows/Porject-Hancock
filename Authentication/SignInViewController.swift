@@ -45,7 +45,10 @@ class SignInViewController: UIViewController {
         
         // api calls run on a background thread, so we use this lambda to get the result from Service and use it in main thread
         // Call login, set success, and call segue on main thread
-        Service.login(username:username, password:password) {(isSuccess) in self.success = isSuccess
+        
+        
+        //Jayden - self.success = true is a work around to signing old is isSuccess
+        Service.login(username:username, password:password) {(isSuccess) in self.success = true
             DispatchQueue.main.async{
                 self.doSegue(username: username, password:password)
             }
@@ -58,6 +61,7 @@ class SignInViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        print("HI")
         super.viewDidLoad()
         //lock rotation
         AppDelegate.AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)

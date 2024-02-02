@@ -72,6 +72,10 @@ struct SingleActivityReport: Codable {
     var totalPointsPossible: Int32
 }
 
+struct Test: Codable{
+ var test2: Int
+}
+
 //Should be edited and added for each image.
 struct SingleImageReport: Codable {
     var username: String
