@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1391A0642B76C5C60060C88A /* IrishGrover-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1391A0632B76C5C60060C88A /* IrishGrover-Regular.ttf */; };
 		3400A23722D543AD00B3EA3A /* ActivitySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400A23622D543AC00B3EA3A /* ActivitySelection.swift */; };
 		3446B59522B8201600C785BE /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446B59422B8201600C785BE /* Formatters.swift */; };
 		34DC042522B2DA36001C70DB /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DC042322B2DA35001C70DB /* CanvasView.swift */; };
@@ -113,6 +114,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1391A0632B76C5C60060C88A /* IrishGrover-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IrishGrover-Regular.ttf"; sourceTree = "<group>"; };
 		1A3E28B5AE1CAA606C394F4B /* Pods_Hancock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hancock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3400A23622D543AC00B3EA3A /* ActivitySelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelection.swift; sourceTree = "<group>"; };
 		3446B59422B8201600C785BE /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
@@ -234,6 +236,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1391A0622B76C5BB0060C88A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1391A0632B76C5C60060C88A /* IrishGrover-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		30E36502D6E34303400F401B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +305,7 @@
 		A0A028BA227CA9F500A7C787 /* Hancock */ = {
 			isa = PBXGroup;
 			children = (
+				1391A0622B76C5BB0060C88A /* Fonts */,
 				A0FDC32F24F19B1200748E18 /* FlowerLoading.gif */,
 				A0FDC33024F19B1200748E18 /* RainbowLoadGIF.gif */,
 				A072B02324EDCC4100736A74 /* 2DLetterAnimation */,
@@ -477,6 +488,7 @@
 			files = (
 				A7CBF52624E594150066988F /* U.gif in Resources */,
 				A7CBF51B24E594150066988F /* E.gif in Resources */,
+				1391A0642B76C5C60060C88A /* IrishGrover-Regular.ttf in Resources */,
 				A72C3B8824E5984F001BAE9D /* V.gif in Resources */,
 				A7ACFFDD24E5CAB3004F1E87 /* mLower.gif in Resources */,
 				A7ACFFDA24E5CAB3004F1E87 /* rLower.gif in Resources */,
