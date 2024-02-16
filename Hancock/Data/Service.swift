@@ -121,7 +121,7 @@ class Service {
             sessions.chapters = [chapter.self]
             sessions.date = "2/9/2024"
             sessions.freedraws = ["231ewqqwe32423e"]
-            sessions.imitation.append(imitationStruct.self)
+            sessions.imitation = [(imitationStruct.self)]
             sessions.timeSpentinApp = 9
             
             studented.sessions = [sessions.self]
