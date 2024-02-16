@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ofX-cZ-dmU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qxo-cW-IOi">
     <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,7 +18,7 @@
         <!--Init View Controller-->
         <scene sceneID="w5a-Ln-7pi">
             <objects>
-                <viewController id="jmb-Cg-UZK" customClass="InitViewController" customModule="ABC_Go_AR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="jmb-Cg-UZK" customClass="InitViewController" customModule="ABC_Go_AR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iMc-Wv-XlP">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,6 +89,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                             <constraint firstItem="aJk-j4-2T1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JJv-Jb-Y9k" secondAttribute="leading" symbolic="YES" id="yc4-OU-FAM"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2U2-B3-SYR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2J-AN-RMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1630,6 +1631,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 <state key="normal" title="Logout"/>
                                 <connections>
                                     <action selector="logoutHandler:" destination="UWV-D1-EGe" eventType="touchUpInside" id="VKI-JS-VHy"/>
+                                    <segue destination="Qpl-IW-fnr" kind="show" id="fkg-51-I45"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -4594,7 +4596,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
         <!--NewStart-->
         <scene sceneID="Ntx-HA-TdC">
             <objects>
-                <viewController id="Qxo-cW-IOi" userLabel="NewStart" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Qxo-cW-IOi" userLabel="NewStart" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FzN-4l-xHU">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4618,6 +4620,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                     <color key="baseBackgroundColor" red="0.5490196078431373" green="0.47843137254901957" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="prv-uj-40A" kind="show" id="2cb-7P-HAn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOL-uE-WJR">
                                 <rect key="frame" x="120" y="906" width="785" height="221"/>
@@ -4627,6 +4632,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="TZZ-Ax-F0T" kind="show" animates="NO" id="3P6-Ev-J7w"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOI-M3-5ei">
                                 <rect key="frame" x="422" y="1203" width="188" height="74"/>
@@ -4636,12 +4644,16 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                     <color key="baseForegroundColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="VR5-wb-rSx" kind="show" id="GSe-SA-fbr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P61-Li-Flu"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hG2-eM-Dto"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPZ-LW-i5j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4650,7 +4662,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
         <!--NewLogin-->
         <scene sceneID="4S9-tX-43a">
             <objects>
-                <viewController id="prv-uj-40A" userLabel="NewLogin" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="prv-uj-40A" userLabel="NewLogin" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G1I-BF-KlR">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4663,6 +4675,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qxo-cW-IOi" kind="show" id="DLq-6V-eto"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcH-nd-EP7">
                                 <rect key="frame" x="120" y="906" width="785" height="221"/>
@@ -4672,9 +4687,12 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qpl-IW-fnr" kind="show" id="oHd-L1-VaR"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oto-eD-h9p">
-                                <rect key="frame" x="203" y="-28" width="747" height="319"/>
+                                <rect key="frame" x="411" y="-28" width="539" height="319"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="150"/>
                                 <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -4693,7 +4711,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </menu>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Pin" textAlignment="center" minimumFontSize="17" sizingRule="oversize" translatesAutoresizingMaskIntoConstraints="NO" id="0NS-fd-bX5">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter PIN" textAlignment="center" minimumFontSize="17" sizingRule="oversize" translatesAutoresizingMaskIntoConstraints="NO" id="0NS-fd-bX5">
                                 <rect key="frame" x="120" y="507" width="785" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -4701,6 +4719,13 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="password"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login failed. Please ensure the correct profile is selected and your PIN is correct." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7G5-Lm-q84">
+                                <rect key="frame" x="220" y="742" width="585" height="127"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.94117647059999998" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="98z-va-aZN"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -4710,12 +4735,12 @@ point the device toward a flat surface to see your Augmented Reality story conte
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tuY-lr-zfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5872" y="-184"/>
+            <point key="canvasLocation" x="-5872.265625" y="-184.04099560761347"/>
         </scene>
         <!--LoggedInMenu-->
         <scene sceneID="rcL-Yn-uYj">
             <objects>
-                <viewController id="Qpl-IW-fnr" userLabel="LoggedInMenu" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Qpl-IW-fnr" userLabel="LoggedInMenu" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yx3-rR-jBJ">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4728,6 +4753,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qxo-cW-IOi" kind="show" id="vUP-1E-427"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ah-iD-IEW">
                                 <rect key="frame" x="120" y="284" width="785" height="176"/>
@@ -4737,6 +4765,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="X3x-SE-cjU" kind="show" id="rar-aB-3Hg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wR-or-m8q">
                                 <rect key="frame" x="120" y="514" width="785" height="176"/>
@@ -4746,6 +4777,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="FRP-Da-cCR" kind="show" id="fAG-w4-dGZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John Doe" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9E-6w-GQM">
                                 <rect key="frame" x="328" y="-28" width="622" height="319"/>
@@ -4762,6 +4796,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="FCG-Tl-XAE" kind="show" id="I8D-8R-4N8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fms-AY-rqw">
                                 <rect key="frame" x="120" y="1068" width="785" height="124"/>
@@ -4771,12 +4808,16 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                     <color key="baseBackgroundColor" red="0.94117647058823528" green="0.36470588235294116" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="pDP-a0-Ohr" kind="show" id="qI5-5B-mJ8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1AS-ng-Hhf"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lJM-hw-qxO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BgF-VX-B3w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4785,7 +4826,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
         <!--NewStudent-->
         <scene sceneID="vdp-lc-Mkc">
             <objects>
-                <viewController id="FRP-Da-cCR" userLabel="NewStudent" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="FRP-Da-cCR" userLabel="NewStudent" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3LX-sX-ked">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4798,6 +4839,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qpl-IW-fnr" kind="show" id="GGO-O6-0q7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVF-aa-AQQ">
                                 <rect key="frame" x="117" y="906" width="791" height="221"/>
@@ -4829,11 +4873,19 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please fill out all fields." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yf3-Ya-XXY">
+                                <rect key="frame" x="368" y="843" width="288" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.94117647059999998" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cFF-Py-j8j"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2lA-ZP-806"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qnl-Fr-v5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4842,7 +4894,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
         <!--LoginStudent-->
         <scene sceneID="Obz-PN-ux8">
             <objects>
-                <viewController id="X3x-SE-cjU" userLabel="LoginStudent" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="X3x-SE-cjU" userLabel="LoginStudent" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ko2-BA-p63">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4855,6 +4907,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qpl-IW-fnr" kind="show" id="hbC-fL-Bbe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PpS-zc-dVj">
                                 <rect key="frame" x="120" y="906" width="785" height="221"/>
@@ -4864,6 +4919,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="jmb-Cg-UZK" kind="show" id="A0U-GX-066"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Student" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukX-m6-rfz">
                                 <rect key="frame" x="311" y="-24" width="662" height="445"/>
@@ -4890,6 +4948,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6ys-RW-sNv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xiq-vw-r0j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4898,7 +4957,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
         <!--ConfirmDeleteManagerProfile-->
         <scene sceneID="hlr-h6-AFj">
             <objects>
-                <viewController id="pDP-a0-Ohr" userLabel="ConfirmDeleteManagerProfile" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="pDP-a0-Ohr" userLabel="ConfirmDeleteManagerProfile" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gii-vg-3gB">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4911,6 +4970,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                     <color key="baseBackgroundColor" red="0.94117647059999998" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="EeN-Dr-enY" kind="show" id="PJg-9L-rQL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kmx-gF-OgG">
                                 <rect key="frame" x="120" y="717" width="785" height="306"/>
@@ -4920,6 +4982,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qpl-IW-fnr" kind="show" id="o3z-90-SWH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you sure? Deleting a profile is permanent." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4K-PJ-Owp">
                                 <rect key="frame" x="70" y="79" width="884" height="691"/>
@@ -4933,6 +4998,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="oq1-B3-3DZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hM1-TL-SVg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4941,7 +5007,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
         <!--ManagerDeleted-->
         <scene sceneID="IOb-ZR-vT2">
             <objects>
-                <viewController id="EeN-Dr-enY" userLabel="ManagerDeleted" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="EeN-Dr-enY" userLabel="ManagerDeleted" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bYh-Ia-6a5">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4961,12 +5027,16 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qxo-cW-IOi" kind="show" id="UhV-pp-DlK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dGZ-YM-9TB"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="YQE-2s-3J5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IzU-bp-Qje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4975,7 +5045,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
         <!--ConfirmDeleteStudent-->
         <scene sceneID="8mm-tS-XHK">
             <objects>
-                <viewController id="GSx-JZ-9aB" userLabel="ConfirmDeleteStudent" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="GSx-JZ-9aB" userLabel="ConfirmDeleteStudent" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TJZ-kl-ALi">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4988,6 +5058,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                     <color key="baseBackgroundColor" red="0.94117647059999998" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="qta-NY-88L" kind="show" id="C4J-JC-0Rx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGu-Yc-hBM">
                                 <rect key="frame" x="120" y="717" width="785" height="306"/>
@@ -4997,6 +5070,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qpl-IW-fnr" kind="show" id="Akz-wF-MEJ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you sure? Deleting a profile is permanent." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbW-dy-T3G">
                                 <rect key="frame" x="70" y="79" width="884" height="691"/>
@@ -5010,6 +5086,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Scd-zd-eeC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FbH-5V-RvS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5018,7 +5095,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
         <!--StudentDeleted-->
         <scene sceneID="lb3-b6-KFr">
             <objects>
-                <viewController id="qta-NY-88L" userLabel="StudentDeleted" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="qta-NY-88L" userLabel="StudentDeleted" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="USl-eS-oyk">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5031,6 +5108,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qpl-IW-fnr" kind="show" id="Wg7-iw-7No"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student Profile Deleted" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0p-kb-Cze">
                                 <rect key="frame" x="99" y="115" width="826" height="691"/>
@@ -5044,6 +5124,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hks-6O-Y0N"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YeZ-jW-8PY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5052,7 +5133,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
         <!--ManageStudentSelect-->
         <scene sceneID="dqO-sS-9um">
             <objects>
-                <viewController id="FCG-Tl-XAE" userLabel="ManageStudentSelect" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="FCG-Tl-XAE" userLabel="ManageStudentSelect" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RNx-BS-iqv">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5065,6 +5146,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qpl-IW-fnr" kind="show" id="S3R-wR-fyv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcv-g1-fxT">
                                 <rect key="frame" x="120" y="906" width="785" height="221"/>
@@ -5074,6 +5158,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="DHT-8u-YYR" kind="show" id="JBG-Vt-SeK"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Student" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzt-QA-k7C">
                                 <rect key="frame" x="311" y="-24" width="662" height="445"/>
@@ -5100,6 +5187,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="LfQ-8z-ynH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUy-tl-Kxa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5108,22 +5196,13 @@ point the device toward a flat surface to see your Augmented Reality story conte
         <!--LoggedInMenu-->
         <scene sceneID="mZt-k7-HWI">
             <objects>
-                <viewController id="DHT-8u-YYR" userLabel="LoggedInMenu" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="DHT-8u-YYR" userLabel="LoggedInMenu" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NFT-3c-JYH">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcY-Sf-qca">
-                                <rect key="frame" x="62" y="80" width="329" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign Out" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
-                                    <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student Name" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WT-zu-SCs">
-                                <rect key="frame" x="328" y="-28" width="622" height="319"/>
+                                <rect key="frame" x="399" y="-28" width="551" height="319"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                 <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -5137,26 +5216,42 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                     <color key="baseBackgroundColor" red="0.94117647059999998" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="GSx-JZ-9aB" kind="show" id="qEZ-pm-Cro"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VaV-l9-qiH">
                                 <rect key="frame" x="120" y="299" width="785" height="726"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8s2-Uf-d4v">
+                                <rect key="frame" x="65" y="80" width="241" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Back" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
+                                    <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qpl-IW-fnr" kind="show" id="INO-l4-JHW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DpN-yP-mTb"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Zc5-Zs-Rbj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXl-3K-fAv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3823" y="457"/>
+            <point key="canvasLocation" x="-3823.2421874999995" y="456.80819912152265"/>
         </scene>
-        <!--NewStudent-->
+        <!--NewManager-->
         <scene sceneID="PSI-CP-PI5">
             <objects>
-                <viewController id="TZZ-Ax-F0T" userLabel="NewStudent" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="TZZ-Ax-F0T" userLabel="NewManager" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZxH-Ex-RbN">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5169,6 +5264,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qxo-cW-IOi" kind="show" id="ZYk-ED-3jb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXG-Bb-uAj">
                                 <rect key="frame" x="117" y="1046" width="791" height="221"/>
@@ -5178,6 +5276,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="60"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qpl-IW-fnr" kind="show" id="7Pi-Zb-YAo"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Manager" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Av0-uY-fwe">
                                 <rect key="frame" x="343" y="-3" width="629" height="445"/>
@@ -5208,20 +5309,28 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="password"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please fill out all fields." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izz-0p-eRN">
+                                <rect key="frame" x="368" y="971" width="288" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.94117647059999998" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AsP-PF-IoM"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dQH-RY-bp8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Nr-RB-5MU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5872" y="1116"/>
+            <point key="canvasLocation" x="-5872.265625" y="1115.6661786237189"/>
         </scene>
         <!--Credits-->
         <scene sceneID="IBf-dF-ere">
             <objects>
-                <viewController id="VR5-wb-rSx" userLabel="Credits" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="VR5-wb-rSx" userLabel="Credits" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HID-ui-fnQ">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5234,6 +5343,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qxo-cW-IOi" kind="show" id="n4v-FU-F7w"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credits" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lR5-vU-G1T">
                                 <rect key="frame" x="343" y="-3" width="629" height="269"/>
@@ -5569,6 +5681,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="nwP-0i-SLw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5e-3e-60J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5576,9 +5689,12 @@ point the device toward a flat surface to see your Augmented Reality story conte
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="fkg-51-I45"/>
+        <segue reference="vUP-1E-427"/>
         <segue reference="aoi-rC-XX7"/>
         <segue reference="j5d-bO-yS9"/>
         <segue reference="nzC-1y-dQf"/>
+        <segue reference="A0U-GX-066"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1024.png" width="1024" height="1024"/>
@@ -5660,16 +5776,16 @@ point the device toward a flat surface to see your Augmented Reality story conte
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
