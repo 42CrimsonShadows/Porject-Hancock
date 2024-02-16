@@ -81,7 +81,86 @@ struct SingleImageReport: Codable {
     var description: String
 }
 
+//Chapters with contained letters
+struct chapter: Codable {
+    var chap1 = ["a", "b", "c"]
+    var chap2 = ["d", "e", "f"]
+}
 
+//Different rows to append to overall storage
+
+struct ChapterStruct: Codable {
+    var info: InfoStruct  //info struct goes here
+    var activites: [LetterStruct] = []
+}
+
+struct LetterStruct: Codable {
+    var attempts: [LetterAttemptStruct] = []
+    var bestAcc = 0
+    var averageAcc = 0
+    var averageTime = 0
+}
+
+struct ImitationStruct: Codable{
+    var letter = ""
+    var image = ""
+}
+
+struct LetterAttemptStruct: Codable {
+    var accuracy = 0
+    var pointsEarned = 0
+    var pointsPossible = 0
+    var score = 0
+    var timeSpent = 0
+}
+
+struct AccuracyStruct: Codable{
+    var letter = ""
+    var accuracy = ""
+}
+
+struct SessionStruct: Codable {
+    var bestAreas: [AccuracyStruct] = [
+        //best areas struct here
+    ] //Append all letters and accuracy value if above certain value (should be between 0 and 80 based on master, maybe 60?) //Old system just finds best letter
+    var needsWork: [AccuracyStruct] = [
+        //needs work struct here
+    ] //Append all letters and accuracy value if below certain value (should be between 0 and bestArea value, maybe 20?)  //Old system just finds worst letter
+    var timeSpentinApp = 7000
+    //Get currdate
+    var date = "datetime"
+
+    var chapters: [ChapterStruct] = [
+        //Chapter structs here
+    ]
+    var freedraws: [String] = [] //image strings here
+    
+    var imitation: [ImitationStruct] = []
+}
+
+struct InfoStruct: Codable {
+    var chapterTimeSpend = 0
+    var bestLetter : AccuracyStruct//letter+acc
+    var worstLetter : AccuracyStruct//letter+acc
+    var chatpterBestAcc = 0
+    var chapterAvgAcc = 0
+}
+
+struct StudentStruct: Codable {
+    var masters: [AccuracyStruct] = [
+        //master letter struct here
+    ]
+    var sessions: [SessionStruct] = [
+        //sessionStruct here
+    ]
+}
+
+struct TeacherStruct: Codable {
+    var pin = "0000"
+    var students: [StudentStruct] = [
+        //sutdent struct here
+    ]
+}
 
 //MARK: --Progress reports
 // I think this might be done on the website.

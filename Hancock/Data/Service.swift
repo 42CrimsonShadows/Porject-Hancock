@@ -65,6 +65,7 @@ class Service {
         }
     }
     
+    // Login funcation
     static func login(username:String, password:String,_ completionHandler: @escaping (_ isSuccess:Bool)-> Void) {
         // escaping the completionHandler allows the closure to be called in SignInViewController after this function has completed
         let encoder = JSONEncoder()
@@ -72,6 +73,78 @@ class Service {
         let user = Credentials(username:username, password:password)
         //let test = Student(type: "Student", firstName: "Student1", lastName: "testing", email: "email", username: "Student1", password: "Test")
         do{
+           
+            var teacher: TeacherStruct = TeacherStruct()
+            var studented: StudentStruct = StudentStruct()
+            var masters: AccuracyStruct = AccuracyStruct()
+            var sessions: SessionStruct = SessionStruct()
+            var bestAreas: AccuracyStruct = AccuracyStruct()
+            var needsWork: AccuracyStruct = AccuracyStruct()
+            var iStruct: InfoStruct = InfoStruct(bestLetter: bestAreas, worstLetter: needsWork)
+            var lStruct: LetterStruct = LetterStruct()
+            var lAtemptStruct: LetterAttemptStruct = LetterAttemptStruct()
+            var chapter: ChapterStruct = ChapterStruct(info: iStruct)
+            var imitationStruct: ImitationStruct = ImitationStruct()
+            
+            masters.letter = "a"
+            masters.accuracy = "30%"
+            
+            bestAreas.accuracy = "4%"
+            bestAreas.letter = "c"
+            
+            needsWork.accuracy = "1%"
+            needsWork.letter = "p"
+            
+            iStruct.chapterAvgAcc = 34
+            iStruct.chapterTimeSpend = 7
+            iStruct.chatpterBestAcc = 3
+            
+            lAtemptStruct.accuracy = 42
+            lAtemptStruct.pointsEarned = 2
+            lAtemptStruct.pointsPossible = 6
+            lAtemptStruct.score = 43
+            lAtemptStruct.timeSpent = 5
+            
+            lStruct.averageAcc = 6
+            lStruct.averageTime = 35
+            lStruct.bestAcc = 3
+            lStruct.attempts = [lAtemptStruct.self]
+
+            imitationStruct.image = "awddawdawadwdwwww"
+            imitationStruct.letter = "freedraw"
+
+            chapter.info = iStruct.self
+            chapter.activites = [lStruct.self]
+            
+            sessions.bestAreas = [bestAreas.self]
+            sessions.needsWork = [needsWork.self]
+            sessions.chapters = [chapter.self]
+            sessions.date = "2/9/2024"
+            sessions.freedraws = ["231ewqqwe32423e"]
+            sessions.imitation = [(imitationStruct.self)]
+            sessions.timeSpentinApp = 9
+            
+            studented.sessions = [sessions.self]
+            studented.masters = [masters.self]
+            
+            teacher.pin = "1234"
+            teacher.students = [studented.self]
+            
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = .prettyPrinted
+            
+            let teacherData = try encoder.encode(teacher)
+            print(teacherData)
+            
+            let defaults = UserDefaults.standard
+            defaults.set(teacherData, forKey: "teacher")
+            
+            let deencoder = JSONDecoder()
+            let deCodeData = try deencoder.decode(TeacherStruct.self, from: defaults.data(forKey: "teacher")!)
+                        
+            print(deCodeData)
+            print(deCodeData.students[0].sessions[0].chapters[0].activites[0].attempts[0].score)
+            
             let endpoint = "https://abcgoapp.org/api/users/authenticate"
             let data = try encoder.encode(user)
             guard let url = URL(string: endpoint) else {
@@ -114,64 +187,52 @@ class Service {
         }
     }
     
+    //Upload line accuracy and time to complete
     static func updateCharacterData(username: String, password: String, letter: String, score: Int32, timeToComplete: Int32, totalPointsEarned: Int32, totalPointsPossible: Int32){
+        
+
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         let test = SingleActivityReport(username: username, password: password, letter: letter, score: score, timeToComplete: timeToComplete, totalPointsEarned: totalPointsEarned, totalPointsPossible: totalPointsPossible)
-        do{
-            let endpoint = "https://abcgoapp.org/api/users/Data"
+        
+        do
+        {
+            let deencoder = JSONDecoder()
             let data = try encoder.encode(test)
-            guard let url = URL(string: endpoint) else {
-                print("Could not set the URL, contact the developer")
-
-                return
-                
-            }
-                //print(String(data: data, encoding: .utf8)!)
-            var request = URLRequest(url: url)
-            request.setValue("application/json", forHTTPHeaderField: "content-type")
-            request.httpMethod = "POST"
-            request.httpBody = data
+            print(test.password)
+            let defaults = UserDefaults.standard
+            defaults.set(data, forKey: "datatest")
+            
+            let isTestMode = defaults.data(forKey: "datatest")
+            let characterJSON = try deencoder.decode(SingleActivityReport.self, from: isTestMode!)
+            let characterString = String(decoding: isTestMode!, as: UTF8.self)
+            
+            print("Letter was " + characterJSON.letter + " from the json " + characterString)
         
-            URLSession.shared.dataTask(with: request) { (data, response, error) in
-                print(response)
-                if let error = error {
-                    //Ping(text: error.localizedDescription, style: .danger).show()
-                    print(error)
-                }
-            }.resume()
-        
-        } catch {
+        } 
+        catch {
             print("Could not encode")
         }
     }
     
+    //Function to upload imgs
     static func updateImageData(username: String, password: String, base64: String, title: String, description: String){
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         let test = SingleImageReport(username: username, password: password, base64: base64, title: title, description: description)
-        do{
-            let endpoint = "https://abcgoapp.org/api/users/Data"
-            let data = try encoder.encode(test)
-            guard let url = URL(string: endpoint) else {
-                print("Could not set the URL, contact the developer")
+        do
+        {
+            let deencoder = JSONDecoder()
+            let defaults = UserDefaults.standard
 
-                return
-                
-            }
-            var request = URLRequest(url: url)
-            request.setValue("application/json", forHTTPHeaderField: "content-type")
-            request.httpMethod = "PUT"
-            request.httpBody = data
-        
-            URLSession.shared.dataTask(with: request) { (data, response, error) in
-                print(response)
-                if let error = error {
-                    print(error)
-                }
-            }.resume()
-        
-        } catch {
+            var deCodeData = try deencoder.decode(TeacherStruct.self, from: defaults.data(forKey: "teacher")!)
+            
+            deCodeData.students[0].sessions[0].freedraws.append(base64)
+            
+            print(deCodeData)
+            
+        }
+        catch {
             print("Could not encode")
         }
     }
