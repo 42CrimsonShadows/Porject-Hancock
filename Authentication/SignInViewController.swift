@@ -47,7 +47,6 @@ class SignInViewController: UIViewController {
         // Call login, set success, and call segue on main thread
         
         
-        //Jayden - self.success = true is a work around to signing old is isSuccess
         Service.login(username:username, password:password) {(isSuccess) in self.success = true
             DispatchQueue.main.async{
                 self.doSegue(username: username, password:password)
