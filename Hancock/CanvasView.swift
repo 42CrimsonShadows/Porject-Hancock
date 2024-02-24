@@ -149,6 +149,14 @@ class CanvasView: UIView {
     
     // MARK: Drawing
     
+    func drawRedDot(at point: CGPoint) {
+        let dotPath = UIBezierPath(ovalIn: CGRect(x: point.x - 5, y: point.y - 5, width: 15, height: 15))
+        let dotLayer = CAShapeLayer()
+        dotLayer.path = dotPath.cgPath
+        dotLayer.fillColor = UIColor.red.cgColor
+        self.layer.addSublayer(dotLayer)
+    }
+    
     override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()!
         setNeedsDisplay()

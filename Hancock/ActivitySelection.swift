@@ -5,6 +5,7 @@ import UIKit
 
 public var currentStep = [[CGPoint]]()
 public var activityPoints = [[CGFloat(0),CGFloat(0)]]
+public var barrierPoints = [[CGFloat(0),CGFloat(0)]]
 public var letterUnderlay = UIImageView()
 
 
@@ -330,6 +331,21 @@ public class ActivitySelection {
                           [CGFloat(0.79),CGFloat(0.35)], //fifth MidPoint1 x, y
                           [CGFloat(0.79),CGFloat(0.6)], //fifth MidPoint2 x, y
                           [CGFloat(0.79),CGFloat(0.12)]] //sixth point
+        
+        barrierPoints = [[CGFloat(0.07),CGFloat(0.12)], //first point x, y
+                         [CGFloat(0.21),CGFloat(0.35)], //first MidPoint1 x, y
+                         [CGFloat(0.21),CGFloat(0.6)], //first MidPoint2 x, y
+                         [CGFloat(0.21),CGFloat(0.86)], //second point x, y
+                         //Line #2
+                         [CGFloat(0.2),CGFloat(0.12)], //fifth point
+                         [CGFloat(0.39),CGFloat(0.35)], //fifth MidPoint1 x, y
+                         [CGFloat(0.59),CGFloat(0.6)], //fifth MidPoint2 x, y
+                         [CGFloat(0.79),CGFloat(0.86)], //sixth point
+                         //Line #3
+                         [CGFloat(0.79),CGFloat(0.86)], //fifth point
+                         [CGFloat(0.79),CGFloat(0.35)], //fifth MidPoint1 x, y
+                         [CGFloat(0.79),CGFloat(0.6)], //fifth MidPoint2 x, y
+                         [CGFloat(0.79),CGFloat(0.12)]] //sixth point
         
         let UnderlayN = UIImage(named: "art.scnassets/LetterImages/N.png")
         letterUnderlay = UIImageView(image: UnderlayN)

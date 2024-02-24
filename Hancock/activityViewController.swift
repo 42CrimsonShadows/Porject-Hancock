@@ -42,6 +42,11 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
     public var coinsPossible: Int32 = 0
     private var canDraw = true
     
+    // Properties for tracking off-path touches
+    private var isCurrentlyOffPath = false
+    private var offPathCount = 0
+    private var offPathLocations = [CGPoint]()
+    
     private let reticleView: ReticleView = {
         let view = ReticleView(frame: CGRect.null)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -266,9 +271,9 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       //AppDelegate.AppUtility.lockOrientation(.landscape, andRotateTo: .landscapeRight)
+        //AppDelegate.AppUtility.lockOrientation(.landscape, andRotateTo: .landscapeRight)
         canvasView.addSubview(reticleView)
-                               
+        
         
         //to toggle on on start, uncomment this line
         //toggleDebugDrawing(debugButton)
@@ -289,9 +294,9 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
         setupMiddleDots()
         
         //load animations
-       // antChillImage.loadGif(name: "Anthony-Chillaxing") //can be set to different images for different chapters
-      //  grassImage.loadGif(name: "Grass-Blowing")
-               
+        // antChillImage.loadGif(name: "Anthony-Chillaxing") //can be set to different images for different chapters
+        //  grassImage.loadGif(name: "Grass-Blowing")
+        
         antFace.isHidden = true
         
         //antChillImage.contentMode = .scaleAspectFit
@@ -321,7 +326,7 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
             })
         }
         
-            
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
             //play the pulsate animation for the first dot
             self.canvasView.greenDot?.pulsate(duration: 0.6)
@@ -333,7 +338,7 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
         })
     }
     override func viewWillDisappear(_ animated: Bool) {
-       // AppDelegate.AppUtility.lockOrientation(.landscape, andRotateTo: .landscapeRight)
+        // AppDelegate.AppUtility.lockOrientation(.landscape, andRotateTo: .landscapeRight)
     }
     
     
@@ -350,6 +355,8 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
         canvasView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         canvasView.widthAnchor.constraint(equalToConstant: 600).isActive = true
         canvasView.heightAnchor.constraint(equalToConstant: 900).isActive = true
+        
+        view.layoutIfNeeded()
     }
     
     private func setupUnderlay() {
@@ -359,6 +366,13 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
         letterUnderlay.centerYAnchor.constraint(equalTo: canvasView.centerYAnchor).isActive = true
         letterUnderlay.widthAnchor.constraint(equalToConstant: 600).isActive = true
         letterUnderlay.heightAnchor.constraint(equalToConstant: 900).isActive = true
+
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        print("Canvas Center: \(canvasView.center)")
+        print("Underlay Center: \(letterUnderlay.center)")
     }
     
     //    public func setupGreenlines() {
@@ -403,8 +417,8 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
         var orangeDot5: CGPoint?
         var purpleDot6: CGPoint?
         var yellowDot7: CGPoint?
-//        var PinkDot8: CGPoint?
-//        var WhiteDot9: CGPoint?
+        //        var PinkDot8: CGPoint?
+        //        var WhiteDot9: CGPoint?
         var blueDot8: CGPoint?
         var orangeDot9: CGPoint?
         var purpleDot10: CGPoint?
@@ -431,9 +445,9 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
                         yellowDot11 = CGPoint(x: 600 * activityPoints[16][0], y: 900 * activityPoints[16][1])
                         purpleDot10 = CGPoint(x: 600 * activityPoints[19][0], y: 900 * activityPoints[19][1])
                         
-
+                        
                     }
-
+                    
                 }
             }
         }
@@ -492,22 +506,22 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
         canvasView.yellowDot = YellowDotView
         
         //Set up Pink dot
-//        view.insertSubview(PinkDotView, belowSubview: canvasView)
-//        PinkDotView.centerXAnchor.constraint(equalTo: canvasView.leftAnchor, constant: PinkDot8?.x ?? 0).isActive = true
-//        PinkDotView.centerYAnchor.constraint(equalTo: canvasView.topAnchor, constant: PinkDot8?.y ?? 0).isActive = true
-//        PinkDotView.widthAnchor.constraint(equalToConstant: 50).isActive = true
-//        PinkDotView.heightAnchor.constraint(equalToConstant: 50).isActive = true
-//        PinkDotView.isHidden = true
-//        canvasView.pinkDot = PinkDotView
+        //        view.insertSubview(PinkDotView, belowSubview: canvasView)
+        //        PinkDotView.centerXAnchor.constraint(equalTo: canvasView.leftAnchor, constant: PinkDot8?.x ?? 0).isActive = true
+        //        PinkDotView.centerYAnchor.constraint(equalTo: canvasView.topAnchor, constant: PinkDot8?.y ?? 0).isActive = true
+        //        PinkDotView.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        //        PinkDotView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        //        PinkDotView.isHidden = true
+        //        canvasView.pinkDot = PinkDotView
         
         //set up white dot
-//        view.insertSubview(WhiteDotView, belowSubview: canvasView)
-//        WhiteDotView.centerXAnchor.constraint(equalTo: canvasView.leftAnchor, constant: WhiteDot9?.x ?? 0).isActive = true
-//        WhiteDotView.centerYAnchor.constraint(equalTo: canvasView.topAnchor, constant: WhiteDot9?.y ?? 0).isActive = true
-//        WhiteDotView.widthAnchor.constraint(equalToConstant: 50).isActive = true
-//        WhiteDotView.heightAnchor.constraint(equalToConstant: 50).isActive = true
-//        WhiteDotView.isHidden = true
-//        canvasView.whiteDot = WhiteDotView
+        //        view.insertSubview(WhiteDotView, belowSubview: canvasView)
+        //        WhiteDotView.centerXAnchor.constraint(equalTo: canvasView.leftAnchor, constant: WhiteDot9?.x ?? 0).isActive = true
+        //        WhiteDotView.centerYAnchor.constraint(equalTo: canvasView.topAnchor, constant: WhiteDot9?.y ?? 0).isActive = true
+        //        WhiteDotView.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        //        WhiteDotView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        //        WhiteDotView.isHidden = true
+        //        canvasView.whiteDot = WhiteDotView
         
         //Set up BLUE2 dot
         view.insertSubview(Blue2DotView, belowSubview: canvasView)
@@ -576,7 +590,7 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
                 if coinArraySize > 12 {
                     coin7 = CGPoint(x: 600 * activityPoints[13][0], y: 900 * activityPoints[13][1])
                     coin8 = CGPoint(x: 600 * activityPoints[14][0], y: 900 * activityPoints[14][1])
-                    //if there is more than three lines
+                    //if there is more than four lines
                     if coinArraySize > 16 {
                         coin9 = CGPoint(x: 600 * activityPoints[17][0], y: 900 * activityPoints[17][1])
                         coin10 = CGPoint(x: 600 * activityPoints[18][0], y: 900 * activityPoints[18][1])
@@ -692,6 +706,7 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
         self.dismiss(animated: false, completion: nil)
     }
     
+    //MARK: Touches
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if(canDraw)
         {
@@ -736,7 +751,7 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
                 
                 //each time we move the touch...
                 touches.forEach {(touch) in
-                    
+                                       
                     //check to see if we interact with coins
                     if canvasView.Line1 == true {
                         if canvasView.CGPointDistance(from: touch.location(in: canvasView), to: middlePoint1) < 25 {
@@ -831,7 +846,7 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
                             if canvasView.coin2Collected == false {
                                 canvasView.coin2Collected = true
                                 canvasView.blackDot8?.isHidden = true
-
+                                
                                 totalCoins += 1
                                 letterCoins += 1
                                 setupCoinLabel()
@@ -855,7 +870,7 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
                             if canvasView.coin2Collected == false {
                                 canvasView.coin2Collected = true
                                 canvasView.blackDot10?.isHidden = true
-
+                                
                                 totalCoins += 1
                                 letterCoins += 1
                                 setupCoinLabel()
@@ -863,6 +878,9 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
                             }
                         }
                     }
+                    
+                    // Check if touch is off path
+                    checkAndTrackOffPath(touch: touch)
                 }
             }
         }
@@ -905,9 +923,9 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
                         //dismiss activity view
                         DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
                             self.dismiss(animated: false, completion: nil)
-                            })
                         })
-                    }
+                    })
+                }
                 
                 //removing coins from total if the line was not completed
                 guard let lastPoint = touches.first?.location(in: canvasView) else { return }
@@ -945,6 +963,73 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
     
     override func touchesEstimatedPropertiesUpdated(_ touches: Set<UITouch>) {
         canvasView.updateEstimatedPropertiesForTouches(touches)
+    }
+    
+    // Checks and tracks off-path touches
+//    private func checkAndTrackOffPath(touch: UITouch) {
+//        let touchPoint = touch.location(in: canvasView)
+//        let threshold: CGFloat = 25 // Adjust this threshold as needed
+//
+//        var isOnPath = false
+//
+//        // Loop through segments
+//        for i in 0..<activityPoints.count-1 {
+//            let start = CGPoint(x: activityPoints[i][0] * canvasView.bounds.maxX,
+//                                y: activityPoints[i][1] * canvasView.bounds.maxY)
+//            let end = CGPoint(x: activityPoints[i+1][0] * canvasView.bounds.maxX,
+//                              y: activityPoints[i+1][1] * canvasView.bounds.maxY)
+//
+//            if touchPoint.distanceToSegment(start: start, end: end) < threshold {
+//                isOnPath = true
+//                break
+//            }
+//        }
+//
+//        if isOnPath {
+//            // If the touch is back on the path, reset the off-path flag
+//            isCurrentlyOffPath = false
+//        } else {
+//            // If the touch is off-path and it's the first time off-path, count it
+//            if !isCurrentlyOffPath {
+//                offPathCount += 1
+//                offPathLocations.append(touchPoint)
+//                isCurrentlyOffPath = true
+//                print("Off path")
+//                
+//                
+//            }
+//            
+//            canvasView.drawRedDot(at: touchPoint)
+//        }
+//    }
+    
+    
+
+    
+    // Image underlay version Im sorry for this code 🙁
+    private func checkAndTrackOffPath(touch: UITouch) {
+        let touchPoint = touch.location(in: canvasView)
+        let alphaThreshold: CGFloat = 0.01 // Adjust this threshold as needed
+
+        if let underlayImage = letterUnderlay.image {
+            let pointMod = CGPoint(x: touchPoint.x * 1.25, y: touchPoint.y * 1.1225)
+            
+            let imagePoint = canvasView.convert(pointMod, to: letterUnderlay)
+            
+            let alphaValue = underlayImage.alphaValueAt(point: imagePoint)
+            
+            if alphaValue < alphaThreshold {
+                if !isCurrentlyOffPath {
+                    offPathCount += 1
+                    offPathLocations.append(touchPoint)
+                    isCurrentlyOffPath = true
+                    canvasView.drawRedDot(at: touchPoint)
+                    print("Off path")
+                }                
+            } else {
+                isCurrentlyOffPath = false
+            }
+        }
     }
     
     //MARK: Actions
@@ -1213,4 +1298,39 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
     
  
 
+}
+
+extension CGPoint {
+    // Calculate the minimum distance from this point to a line segment.
+    func distanceToSegment(start: CGPoint, end: CGPoint) -> CGFloat {
+        let dx = end.x - start.x
+        let dy = end.y - start.y
+        let lengthSquared = dx*dx + dy*dy
+        var t = ((self.x - start.x) * dx + (self.y - start.y) * dy) / lengthSquared
+        t = max(0, min(1, t))
+        let closestPoint = CGPoint(x: start.x + t * dx, y: start.y + t * dy)
+        return self.distance(to: closestPoint)
+    }
+
+    // Calculate the Euclidean distance between two points.
+    func distance(to point: CGPoint) -> CGFloat {
+        let dx = self.x - point.x
+        let dy = self.y - point.y
+        return sqrt(dx*dx + dy*dy)
+    }
+}
+
+extension UIImage {
+    func alphaValueAt(point: CGPoint) -> CGFloat {
+        guard let cgImage = self.cgImage, let dataProvider = cgImage.dataProvider else { return 0 }
+        let pixelData = dataProvider.data
+        let data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
+        
+        let x = Int(point.x)
+        let y = Int(point.y)
+
+        let pixelIndex = (cgImage.width * y + x) * 4 // Assuming a standard RGBA image
+        let alpha = data[pixelIndex + 3] // Alpha value of the pixel
+        return CGFloat(alpha) / 255.0
+    }
 }
