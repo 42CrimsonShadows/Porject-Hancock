@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1391A0642B76C5C60060C88A /* IrishGrover-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1391A0632B76C5C60060C88A /* IrishGrover-Regular.ttf */; };
+		1391A0642B76C5C60060C88A /* IrishGrover.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1391A0632B76C5C60060C88A /* IrishGrover.ttf */; };
 		3400A23722D543AD00B3EA3A /* ActivitySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400A23622D543AC00B3EA3A /* ActivitySelection.swift */; };
 		3446B59522B8201600C785BE /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446B59422B8201600C785BE /* Formatters.swift */; };
 		34DC042522B2DA36001C70DB /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DC042322B2DA35001C70DB /* CanvasView.swift */; };
 		34DC042622B2DA36001C70DB /* ReticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DC042422B2DA36001C70DB /* ReticleView.swift */; };
 		34DC9AB42433E3A40039D726 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DC9AB32433E3A40039D726 /* Service.swift */; };
 		34DC9AB92433FFC20039D726 /* Data.Bodies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DC9AB82433FFC20039D726 /* Data.Bodies.swift */; };
+		51F46DD52B926E1A001A891D /* ManagerSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F46DD42B926E1A001A891D /* ManagerSignInViewController.swift */; };
+		51F46DD72B926E70001A891D /* ManagerRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F46DD62B926E70001A891D /* ManagerRegisterViewController.swift */; };
+		51F46DD92B926EC7001A891D /* StudentSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F46DD82B926EC7001A891D /* StudentSignInViewController.swift */; };
+		51F46DDB2B926EE1001A891D /* StudentRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F46DDA2B926EE1001A891D /* StudentRegisterViewController.swift */; };
+		51F46DDD2B927521001A891D /* StudentMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F46DDC2B927521001A891D /* StudentMenuViewController.swift */; };
+		51F46DDF2B92753D001A891D /* ManagerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F46DDE2B92753D001A891D /* ManagerMenuViewController.swift */; };
+		51F46DE12B92774A001A891D /* StartMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F46DE02B92774A001A891D /* StartMenuViewController.swift */; };
 		A0030811251EA40D00DF0171 /* qLower.gif in Resources */ = {isa = PBXBuildFile; fileRef = A0030810251EA40D00DF0171 /* qLower.gif */; };
 		A004383822CBEEE700E32F21 /* ChapterSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A004383722CBEEE700E32F21 /* ChapterSelection.swift */; };
 		A00678EC22AEEB5B00846A2D /* line.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00678EB22AEEB5B00846A2D /* line.swift */; };
@@ -114,7 +121,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1391A0632B76C5C60060C88A /* IrishGrover-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IrishGrover-Regular.ttf"; sourceTree = "<group>"; };
+		1391A0632B76C5C60060C88A /* IrishGrover.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IrishGrover.ttf; sourceTree = "<group>"; };
 		1A3E28B5AE1CAA606C394F4B /* Pods_Hancock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hancock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3400A23622D543AC00B3EA3A /* ActivitySelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelection.swift; sourceTree = "<group>"; };
 		3446B59422B8201600C785BE /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
@@ -122,6 +129,13 @@
 		34DC042422B2DA36001C70DB /* ReticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReticleView.swift; sourceTree = "<group>"; };
 		34DC9AB32433E3A40039D726 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		34DC9AB82433FFC20039D726 /* Data.Bodies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.Bodies.swift; sourceTree = "<group>"; };
+		51F46DD42B926E1A001A891D /* ManagerSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerSignInViewController.swift; path = Authentication/ManagerSignInViewController.swift; sourceTree = SOURCE_ROOT; };
+		51F46DD62B926E70001A891D /* ManagerRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerRegisterViewController.swift; path = Authentication/ManagerRegisterViewController.swift; sourceTree = SOURCE_ROOT; };
+		51F46DD82B926EC7001A891D /* StudentSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSignInViewController.swift; sourceTree = "<group>"; };
+		51F46DDA2B926EE1001A891D /* StudentRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRegisterViewController.swift; sourceTree = "<group>"; };
+		51F46DDC2B927521001A891D /* StudentMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMenuViewController.swift; sourceTree = "<group>"; };
+		51F46DDE2B92753D001A891D /* ManagerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerMenuViewController.swift; sourceTree = "<group>"; };
+		51F46DE02B92774A001A891D /* StartMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuViewController.swift; sourceTree = "<group>"; };
 		7F29B875A1DB16B48327DFAC /* Pods-Hancock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hancock.release.xcconfig"; path = "Target Support Files/Pods-Hancock/Pods-Hancock.release.xcconfig"; sourceTree = "<group>"; };
 		A0030810251EA40D00DF0171 /* qLower.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = qLower.gif; sourceTree = "<group>"; };
 		A004383722CBEEE700E32F21 /* ChapterSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterSelection.swift; sourceTree = "<group>"; };
@@ -239,7 +253,7 @@
 		1391A0622B76C5BB0060C88A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				1391A0632B76C5C60060C88A /* IrishGrover-Regular.ttf */,
+				1391A0632B76C5C60060C88A /* IrishGrover.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -268,6 +282,20 @@
 				7F29B875A1DB16B48327DFAC /* Pods-Hancock.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		51F46DD32B926DDC001A891D /* UpdatedAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				51F46DD42B926E1A001A891D /* ManagerSignInViewController.swift */,
+				51F46DD62B926E70001A891D /* ManagerRegisterViewController.swift */,
+				51F46DD82B926EC7001A891D /* StudentSignInViewController.swift */,
+				51F46DDA2B926EE1001A891D /* StudentRegisterViewController.swift */,
+				51F46DDC2B927521001A891D /* StudentMenuViewController.swift */,
+				51F46DDE2B92753D001A891D /* ManagerMenuViewController.swift */,
+				51F46DE02B92774A001A891D /* StartMenuViewController.swift */,
+			);
+			path = UpdatedAuthentication;
 			sourceTree = "<group>";
 		};
 		A072B02324EDCC4100736A74 /* 2DLetterAnimation */ = {
@@ -416,6 +444,7 @@
 		C939B55A229EF96200D15A2B /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				51F46DD32B926DDC001A891D /* UpdatedAuthentication */,
 				A08A2D5322C02AA40076B814 /* Anthony-Chillaxing.gif */,
 				C939B55D229F302500D15A2B /* SignInViewController.swift */,
 				C939B55F229F305900D15A2B /* RegisterViewController.swift */,
@@ -488,7 +517,7 @@
 			files = (
 				A7CBF52624E594150066988F /* U.gif in Resources */,
 				A7CBF51B24E594150066988F /* E.gif in Resources */,
-				1391A0642B76C5C60060C88A /* IrishGrover-Regular.ttf in Resources */,
+				1391A0642B76C5C60060C88A /* IrishGrover.ttf in Resources */,
 				A72C3B8824E5984F001BAE9D /* V.gif in Resources */,
 				A7ACFFDD24E5CAB3004F1E87 /* mLower.gif in Resources */,
 				A7ACFFDA24E5CAB3004F1E87 /* rLower.gif in Resources */,
@@ -594,9 +623,11 @@
 				A0E9B7B623EBA70200929F4A /* PlayWalk.swift in Sources */,
 				34DC9AB92433FFC20039D726 /* Data.Bodies.swift in Sources */,
 				34DC042622B2DA36001C70DB /* ReticleView.swift in Sources */,
+				51F46DE12B92774A001A891D /* StartMenuViewController.swift in Sources */,
 				A0A028C0227CA9F500A7C787 /* ViewController.swift in Sources */,
 				34DC042522B2DA36001C70DB /* CanvasView.swift in Sources */,
 				A713540624ACC7CE00E6D656 /* FreeWriteViewController.swift in Sources */,
+				51F46DDD2B927521001A891D /* StudentMenuViewController.swift in Sources */,
 				A0A028BC227CA9F500A7C787 /* AppDelegate.swift in Sources */,
 				A03BF89224EB3E6C00962960 /* AssessmentSelection.swift in Sources */,
 				A076E3AD2506CF9E00DE0F47 /* PracticeMainMeniViewController.swift in Sources */,
@@ -607,12 +638,16 @@
 				3400A23722D543AD00B3EA3A /* ActivitySelection.swift in Sources */,
 				A05D40C72505BE930089CDC7 /* LetterMatchingb&pViewController.swift in Sources */,
 				3446B59522B8201600C785BE /* Formatters.swift in Sources */,
+				51F46DDF2B92753D001A891D /* ManagerMenuViewController.swift in Sources */,
+				51F46DD52B926E1A001A891D /* ManagerSignInViewController.swift in Sources */,
 				A05D40C92505C3730089CDC7 /* LetterMatchingPGQViewController.swift in Sources */,
 				A00E7B5A22CA8D25009BA733 /* UIViewExtension.swift in Sources */,
+				51F46DDB2B926EE1001A891D /* StudentRegisterViewController.swift in Sources */,
 				A004383822CBEEE700E32F21 /* ChapterSelection.swift in Sources */,
 				C99A9BE122A058A700554D9A /* HomeViewController.swift in Sources */,
 				C939B55E229F302500D15A2B /* SignInViewController.swift in Sources */,
 				A00678EC22AEEB5B00846A2D /* line.swift in Sources */,
+				51F46DD72B926E70001A891D /* ManagerRegisterViewController.swift in Sources */,
 				A78A6C5324A0F7E200F32D3D /* LevelTwoMenuViewController.swift in Sources */,
 				C99A9BE322A06C0700554D9A /* InitViewController.swift in Sources */,
 				A07974B322861DB000606889 /* StudentTableViewController.swift in Sources */,
@@ -621,6 +656,7 @@
 				A02BCC3B22A86EA70059E3D8 /* activityViewController.swift in Sources */,
 				A7E62789249AAC560031126F /* LevelTwoActivityViewController.swift in Sources */,
 				A07974B12285FC4A00606889 /* StudentsTableViewCell.swift in Sources */,
+				51F46DD92B926EC7001A891D /* StudentSignInViewController.swift in Sources */,
 				34DC9AB42433E3A40039D726 /* Service.swift in Sources */,
 				A08A2D4122BEC4990076B814 /* Swift_Gif.swift in Sources */,
 				A0E9B7BA23EBAAE500929F4A /* LetterComplete.swift in Sources */,

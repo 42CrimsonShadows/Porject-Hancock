@@ -19,17 +19,21 @@
 	<key>STORAGE_BUCKET</key>
 	<string>gimmtestdb.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:892255177867:ios:86fc27efe6d3d53a</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>IrishGrover.ttf</string>
+	</array>
 	<key>DATABASE_URL</key>
 	<string>https://gimmtestdb.firebaseio.com</string>
 </dict>
