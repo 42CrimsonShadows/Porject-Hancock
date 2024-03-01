@@ -46,6 +46,7 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
     private var isCurrentlyOffPath = false
     private var offPathCount = 0
     private var offPathLocations = [CGPoint]()
+    private var hasGoneOffPath = false;
     
     private let reticleView: ReticleView = {
         let view = ReticleView(frame: CGRect.null)
@@ -285,6 +286,9 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
             pencilInteraction.delegate = self
             view.addInteraction(pencilInteraction)
         }
+        
+        hasGoneOffPath = false
+        
         setupCoinLabel()
         setupCanvas()
         //setupGreenlines() ----- For setting up letter craked images to be shown/hidden
@@ -914,6 +918,21 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
                     //play last ding
                     self.canvasView.playAudioFXFile(file: chapterSelectedSoundDict!["CoinDing4"]!, type: "mp3")
                     
+                    if (hasGoneOffPath) {
+                        print(selectedActivity)
+                        
+                        if let image = screenShot() {
+                            if let pngData = image.pngData() {
+                                let base64String = pngData.base64EncodedString()
+                                // send character data to db with user credentials from login
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                                    Service.updateImageData(username: user, password: pass, base64: base64String, title: "Letter: \(selectedActivity)", description: "In Letter Activity")
+                                })
+                                print("Out of bounds on letter \(pngData)")
+                            }
+                        }
+                    }
+                    
                     //play cheer
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
                         self.canvasView.playAudioFXFile(file: chapterSelectedSoundDict!["LetterComplete"]!, type: "wav")
@@ -1020,8 +1039,7 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
             
             if alphaValue < alphaThreshold {
                 if !isCurrentlyOffPath {
-                    offPathCount += 1
-                    offPathLocations.append(touchPoint)
+                    hasGoneOffPath = true
                     isCurrentlyOffPath = true
                     canvasView.drawRedDot(at: touchPoint)
                     print("Off path")
@@ -1296,7 +1314,16 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
         }
     }
     
- 
+    private func screenShot() -> UIImage? {
+        //Create the UIImage
+        UIGraphicsBeginImageContext(canvasView.frame.size)
+        letterUnderlay.layer.render(in: UIGraphicsGetCurrentContext()!)
+        canvasView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
 
 }
 
@@ -1334,3 +1361,4 @@ extension UIImage {
         return CGFloat(alpha) / 255.0
     }
 }
+
