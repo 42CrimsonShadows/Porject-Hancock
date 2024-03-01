@@ -141,6 +141,7 @@ class Service {
             
             let deencoder = JSONDecoder()
             let deCodeData = try deencoder.decode(TeacherStruct.self, from: defaults.data(forKey: "teacher")!)
+            print(defaults)
                         
             print(deCodeData)
             print(deCodeData.students[0].sessions[0].chapters[0].activites[0].attempts[0].score)
@@ -186,6 +187,27 @@ class Service {
             return
         }
     }
+    
+    //MARK: -- UPDATED AUTH
+    func CreateManager(firstName: String, lastName: String, pin: String) {
+        var newTeacher = TeacherStruct(pin: pin, students: [])
+        //TODO add to defaults
+    }
+    func CreateStudent(firstName: String, lastName: String, pin: String) {
+        var newStudent = StudentStruct()
+        //TOOD add student properties, bind to current teacher
+    }
+    // func DeleteUser(){} make work for both student and manager
+    
+    // func DisplayStudentData(){}
+    
+    func AttemptLogin(username: String, pin: String) {
+        //make function work for both manager and student
+        //TODO compare passed kvp to defaults in localstorage
+        
+        //TODO if kvp matches segue to app
+    }
+    //END SECTION
     
     //Upload line accuracy and time to complete
     static func updateCharacterData(username: String, password: String, letter: String, score: Int32, timeToComplete: Int32, totalPointsEarned: Int32, totalPointsPossible: Int32){

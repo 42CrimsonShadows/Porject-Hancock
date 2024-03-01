@@ -4894,6 +4894,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                     <navigationItem key="navigationItem" id="BgR-xu-phc"/>
                     <connections>
                         <outlet property="EnterPin" destination="0NS-fd-bX5" id="Q0c-Qt-7Po"/>
+                        <outlet property="SelectOut" destination="ghJ-Me-2i5" id="UrF-Jd-aJc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tuY-lr-zfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -5597,7 +5598,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Bi7-Fg-eLq"/>
+        <segue reference="j2g-Mt-cqV"/>
         <segue reference="aoi-rC-XX7"/>
         <segue reference="2O5-wy-OoL"/>
         <segue reference="nzC-1y-dQf"/>
