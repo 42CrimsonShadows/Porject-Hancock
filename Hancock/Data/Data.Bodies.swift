@@ -160,6 +160,7 @@ struct TeacherStruct: Codable {
     var students: [StudentStruct] = [
         //sutdent struct here
     ]
+    var name: String
 }
 
 //MARK: --Progress reports
