@@ -163,6 +163,12 @@ struct TeacherStruct: Codable {
     var name: String
 }
 
+struct LocalStorage: Codable{
+    var teachers: [TeacherStruct] = [
+        
+    ]
+}
+
 //MARK: --Progress reports
 // I think this might be done on the website.
 
