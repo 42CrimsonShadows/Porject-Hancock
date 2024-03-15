@@ -78,7 +78,7 @@ class ManagerSignInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func LoginPressed(_ sender: Any) {
         pin = EnterPin.text!
         print("username: " + username + " Pin: " + pin)
-        if (Service().AttemptLogin(username: username, pin: pin) && !username.isEmpty){
+        if (Service.AttemptLogin(username: username, pin: pin) && !username.isEmpty){
             FailedAttempt.text = "Login Success"
             FailedAttempt.textColor = (UIColor.systemGreen)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {

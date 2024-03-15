@@ -43,11 +43,7 @@ class RegisterViewController: UIViewController {
                 
                 // api calls run on a background thread, so we use this lambda to get the result from Service and use it in main thread
                 // call register and set success, call segue on main thread
-                Service.register(firstName: first, lastName: last, email: email, username: username, password: password) {(isSuccess) in self.success = isSuccess
-                    DispatchQueue.main.async{
-                        self.doSegue(username: username, password:password)
-                    }
-                }
+
             }
         }
         

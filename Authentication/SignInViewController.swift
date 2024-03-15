@@ -46,24 +46,11 @@ class SignInViewController: UIViewController {
         // api calls run on a background thread, so we use this lambda to get the result from Service and use it in main thread
         // Call login, set success, and call segue on main thread
         
-        //This is where the call to sign in is
-        Service.login(username:username, password:password) 
-        {
-            (isSuccess) in self.success = true
-            DispatchQueue.main.async{
-                self.doSegue(username: username, password:password)
-            }
-        }
+
     }
     
     public func TestLogin(){
-        Service.login(username:"", password:"")
-        {
-            (isSuccess) in self.success = true
-            DispatchQueue.main.async{
-                self.doSegue(username: "", password:"")
-            }
-        }
+
     }
     
     @IBAction func RegisterButton(_ sender: Any) {

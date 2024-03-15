@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "38D675DC-634A-45C2-B014-9117D8DE9B47"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hancock/Data/Service.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "login(username:password:_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "00D25783-BCE8-44AE-A10D-2278BC667BDF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -30,9 +14,9 @@
             filePath = "Authentication/SignInViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "doSegue(username:password:)"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -78,8 +62,8 @@
             filePath = "Authentication/SignInViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "doSegue(username:password:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -88,14 +72,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "18A39D24-8CB0-4293-AF48-539088338533"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hancock/Data/Service.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "AttemptLogin(username:pin:)"
             landmarkType = "7">
             <Locations>
@@ -129,179 +113,20 @@
                   endingLineNumber = "211"
                   offsetFromSymbolStart = "132">
                </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "ED26B79B-ADCF-4AEC-8009-FA6EEEDB63B5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hancock/Data/Service.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "login(username:password:_:)"
-            landmarkType = "7">
-            <Locations>
                <Location
-                  uuid = "ED26B79B-ADCF-4AEC-8009-FA6EEEDB63B5 - a49b2bd2f67c79cf"
+                  uuid = "18A39D24-8CB0-4293-AF48-539088338533 - 46b5ed1436a358d8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "static ABC_Go_AR.Service.updateImageData(username: Swift.String, password: Swift.String, base64: Swift.String, title: Swift.String, description: Swift.String) -&gt; ()"
+                  symbolName = "static ABC_Go_AR.Service.AttemptLogin(username: Swift.String, pin: Swift.String) -&gt; Swift.Bool"
                   moduleName = "ABC Go AR"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jaydenquallio/Documents/GitHub/ABC-Go-AR/Hancock/Data/Service.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "259"
-                  endingLineNumber = "259"
-                  offsetFromSymbolStart = "280">
-               </Location>
-               <Location
-                  uuid = "ED26B79B-ADCF-4AEC-8009-FA6EEEDB63B5 - c56543461ed6b531"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static ABC_Go_AR.Service.pushData() -&gt; ()"
-                  moduleName = "ABC Go AR"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jaydenquallio/Documents/GitHub/ABC-Go-AR/Hancock/Data/Service.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "155"
-                  endingLineNumber = "155"
-                  offsetFromSymbolStart = "1676">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0479A621-2767-44EB-AA95-4821CA9B7792"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hancock/Data/Service.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "login(username:password:_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0479A621-2767-44EB-AA95-4821CA9B7792 - 497f079ff56fa0d1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static ABC_Go_AR.Service.updateCharacterData(username: Swift.String, password: Swift.String, letter: Swift.String, score: Swift.Int32, timeToComplete: Swift.Int32, totalPointsEarned: Swift.Int32, totalPointsPossible: Swift.Int32) -&gt; ()"
-                  moduleName = "ABC Go AR"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jaydenquallio/Documents/GitHub/ABC-Go-AR/Hancock/Data/Service.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "210"
-                  endingLineNumber = "210"
-                  offsetFromSymbolStart = "408">
-               </Location>
-               <Location
-                  uuid = "0479A621-2767-44EB-AA95-4821CA9B7792 - 87c10b18bbf409ca"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static ABC_Go_AR.Service.getObject(id: Swift.String) -&gt; ()"
-                  moduleName = "ABC Go AR"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jaydenquallio/Documents/GitHub/ABC-Go-AR/Hancock/Data/Service.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "107"
-                  endingLineNumber = "107"
-                  offsetFromSymbolStart = "1176">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4F492F4C-F054-4086-8079-940079E7B059"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hancock/Data/Service.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "register(firstName:lastName:email:username:password:_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4F492F4C-F054-4086-8079-940079E7B059 - 955824a60ebaa778"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static ABC_Go_AR.Service.login(username: Swift.String, password: Swift.String, _: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "ABC Go AR"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jaydenquallio/Documents/GitHub/ABC-Go-AR/Hancock/Data/Service.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "580">
-               </Location>
-               <Location
-                  uuid = "4F492F4C-F054-4086-8079-940079E7B059 - 955824a60ebaa759"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static ABC_Go_AR.Service.login(username: Swift.String, password: Swift.String, _: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "ABC Go AR"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jaydenquallio/Documents/GitHub/ABC-Go-AR/Hancock/Data/Service.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "580">
-               </Location>
-               <Location
-                  uuid = "4F492F4C-F054-4086-8079-940079E7B059 - 955824a60ebaa759"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static ABC_Go_AR.Service.login(username: Swift.String, password: Swift.String, _: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "ABC Go AR"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jaydenquallio/Documents/GitHub/ABC-Go-AR/Hancock/Data/Service.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "496">
-               </Location>
-               <Location
-                  uuid = "4F492F4C-F054-4086-8079-940079E7B059 - 955824a60ebaa759"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static ABC_Go_AR.Service.login(username: Swift.String, password: Swift.String, _: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "ABC Go AR"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jaydenquallio/Documents/GitHub/ABC-Go-AR/Hancock/Data/Service.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "700">
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "48">
                </Location>
             </Locations>
          </BreakpointContent>
