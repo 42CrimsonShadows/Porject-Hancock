@@ -55,7 +55,7 @@ class Service {
     
     //Function to upload imgs
         
-        func updateImageData(localStorage: LocalStorage, teacherName: String, pin: String, studenName: String, session: String, base64: String, title: String, description: String){
+    static func updateImageData(localStorage: LocalStorage, teacherName: String, pin: String, studenName: String, session: String, base64: String, title: String, description: String){
         
         print(base64)
         var tempStorage: LocalStorage = DecodeData()
