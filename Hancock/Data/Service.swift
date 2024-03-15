@@ -201,10 +201,10 @@ class Service {
     
     // func DisplayStudentData(){}
     
-    func AttemptLogin(username: String, pin: String) {
+    func AttemptLogin(username: String, pin: String) -> Bool{
         //make function work for both manager and student
         //TODO compare passed kvp to defaults in localstorage
-        
+        return true
         //TODO if kvp matches segue to app
     }
     //END SECTION
