@@ -9,9 +9,6 @@
 import UIKit
 
 class ManagerSignInViewController: UIViewController, UITextFieldDelegate {
-    
-    @IBOutlet weak var EnterPin: UITextField!
-    @IBOutlet weak var ManagerName: UIButton!
     var username = ""
     var pin = ""
     
@@ -45,6 +42,10 @@ class ManagerSignInViewController: UIViewController, UITextFieldDelegate {
         "Option 26",
     ]
     
+    @IBOutlet weak var EnterPin: UITextField!
+    @IBOutlet weak var ManagerName: UIButton!
+    @IBOutlet weak var FailedAttempt: UILabel!
+    
     @IBAction func SelectManagerPressed(_ sender: UIButton) {
         let alertController = UIAlertController(title: "Select Item", message: nil, preferredStyle: .actionSheet)
         let attributes: [NSAttributedString.Key: Any] = [
@@ -77,22 +78,16 @@ class ManagerSignInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func LoginPressed(_ sender: Any) {
         pin = EnterPin.text!
         print("username: " + username + " Pin: " + pin)
-        if (Service().AttemptLogin(username: username, pin: pin))
-        {
+        if (Service().AttemptLogin(username: username, pin: pin)){
+            FailedAttempt.text = ""
             //perform segue
+            self.performSegue(withIdentifier: "managerLoginSuccess", sender: self)
         }
         else{
-            
+            FailedAttempt.text = "username and pin do not match"
         }
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        EnterPin.delegate = self
-    }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
     // UITextFieldDelegate method to enforce numeric input and limit length to 4
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentText = textField.text ?? ""
@@ -102,5 +97,14 @@ class ManagerSignInViewController: UIViewController, UITextFieldDelegate {
         
         // Allow only numeric input and limit the length to 4 characters
         return updatedText.count <= 4 && updatedText.allSatisfy({ $0.isNumber })
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        EnterPin.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 }

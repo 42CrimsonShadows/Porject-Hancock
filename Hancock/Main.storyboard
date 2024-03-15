@@ -4857,7 +4857,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <constraint firstItem="zcH-nd-EP7" firstAttribute="width" secondItem="mfy-g8-cl3" secondAttribute="width" multiplier="0.6" id="TVN-dH-Opy"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login failed. Please ensure the correct profile is selected and your PIN is correct." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7G5-Lm-q84">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7G5-Lm-q84">
                                 <rect key="frame" x="256" y="683" width="512" height="273"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.94117647059999998" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -4894,12 +4894,14 @@ point the device toward a flat surface to see your Augmented Reality story conte
                     <navigationItem key="navigationItem" id="BgR-xu-phc"/>
                     <connections>
                         <outlet property="EnterPin" destination="0NS-fd-bX5" id="Q0c-Qt-7Po"/>
+                        <outlet property="FailedAttempt" destination="7G5-Lm-q84" id="pH1-9j-vfF"/>
                         <outlet property="ManagerName" destination="ghJ-Me-2i5" id="aEg-Gj-BtD"/>
+                        <segue destination="Qpl-IW-fnr" kind="presentation" identifier="managerLoginSuccess" id="6Sx-wx-bvL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tuY-lr-zfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5872.265625" y="-184.04099560761347"/>
+            <point key="canvasLocation" x="-5890" y="-184"/>
         </scene>
         <!--LoggedInMenu-->
         <scene sceneID="rcL-Yn-uYj">
