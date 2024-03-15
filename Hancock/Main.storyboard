@@ -4928,6 +4928,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="jmb-Cg-UZK" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Pu6-xC-9FP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wR-or-m8q">
                                 <rect key="frame" x="120" y="514" width="785" height="176"/>
@@ -5618,8 +5621,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
     <inferredMetricsTieBreakers>
         <segue reference="j2g-Mt-cqV"/>
         <segue reference="aoi-rC-XX7"/>
-        <segue reference="2O5-wy-OoL"/>
+        <segue reference="j5d-bO-yS9"/>
         <segue reference="nzC-1y-dQf"/>
+        <segue reference="Pu6-xC-9FP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1024.png" width="1024" height="1024"/>
