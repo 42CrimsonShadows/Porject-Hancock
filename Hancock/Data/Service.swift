@@ -10,11 +10,6 @@ import Foundation
 
 
 class Service {
-    
-    
-    var username: String = ""
-    var password: String = ""
-    
     //MARK: --CREATE(POST)
     //All these functions are created for adding new entries to the database
      
@@ -32,6 +27,14 @@ class Service {
     
     // func DisplayStudentData(){}
     
+    static func StudentLogin(studentName: String){
+        var tempStorage = DecodeData()
+        let newSession = SessionStruct(letter: [], imitation: [], freeDraw: [])
+        tempStorage.teachers[ManagerSignInViewController().username]?.students[StudentSignInViewController().studentName]?.sessions.append(newSession)
+        StudentSignInViewController().sessions = (tempStorage.teachers[ManagerSignInViewController().username]?.students[StudentSignInViewController().studentName]?.sessions.count ?? 1) - 1
+        EncodeData(DataToEncode: tempStorage)
+    }
+    
     static func AttemptLogin(username: String, pin: String) -> Bool{
         //make function work for both manager and student
         //TODO compare passed kvp to defaults in localstorage
@@ -41,35 +44,37 @@ class Service {
     //END SECTION
     
     //Upload line accuracy and time to complete
-    static func updateCharacterData(localStorage: LocalStorage, teacherName: String, pin: String, studenName: String, session: String, letter: String, score: Int32, timeToComplete: Int32, totalPointsEarned: Int32, totalPointsPossible: Int32){
+    static func updateCharacterData(localStorage: LocalStorage, teacherName: String, pin: String, studenName: String, session: Int, letter: String, score: Int32, timeToComplete: Int32, totalPointsEarned: Int32, totalPointsPossible: Int32){
         
         var tempStorage: LocalStorage = DecodeData()
 
             // Pass in faults later
         var letterStruct = LetterStruct(letter: letter, tokens: totalPointsEarned, faults: 0)
         
-        tempStorage.teachers[teacherName]?.students[studenName]?.sessions[session]?.letter.append(letterStruct)
+        tempStorage.teachers[teacherName]?.students[studenName]?.sessions[session].letter.append(letterStruct)
         
         EncodeData(DataToEncode: tempStorage)
     }
     
     //Function to upload imgs
         
-    static func updateImageData(localStorage: LocalStorage, teacherName: String, pin: String, studenName: String, session: String, base64: String, title: String, description: String){
+    static func updateImageData(localStorage: LocalStorage, teacherName: String, pin: String, studenName: String, session: Int, base64: String, title: String, description: String){
+        var testName: String = "Teacher"
+        var studentTest: String = "Student"
         
-        print(base64)
         var tempStorage: LocalStorage = DecodeData()
-
+        print(tempStorage.teachers[testName]?.students[studentTest]?.sessions[session].freeDraw)
             if(title == "Free Draw"){
-                tempStorage.teachers[teacherName]?.students[studenName]?.sessions[session]?.freeDraw.append(base64)
+                tempStorage.teachers[testName]?.students[studentTest]?.sessions[session].freeDraw.append(base64)
             }
             else{
                 print("This is your data " + title)
                 let tempImitation = ImitationStruct(letter: title, image: base64)
-                tempStorage.teachers[teacherName]?.students[studenName]?.sessions[session]?.imitation.append(tempImitation)
+                tempStorage.teachers[testName]?.students[studentTest]?.sessions[session].imitation.append(tempImitation)
             }
         
         EncodeData(DataToEncode: tempStorage)
+        print(tempStorage.teachers[testName]?.students[studentTest]?.sessions[session].freeDraw)
     }
     
     //MARK: --READ(GET)
@@ -192,35 +197,29 @@ extension Date {
 }
 
 func EncodeData(DataToEncode: LocalStorage) {
-    let encoder = JSONEncoder()
-    encoder.outputFormatting = .prettyPrinted
+//    let encoder = JSONEncoder()
+//    encoder.outputFormatting = .prettyPrinted
     
-    let defaults = UserDefaults.standard
-    
-    do{
-        let data = try encoder.encode(DataToEncode)
-        defaults.setValue(data, forKey: "Storage")
-    }
-    catch{
-        print("It Broke")
-    }
+//    let defaults: Void = UserDefaults.standard.setValue(DataToEncode, forKey: "Storage")
+    UserDefaults.standard.set(try? PropertyListEncoder().encode(DataToEncode), forKey: "Storage")
+//    do{
+//        //let data = try encoder.encode(DataToEncode)
+//    }
+//    catch{
+//        print("It Broke")
+//    }
 }
 
 func DecodeData() -> LocalStorage {
-    let decoder = JSONDecoder()
-    let defaults = UserDefaults.standard
-    
     do{
-        
-        let decoded = defaults.data(forKey: String("Storage"))
-        print(decoded ?? "did not decode")
-        let test = try decoder.decode(LocalStorage.self, from: decoded!)
-        return test
-    }
-    catch{
-        var tempStorage: LocalStorage = LocalStorage()
-        EncodeData(DataToEncode: tempStorage)
-        return tempStorage
+        if let data = UserDefaults.standard.value(forKey:"Storage") as? Data {
+            return try! PropertyListDecoder().decode(LocalStorage.self, from: data)
+        }
+        else{
+            let tempStorage: LocalStorage = LocalStorage()
+            EncodeData(DataToEncode: tempStorage)
+            return tempStorage
+        }
     }
 }
     

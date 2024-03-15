@@ -106,7 +106,7 @@ struct SessionStruct: Codable{
 }
 
 struct StudentStruct: Codable {
-    var sessions: [String : SessionStruct]
+    var sessions: [SessionStruct]
 }
 
 struct TeacherStruct: Codable {

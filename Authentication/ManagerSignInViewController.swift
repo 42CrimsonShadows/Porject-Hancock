@@ -9,8 +9,8 @@
 import UIKit
 
 class ManagerSignInViewController: UIViewController, UITextFieldDelegate {
-    var username = ""
-    var pin = ""
+    public var username = ""
+    public var pin = ""
     
     //Temporary
     var ManagerNames = [
