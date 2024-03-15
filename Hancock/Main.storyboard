@@ -4655,7 +4655,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                     <color key="baseBackgroundColor" red="0.6207177639" green="0.55851060149999998" blue="0.72031271460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="prv-uj-40A" kind="presentation" id="ona-3O-zad"/>
+                                                    <segue destination="prv-uj-40A" kind="presentation" modalTransitionStyle="crossDissolve" id="ona-3O-zad"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88Q-tY-qOA" userLabel="New Manager">
@@ -4672,7 +4672,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                     <color key="baseBackgroundColor" red="0.6207177639" green="0.55851060149999998" blue="0.72031271460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="TZZ-Ax-F0T" kind="presentation" identifier="toManagerRegistration" id="TXN-ed-dd7"/>
+                                                    <segue destination="TZZ-Ax-F0T" kind="presentation" identifier="toManagerRegistration" modalTransitionStyle="crossDissolve" id="TXN-ed-dd7"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -4704,7 +4704,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                     <color key="baseForegroundColor" red="0.35551446679999998" green="0.37871953850000001" blue="0.50108003619999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="VR5-wb-rSx" kind="presentation" identifier="toCredits" id="cIQ-dK-kgv"/>
+                                                    <segue destination="VR5-wb-rSx" kind="presentation" identifier="toCredits" modalTransitionStyle="crossDissolve" id="cIQ-dK-kgv"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -4775,7 +4775,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="Qxo-cW-IOi" kind="presentation" identifier="backToStartFromManagerLogin" id="j2g-Mt-cqV"/>
+                                            <segue destination="Qxo-cW-IOi" kind="presentation" identifier="backToStartFromManagerLogin" modalTransitionStyle="crossDissolve" id="j2g-Mt-cqV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -4896,7 +4896,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <outlet property="EnterPin" destination="0NS-fd-bX5" id="Q0c-Qt-7Po"/>
                         <outlet property="FailedAttempt" destination="7G5-Lm-q84" id="pH1-9j-vfF"/>
                         <outlet property="ManagerName" destination="ghJ-Me-2i5" id="aEg-Gj-BtD"/>
-                        <segue destination="Qpl-IW-fnr" kind="presentation" identifier="managerLoginSuccess" id="6Sx-wx-bvL"/>
+                        <segue destination="Qpl-IW-fnr" kind="presentation" identifier="managerLoginSuccess" modalTransitionStyle="crossDissolve" id="6Sx-wx-bvL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tuY-lr-zfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -5368,70 +5368,24 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPa-jN-92Y" userLabel="Top">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="273"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gS-ts-GyW">
-                                        <rect key="frame" x="30" y="82" width="232" height="109"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Back">
-                                                    <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                            <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="Qxo-cW-IOi" kind="presentation" identifier="backToStartFromManagerRegistration" id="Sfh-QK-Ad5"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Av0-uY-fwe">
-                                        <rect key="frame" x="262" y="0.0" width="717" height="136.5"/>
-                                        <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="112"/>
-                                        <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manager" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUg-mB-dmr" userLabel="Manager">
-                                        <rect key="frame" x="262" y="136.5" width="717" height="132.5"/>
-                                        <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="112"/>
-                                        <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstItem="Av0-uY-fwe" firstAttribute="trailing" secondItem="HPa-jN-92Y" secondAttribute="trailing" constant="-45" id="9ge-9m-1Mu"/>
-                                    <constraint firstItem="5gS-ts-GyW" firstAttribute="trailing" secondItem="Av0-uY-fwe" secondAttribute="leading" id="I7m-xT-Ecm"/>
-                                    <constraint firstItem="5gS-ts-GyW" firstAttribute="leading" secondItem="HPa-jN-92Y" secondAttribute="leading" constant="30" id="NQa-DX-8Es"/>
-                                    <constraint firstItem="5gS-ts-GyW" firstAttribute="height" secondItem="HPa-jN-92Y" secondAttribute="height" multiplier="0.4" id="NU0-yN-LBV"/>
-                                    <constraint firstItem="5gS-ts-GyW" firstAttribute="centerY" secondItem="HPa-jN-92Y" secondAttribute="centerY" id="Qfa-h4-WPG"/>
-                                    <constraint firstItem="wUg-mB-dmr" firstAttribute="width" secondItem="Av0-uY-fwe" secondAttribute="width" id="TQb-ZC-eFN"/>
-                                    <constraint firstItem="Av0-uY-fwe" firstAttribute="height" secondItem="HPa-jN-92Y" secondAttribute="height" multiplier="0.5" id="VXj-8E-NsW"/>
-                                    <constraint firstItem="Av0-uY-fwe" firstAttribute="width" secondItem="HPa-jN-92Y" secondAttribute="width" multiplier="0.7" id="ad4-od-yYc"/>
-                                    <constraint firstItem="Av0-uY-fwe" firstAttribute="top" secondItem="HPa-jN-92Y" secondAttribute="top" id="erC-1l-p9J"/>
-                                    <constraint firstItem="wUg-mB-dmr" firstAttribute="top" secondItem="Av0-uY-fwe" secondAttribute="bottom" id="pz0-LO-bEi"/>
-                                    <constraint firstItem="wUg-mB-dmr" firstAttribute="leading" secondItem="Av0-uY-fwe" secondAttribute="leading" id="xbk-7y-AyL"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DdF-AM-fE7" userLabel="Middle">
                                 <rect key="frame" x="0.0" y="273" width="1024" height="683"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Manager First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mLb-Hp-AcT">
                                         <rect key="frame" x="153.5" y="102.5" width="717" height="137"/>
                                         <color key="backgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Manager Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P7g-zU-upx">
                                         <rect key="frame" x="153.5" y="273.5" width="717" height="136.5"/>
                                         <color key="backgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Set Pin" textAlignment="center" minimumFontSize="17" sizingRule="oversize" translatesAutoresizingMaskIntoConstraints="NO" id="FM4-V0-3Hi">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Set Pin" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FM4-V0-3Hi">
                                         <rect key="frame" x="153.5" y="444" width="717" height="137"/>
                                         <color key="backgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5461,8 +5415,14 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXG-Bb-uAj" userLabel="Create Manager">
                                         <rect key="frame" x="205" y="102.5" width="614" height="205"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Create Manager" cornerStyle="large">
-                                            <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Create Manager">
+                                                    <attributes>
+                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -5476,12 +5436,60 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <constraint firstItem="tXG-Bb-uAj" firstAttribute="centerY" secondItem="G9N-gu-geF" secondAttribute="centerY" id="MEW-sz-Cg3"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill out all fields." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izz-0p-eRN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izz-0p-eRN">
                                 <rect key="frame" x="256" y="819.5" width="512" height="273.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.94117647059999998" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPa-jN-92Y" userLabel="Top">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="273"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gS-ts-GyW">
+                                        <rect key="frame" x="30" y="82" width="232" height="109"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Back">
+                                                    <attributes>
+                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Qxo-cW-IOi" kind="presentation" identifier="backToStartFromManagerRegistration" modalTransitionStyle="crossDissolve" id="Sfh-QK-Ad5"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Av0-uY-fwe">
+                                        <rect key="frame" x="262" y="0.0" width="717" height="136.5"/>
+                                        <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="112"/>
+                                        <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manager" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUg-mB-dmr" userLabel="Manager">
+                                        <rect key="frame" x="262" y="136.5" width="717" height="132.5"/>
+                                        <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="112"/>
+                                        <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="Av0-uY-fwe" firstAttribute="trailing" secondItem="HPa-jN-92Y" secondAttribute="trailing" constant="-45" id="9ge-9m-1Mu"/>
+                                    <constraint firstItem="5gS-ts-GyW" firstAttribute="trailing" secondItem="Av0-uY-fwe" secondAttribute="leading" id="I7m-xT-Ecm"/>
+                                    <constraint firstItem="5gS-ts-GyW" firstAttribute="leading" secondItem="HPa-jN-92Y" secondAttribute="leading" constant="30" id="NQa-DX-8Es"/>
+                                    <constraint firstItem="5gS-ts-GyW" firstAttribute="height" secondItem="HPa-jN-92Y" secondAttribute="height" multiplier="0.4" id="NU0-yN-LBV"/>
+                                    <constraint firstItem="5gS-ts-GyW" firstAttribute="centerY" secondItem="HPa-jN-92Y" secondAttribute="centerY" id="Qfa-h4-WPG"/>
+                                    <constraint firstItem="wUg-mB-dmr" firstAttribute="width" secondItem="Av0-uY-fwe" secondAttribute="width" id="TQb-ZC-eFN"/>
+                                    <constraint firstItem="Av0-uY-fwe" firstAttribute="height" secondItem="HPa-jN-92Y" secondAttribute="height" multiplier="0.5" id="VXj-8E-NsW"/>
+                                    <constraint firstItem="Av0-uY-fwe" firstAttribute="width" secondItem="HPa-jN-92Y" secondAttribute="width" multiplier="0.7" id="ad4-od-yYc"/>
+                                    <constraint firstItem="Av0-uY-fwe" firstAttribute="top" secondItem="HPa-jN-92Y" secondAttribute="top" id="erC-1l-p9J"/>
+                                    <constraint firstItem="wUg-mB-dmr" firstAttribute="top" secondItem="Av0-uY-fwe" secondAttribute="bottom" id="pz0-LO-bEi"/>
+                                    <constraint firstItem="wUg-mB-dmr" firstAttribute="leading" secondItem="Av0-uY-fwe" secondAttribute="leading" id="xbk-7y-AyL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AsP-PF-IoM"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -5509,9 +5517,11 @@ point the device toward a flat surface to see your Augmented Reality story conte
                     </view>
                     <navigationItem key="navigationItem" id="dQH-RY-bp8"/>
                     <connections>
+                        <outlet property="FailedAttempt" destination="izz-0p-eRN" id="Oxb-Rg-qsq"/>
                         <outlet property="FirstName" destination="mLb-Hp-AcT" id="ird-MK-uJu"/>
                         <outlet property="LastName" destination="P7g-zU-upx" id="Wvx-Lr-vwA"/>
                         <outlet property="SetPin" destination="FM4-V0-3Hi" id="Yf6-mL-uNF"/>
+                        <segue destination="Qxo-cW-IOi" kind="presentation" identifier="managerCreationSuccess" modalTransitionStyle="crossDissolve" id="MjK-3O-xzl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Nr-RB-5MU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -5543,7 +5553,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="Qxo-cW-IOi" kind="presentation" identifier="backToStartFromCredits" id="Bi7-Fg-eLq"/>
+                                            <segue destination="Qxo-cW-IOi" kind="presentation" identifier="backToStartFromCredits" modalTransitionStyle="crossDissolve" id="Bi7-Fg-eLq"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mT3-8X-idU">

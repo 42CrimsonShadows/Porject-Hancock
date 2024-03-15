@@ -47,7 +47,7 @@ class ManagerSignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var FailedAttempt: UILabel!
     
     @IBAction func SelectManagerPressed(_ sender: UIButton) {
-        let alertController = UIAlertController(title: "Select Item", message: nil, preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Select Manager", message: nil, preferredStyle: .actionSheet)
         let attributes: [NSAttributedString.Key: Any] = [
             .font: UIFont(name: "Irish Grover", size: 50) ?? UIFont.systemFont(ofSize: 50),
             .foregroundColor: UIColor.white
@@ -78,12 +78,15 @@ class ManagerSignInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func LoginPressed(_ sender: Any) {
         pin = EnterPin.text!
         print("username: " + username + " Pin: " + pin)
-        if (Service().AttemptLogin(username: username, pin: pin)){
-            FailedAttempt.text = ""
-            //perform segue
-            self.performSegue(withIdentifier: "managerLoginSuccess", sender: self)
+        if (Service().AttemptLogin(username: username, pin: pin) && !username.isEmpty){
+            FailedAttempt.text = "Login Success"
+            FailedAttempt.textColor = (UIColor.systemGreen)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.performSegue(withIdentifier: "managerLoginSuccess", sender: self)
+            }
         }
         else{
+            FailedAttempt.textColor = (UIColor.systemRed)
             FailedAttempt.text = "username and pin do not match"
         }
     }
