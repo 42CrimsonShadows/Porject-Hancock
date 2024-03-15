@@ -926,7 +926,7 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
                                 let base64String = pngData.base64EncodedString()
                                 // send character data to db with user credentials from login
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-                                    Service.updateImageData(username: user, password: pass, base64: base64String, title: "Letter: \(selectedActivity)", description: "In Letter Activity")
+//                                    Service.updateImageData(username: user, password: pass, base64: base64String, title: "Letter: \(selectedActivity)", description: "In Letter Activity")
                                 })
                                 print("Out of bounds on letter \(pngData)")
                             }
@@ -938,7 +938,7 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
                         self.canvasView.playAudioFXFile(file: chapterSelectedSoundDict!["LetterComplete"]!, type: "wav")
                         
                         // send character data to db with user credentials from login
-                        Service.updateCharacterData(username: user, password: pass, letter: selectedActivity, score: self.letterCoins, timeToComplete: Service.TimeSinceActive(lastActive: startTime), totalPointsEarned: self.letterCoins, totalPointsPossible: self.coinsPossible)
+//                        Service.updateCharacterData(username: user, password: pass, letter: selectedActivity, score: self.letterCoins, timeToComplete: Service.TimeSinceActive(lastActive: startTime), totalPointsEarned: self.letterCoins, totalPointsPossible: self.coinsPossible)
                         //dismiss activity view
                         DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
                             self.dismiss(animated: false, completion: nil)

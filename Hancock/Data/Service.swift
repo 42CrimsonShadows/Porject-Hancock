@@ -20,6 +20,7 @@ class Service {
     
     //Register new users
     static func register (firstName: String, lastName: String, email: String, username: String, password: String, _ completionHandler: @escaping (_ isSuccess:Bool)-> Void) {
+<<<<<<< Updated upstream
         // escaping the completionHandler allows the closure to be called in RegisterViewController after this function has completed
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
@@ -63,6 +64,10 @@ class Service {
         } catch {
             print("Could not encode")
         }
+=======
+        // escaping the completionHandler allows the closure to be called in RegisterViewController after this function has complete
+        
+>>>>>>> Stashed changes
     }
     
     // Login funcation
@@ -72,6 +77,7 @@ class Service {
         encoder.outputFormatting = .prettyPrinted
         let user = Credentials(username:username, password:password)
         //let test = Student(type: "Student", firstName: "Student1", lastName: "testing", email: "email", username: "Student1", password: "Test")
+<<<<<<< Updated upstream
         do{
            
             var teacher: TeacherStruct = TeacherStruct()
@@ -208,15 +214,38 @@ class Service {
         //TODO if kvp matches segue to app
     }
     //END SECTION
+=======
+        
+    }
+    
+    //MARK: -- UPDATED AUTH
+        func CreateManager(firstName: String, lastName: String, pin: String) {
+            //var newTeacher = TeacherStruct(pin: pin, students: [])
+            //TODO add to defaults
+        }
+        func CreateStudent(firstName: String, lastName: String, pin: String) {
+//            var newStudent = StudentStruct()
+            //TOOD add student properties, bind to current teacher
+        }
+        // func DeleteUser(){} make work for both student and manager
+
+        // func DisplayStudentData(){}
+
+        func AttemptLogin(username: String, pin: String) {
+            //make function work for both manager and student
+            //TODO compare passed kvp to defaults in localstorage
+
+            //TODO if kvp matches segue to app
+        }
+        //END SECTION
+>>>>>>> Stashed changes
     
     //Upload line accuracy and time to complete
-    static func updateCharacterData(username: String, password: String, letter: String, score: Int32, timeToComplete: Int32, totalPointsEarned: Int32, totalPointsPossible: Int32){
+    static func updateCharacterData(localStorage: LocalStorage, teacherName: String, pin: String, studenName: String, session: String, letter: String, score: Int32, timeToComplete: Int32, totalPointsEarned: Int32, totalPointsPossible: Int32){
         
-
-        let encoder = JSONEncoder()
-        encoder.outputFormatting = .prettyPrinted
-        let test = SingleActivityReport(username: username, password: password, letter: letter, score: score, timeToComplete: timeToComplete, totalPointsEarned: totalPointsEarned, totalPointsPossible: totalPointsPossible)
+        var tempStorage: LocalStorage = DecodeData()
         
+<<<<<<< Updated upstream
         do
         {
             let deencoder = JSONDecoder()
@@ -230,14 +259,18 @@ class Service {
             let characterString = String(decoding: isTestMode!, as: UTF8.self)
             
             print("Letter was " + characterJSON.letter + " from the json " + characterString)
+=======
+        // Pass in faults later
+        var letterStruct = LetterStruct(letter: letter, tokens: totalPointsEarned, faults: 0)
+>>>>>>> Stashed changes
         
-        } 
-        catch {
-            print("Could not encode")
-        }
+        tempStorage.teachers[teacherName]?.students[studenName]?.sessions[session]?.letter.append(letterStruct)
+        
+        EncodeData(DataToEncode: tempStorage)
     }
     
     //Function to upload imgs
+<<<<<<< Updated upstream
     static func updateImageData(username: String, password: String, base64: String, title: String, description: String){
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
@@ -257,6 +290,23 @@ class Service {
         catch {
             print("Could not encode")
         }
+=======
+    static func updateImageData(localStorage: LocalStorage, teacherName: String, pin: String, studenName: String, session: String, base64: String, title: String, description: String){
+        
+        print(base64)
+        var tempStorage: LocalStorage = DecodeData()
+
+            if(title == "Free Draw"){
+                tempStorage.teachers[teacherName]?.students[studenName]?.sessions[session]?.freeDraw.append(base64)
+            }
+            else{
+                print("This is your data " + title)
+                let tempImitation = ImitationStruct(letter: title, image: base64)
+                tempStorage.teachers[teacherName]?.students[studenName]?.sessions[session]?.imitation.append(tempImitation)
+            }
+        
+        EncodeData(DataToEncode: tempStorage)
+>>>>>>> Stashed changes
     }
     
     //MARK: --READ(GET)
@@ -377,6 +427,43 @@ extension Date {
         return Int32(Calendar.current.dateComponents([.second], from: date, to: self).second ?? 0)
     }
     
+<<<<<<< Updated upstream
+=======
+}
+
+func EncodeData(DataToEncode: LocalStorage) {
+    let encoder = JSONEncoder()
+    encoder.outputFormatting = .prettyPrinted
+    
+    let defaults = UserDefaults.standard
+    
+    do{
+        let data = try encoder.encode(DataToEncode)
+        defaults.setValue(data, forKey: "Storage")
+    }
+    catch{
+        print("It Broke")
+    }
+}
+
+func DecodeData() -> LocalStorage {
+    let decoder = JSONDecoder()
+    let defaults = UserDefaults.standard
+    
+    do{
+        
+        let decoded = defaults.data(forKey: String("Storage"))
+        print(decoded ?? "did not decode")
+        let test = try decoder.decode(LocalStorage.self, from: decoded!)
+        return test
+    }
+    catch{
+        var tempStorage: LocalStorage = LocalStorage()
+        EncodeData(DataToEncode: tempStorage)
+        return tempStorage
+    }
+}
+>>>>>>> Stashed changes
 //    func offset(from date: Date) -> Int32 {
         //var time: Int32 = 0
 //        if years(from: date) > 0 { return []}
