@@ -11,20 +11,23 @@ import Foundation
 
 class Service {
     
+    
     var username: String = ""
     var password: String = ""
-
+    
     //MARK: --CREATE(POST)
     //All these functions are created for adding new entries to the database
     
     //Register new users
     static func register (firstName: String, lastName: String, email: String, username: String, password: String, _ completionHandler: @escaping (_ isSuccess:Bool)-> Void) {
         // escaping the completionHandler allows the closure to be called in RegisterViewController after this function has completed
-        
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
         let user = Student(type: "Student", firstName: firstName, lastName: lastName, email: email, username: username, password: password)
         //let test = Student(type: "Student", firstName: "Student1", lastName: "testing", username: "Student1", password: "Test")
         do{
             let endpoint = "https://abcgoapp.org/api/users/register"
+            let data = try encoder.encode(user)
             guard let url = URL(string: endpoint) else {
                 print("Could not set the URL, contact the developer")
 
@@ -36,7 +39,7 @@ class Service {
             var request = URLRequest(url: url)
             request.setValue("application/json", forHTTPHeaderField: "content-type")
             request.httpMethod = "POST"
-            //request.httpBody = data
+            request.httpBody = data
             var code = 0
         
             URLSession.shared.dataTask(with: request) { (data, response, error) in
@@ -65,14 +68,13 @@ class Service {
     // Login funcation
     static func login(username:String, password:String,_ completionHandler: @escaping (_ isSuccess:Bool)-> Void) {
         // escaping the completionHandler allows the closure to be called in SignInViewController after this function has completed
-        
-//        let encoder = JSONEncoder()
-//        encoder.outputFormatting = .prettyPrinted
-        
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
         let user = Credentials(username:username, password:password)
         //let test = Student(type: "Student", firstName: "Student1", lastName: "testing", email: "email", username: "Student1", password: "Test")
         do{
-            var teacher: TeacherStruct = TeacherStruct(name: "ThisIsATest")
+           
+            var teacher: TeacherStruct = TeacherStruct()
             var studented: StudentStruct = StudentStruct()
             var masters: AccuracyStruct = AccuracyStruct()
             var sessions: SessionStruct = SessionStruct()
@@ -128,20 +130,24 @@ class Service {
             teacher.pin = "1234"
             teacher.students = [studented.self]
             
-//            let encoder = JSONEncoder()
-//            encoder.outputFormatting = .prettyPrinted
-//            
-            //let teacherData = try encoder.encode(teacher)
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = .prettyPrinted
             
-            let teacherData: () = EncodeData(TeacherName: teacher.name, DataToEncode: teacher)
+            let teacherData = try encoder.encode(teacher)
             print(teacherData)
             
-            let deCodeData = DecodeData(TeacherName: teacher.name)
+            let defaults = UserDefaults.standard
+            defaults.set(teacherData, forKey: "teacher")
             
+            let deencoder = JSONDecoder()
+            let deCodeData = try deencoder.decode(TeacherStruct.self, from: defaults.data(forKey: "teacher")!)
+            print(defaults)
+                        
             print(deCodeData)
             print(deCodeData.students[0].sessions[0].chapters[0].activites[0].attempts[0].score)
             
             let endpoint = "https://abcgoapp.org/api/users/authenticate"
+            let data = try encoder.encode(user)
             guard let url = URL(string: endpoint) else {
                 print("Could not set the URL, contact the developer")
                 
@@ -153,7 +159,7 @@ class Service {
             var request = URLRequest(url: url)
             request.setValue("application/json", forHTTPHeaderField: "content-type")
             request.httpMethod = "POST"
-            request.httpBody = nil
+            request.httpBody = data
             var code = 0
         
             URLSession.shared.dataTask(with: request) { (data, response, error) in
@@ -183,25 +189,25 @@ class Service {
     }
     
     //MARK: -- UPDATED AUTH
-        func CreateManager(firstName: String, lastName: String, pin: String) {
-            //var newTeacher = TeacherStruct(pin: pin, students: [])
-            //TODO add to defaults
-        }
-        func CreateStudent(firstName: String, lastName: String, pin: String) {
-            var newStudent = StudentStruct()
-            //TOOD add student properties, bind to current teacher
-        }
-        // func DeleteUser(){} make work for both student and manager
-
-        // func DisplayStudentData(){}
-
-        func AttemptLogin(username: String, pin: String) {
-            //make function work for both manager and student
-            //TODO compare passed kvp to defaults in localstorage
-
-            //TODO if kvp matches segue to app
-        }
-        //END SECTION
+    func CreateManager(firstName: String, lastName: String, pin: String) {
+        var newTeacher = TeacherStruct(pin: pin, students: [])
+        //TODO add to defaults
+    }
+    func CreateStudent(firstName: String, lastName: String, pin: String) {
+        var newStudent = StudentStruct()
+        //TOOD add student properties, bind to current teacher
+    }
+    // func DeleteUser(){} make work for both student and manager
+    
+    // func DisplayStudentData(){}
+    
+    func AttemptLogin(username: String, pin: String) -> Bool{
+        //make function work for both manager and student
+        //TODO compare passed kvp to defaults in localstorage
+        return true
+        //TODO if kvp matches segue to app
+    }
+    //END SECTION
     
     //Upload line accuracy and time to complete
     static func updateCharacterData(username: String, password: String, letter: String, score: Int32, timeToComplete: Int32, totalPointsEarned: Int32, totalPointsPossible: Int32){
@@ -224,28 +230,6 @@ class Service {
             let characterString = String(decoding: isTestMode!, as: UTF8.self)
             
             print("Letter was " + characterJSON.letter + " from the json " + characterString)
-            
-
-            
-            
-            switch(true){
-                case score >= 80:
-                    
-                    break
-                case score >= 60:
-                    
-                    break
-                    
-                case score <= 25:
-                    
-                    break
-                    
-                default:
-                    
-                    break
-                
-            }
-            
         
         } 
         catch {
@@ -255,21 +239,24 @@ class Service {
     
     //Function to upload imgs
     static func updateImageData(username: String, password: String, base64: String, title: String, description: String){
-        
-        print(base64)
-        var decoded = DecodeData(TeacherName: "ThisIsATest")
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        let test = SingleImageReport(username: username, password: password, base64: base64, title: title, description: description)
+        do
+        {
+            let deencoder = JSONDecoder()
+            let defaults = UserDefaults.standard
 
-            if(title == "Free Draw"){
-                decoded.students[0].sessions[0].freedraws.append(base64)
-                EncodeData(TeacherName: "ThisIsATest", DataToEncode: decoded)
-            }
-            else{
-                print("This is your data " + title)
-                let tempImitation = ImitationStruct(letter: title, image: base64)
-                decoded.students[0].sessions[0].imitation.append(tempImitation)
-                EncodeData(TeacherName: "ThisIsATest", DataToEncode: decoded)
-            }
-            print(decoded)
+            var deCodeData = try deencoder.decode(TeacherStruct.self, from: defaults.data(forKey: "teacher")!)
+            
+            deCodeData.students[0].sessions[0].freedraws.append(base64)
+            
+            print(deCodeData)
+            
+        }
+        catch {
+            print("Could not encode")
+        }
     }
     
     //MARK: --READ(GET)
@@ -390,38 +377,6 @@ extension Date {
         return Int32(Calendar.current.dateComponents([.second], from: date, to: self).second ?? 0)
     }
     
-}
-
-func EncodeData(TeacherName: String, DataToEncode: TeacherStruct) {
-    let encoder = JSONEncoder()
-    encoder.outputFormatting = .prettyPrinted
-    
-    let defaults = UserDefaults.standard
-    
-    do{
-        let data = try encoder.encode(DataToEncode)
-        defaults.setValue(data, forKey: TeacherName)
-    }
-    catch{
-        print("It Broke")
-    }
-}
-
-func DecodeData(TeacherName: String) -> TeacherStruct {
-    let decoder = JSONDecoder()
-    let defaults = UserDefaults.standard
-    
-    do{
-        
-        let decoded = defaults.data(forKey: String(TeacherName))
-        print(decoded ?? "did not work " + TeacherName)
-        let test = try decoder.decode(TeacherStruct.self, from: decoded!)
-        return test
-    }
-    catch{
-        return TeacherStruct(name: TeacherName)
-    }
-}
 //    func offset(from date: Date) -> Int32 {
         //var time: Int32 = 0
 //        if years(from: date) > 0 { return []}
@@ -433,7 +388,7 @@ func DecodeData(TeacherName: String) -> TeacherStruct {
 //        print(time)
 //        return seconds(from: date)
 //    }
-
+}
 
 //extension NSDate {
 //    func hour() -> Int{
