@@ -317,7 +317,7 @@ class FreeWriteViewController: UIViewController {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                         var tempStorage = DecodeData()
                         
-                        Service.updateImageData(localStorage: tempStorage, teacherName: ManagerSignInViewController().username, pin:  ManagerSignInViewController().pin, studenName: StudentSignInViewController().studentName, session: 0, base64: base64String, title: "Free Draw", description: description)
+                        Service.updateImageData(localStorage: tempStorage, teacherName: ManagerSignInViewController().username, pin:  ManagerSignInViewController().pin, studenName: Service().currentStudent, session: 0, base64: base64String, title: "Free Draw", description: description)
                     })
                     print("Did screenshot Level4 and this is the pngData: \(pngData)")
     //                let fileName = getDocumentDirectory().appendingPathComponent("copy.png")

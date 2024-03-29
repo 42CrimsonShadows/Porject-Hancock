@@ -10,8 +10,7 @@ import UIKit
 
 class StudentSignInViewController: UIViewController {
     
-    public var studentName: String = ""
-    public var sessions: Int = 0
+    let StudentNames = Service().GetStudents()
 
     override func viewDidLoad() {
         super.viewDidLoad()

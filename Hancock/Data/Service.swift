@@ -10,29 +10,99 @@ import Foundation
 
 
 class Service {
+    var currentTeacher : String = ""
+    var currentStudent : String = ""
+    var currentSession : Int = 0
+    
     //MARK: --CREATE(POST)
     //All these functions are created for adding new entries to the database
      
     //MARK: -- UPDATED AUTH
     func CreateManager(firstName: String, lastName: String, pin: String) {
-        //var newTeacher = TeacherStruct(pin: pin, students: [])
-        //TODO add to defaults
+        //Get local storage
+        var temp = DecodeData()
+        //Create new teacher object
+        let newTeacher = TeacherStruct(pin: pin, students: [:])
+        //Add OR Update new teacher object in storage
+        temp.teachers.updateValue(newTeacher, forKey: lastName + "_" + firstName)
+        //Update Storage Object
+        EncodeData(DataToEncode: temp)
+        
     }
     
-    func CreateStudent(firstName: String, lastName: String, pin: String) {
-        //var newStudent = StudentStruct()
-        //TOOD add student properties, bind to current teacher
+    func CreateStudent(firstName: String, lastName: String) {
+        //Get local storage
+        var temp = DecodeData()
+        //Create new teacher object
+        let newStudent = StudentStruct(sessions: [])
+        //Add OR Update new teacher object in storage
+        temp.teachers[currentTeacher]?.students.updateValue(newStudent, forKey: lastName + "_" + firstName)
+        //Update Storage Object
+        EncodeData(DataToEncode: temp)
+
     }
-    // func DeleteUser(){} make work for both student and manager
+    
+    func DeleteManager(pin: String) -> Bool{
+        var tempStorage = DecodeData()
+        if(tempStorage.teachers[currentTeacher] != nil && tempStorage.teachers[currentTeacher]?.pin == pin) {
+            tempStorage.teachers.removeValue(forKey: currentTeacher)
+            currentTeacher = ""
+            return true
+        }
+        return false
+    }
+    
+    func DeleteStudent(studentName : String, pin: String) -> Bool{
+        var tempStorage = DecodeData()
+        if(tempStorage.teachers[currentTeacher]?.students[studentName] != nil && tempStorage.teachers[currentStudent]?.pin == pin) {
+            tempStorage.teachers[currentTeacher]?.students.removeValue(forKey: studentName)
+            currentStudent = ""
+            currentSession = 0
+            return true
+        }
+        return false
+    }
     
     // func DisplayStudentData(){}
     
-    static func StudentLogin(studentName: String){
+    func ManagerLogin(username: String, pin : String) -> Bool{
+       let tempStorage = DecodeData()
+        if(tempStorage.teachers[username] != nil && tempStorage.teachers[username]?.pin == pin) {
+            currentTeacher = username
+            return true
+        }
+        return false
+   }
+    
+     func StudentLogin(studentName: String) -> Bool{
         var tempStorage = DecodeData()
-        let newSession = SessionStruct(letter: [], imitation: [], freeDraw: [])
-        tempStorage.teachers[ManagerSignInViewController().username]?.students[StudentSignInViewController().studentName]?.sessions.append(newSession)
-        StudentSignInViewController().sessions = (tempStorage.teachers[ManagerSignInViewController().username]?.students[StudentSignInViewController().studentName]?.sessions.count ?? 1) - 1
-        EncodeData(DataToEncode: tempStorage)
+         if(tempStorage.teachers[currentTeacher]?.students[studentName] != nil) {
+             currentStudent = studentName
+             let newSession = SessionStruct(letter: [], imitation: [], freeDraw: [])
+             tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions.append(newSession)
+             currentSession = (tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions.count ?? 1) - 1
+             EncodeData(DataToEncode: tempStorage)
+             return true
+         }
+         return false
+    }
+    
+     func GetManagers() -> [String] {
+        var managers : [String] = []
+        let storage = DecodeData()
+        for (key, value) in storage.teachers {
+            managers.append(key)
+        }
+        return managers
+    }
+    
+    func GetStudents() -> [String] {
+        var studentsArray : [String] = []
+        let storage = DecodeData()
+        for (key, value) in storage.teachers[currentTeacher]?.students ?? [:] {
+            studentsArray.append(key)
+        }
+        return studentsArray
     }
     
     static func AttemptLogin(username: String, pin: String) -> Bool{

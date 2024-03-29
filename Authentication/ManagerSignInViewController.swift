@@ -12,35 +12,8 @@ class ManagerSignInViewController: UIViewController, UITextFieldDelegate {
     public var username = ""
     public var pin = ""
     
-    //Temporary
-    var ManagerNames = [
-        "Option 1",
-        "Option 2",
-        "Option 3",
-        "Option 4",
-        "Option 5",
-        "Option 6",
-        "Option 7",
-        "Option 8",
-        "Option 9",
-        "Option 10",
-        "Option 11",
-        "Option 12",
-        "Option 13",
-        "Option 14",
-        "Option 15",
-        "Option 16",
-        "Option 17",
-        "Option 18",
-        "Option 19",
-        "Option 20",
-        "Option 21",
-        "Option 22",
-        "Option 23",
-        "Option 24",
-        "Option 25",
-        "Option 26",
-    ]
+    
+    let ManagerNames = Service().GetManagers()
     
     @IBOutlet weak var EnterPin: UITextField!
     @IBOutlet weak var ManagerName: UIButton!
@@ -54,9 +27,9 @@ class ManagerSignInViewController: UIViewController, UITextFieldDelegate {
         ]
         //Add Manager Name Options
         ManagerNames.forEach { managerName in
-                alertController.addAction(UIAlertAction(title: managerName, style: .default, handler: { [weak self] _ in
+                alertController.addAction(UIAlertAction(title: managerName.split(separator: "_")[1] + " " + managerName.split(separator: "_")[0], style: .default, handler: { [weak self] _ in
                     guard let self = self else { return }
-                    let attributedString = NSAttributedString(string: managerName, attributes: attributes)
+                    let attributedString = NSAttributedString(string: managerName.split(separator: "_")[1] + " " + managerName.split(separator: "_")[0], attributes: attributes)
                     self.ManagerName.setAttributedTitle(attributedString, for: .normal)
                     username = managerName
                 }))
@@ -78,7 +51,7 @@ class ManagerSignInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func LoginPressed(_ sender: Any) {
         pin = EnterPin.text!
         print("username: " + username + " Pin: " + pin)
-        if (Service.AttemptLogin(username: username, pin: pin) && !username.isEmpty){
+        if (Service().ManagerLogin(username: username, pin: pin) && !username.isEmpty){
             FailedAttempt.text = "Login Success"
             FailedAttempt.textColor = (UIColor.systemGreen)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
