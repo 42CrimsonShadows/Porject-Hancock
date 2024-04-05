@@ -8,11 +8,11 @@
 
 import Foundation
 
+public var currentTeacher : String = ""
+public var currentStudent : String = ""
+public var currentSession : Int = 0
 
 class Service {
-    var currentTeacher : String = ""
-    var currentStudent : String = ""
-    var currentSession : Int = 0
     
     //MARK: --CREATE(POST)
     //All these functions are created for adding new entries to the database
@@ -76,7 +76,6 @@ class Service {
        let tempStorage = DecodeData()
         if(tempStorage.teachers[username] != nil && tempStorage.teachers[username]?.pin == pin) {
             currentTeacher = username
-            print(currentTeacher)
             return true
         }
         return false

@@ -14,7 +14,7 @@ class ManagerMenuViewController: UIViewController {
     //ManagerLabel GetManager from Service
     
     @IBAction func SignOutPressed(_ sender: UIButton) {
-        //clear current manager
+        Service().LogOutManager()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.performSegue(withIdentifier: "managerSignOut", sender: self)
         }
@@ -26,6 +26,8 @@ class ManagerMenuViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        let name = Service().GetCurrentManager()
+        ManagerLabel.text = name.split(separator: "_")[1] + " " + name.split(separator: "_")[0]
     }
 }
 

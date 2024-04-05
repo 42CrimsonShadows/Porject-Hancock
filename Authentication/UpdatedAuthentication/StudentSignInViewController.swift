@@ -22,7 +22,7 @@ class StudentSignInViewController: UIViewController, UITextFieldDelegate {
         ]
         //Add Manager Name Options
         StudentNames.forEach { studentName in
-            alertController.addAction(UIAlertAction(title: String(studentName.split(separator: "_")[1]) + " " + studentName.split(separator: "_")[0], style: .default, handler: { [weak self] _ in
+            alertController.addAction(UIAlertAction(title: studentName.split(separator: "_")[1] + " " + studentName.split(separator: "_")[0], style: .default, handler: { [weak self] _ in
                     guard let self = self else { return }
                     let attributedString = NSAttributedString(string: String( studentName.split(separator: "_")[1] + " " + studentName.split(separator: "_")[0]), attributes: attributes)
                     self.StudentName.setAttributedTitle(attributedString, for: .normal)
