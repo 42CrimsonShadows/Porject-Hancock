@@ -50,6 +50,11 @@ class Service {
         return currentStudent
     }
     
+    func GetPin() -> String {
+        var tempStorage = DecodeData()
+        return tempStorage.teachers[currentTeacher]?.pin ?? ""
+    }
+    
     func DeleteManager(pin: String) -> Bool{
         var tempStorage = DecodeData()
         if(tempStorage.teachers[currentTeacher] != nil && tempStorage.teachers[currentTeacher]?.pin == pin) {
@@ -120,6 +125,7 @@ class Service {
         for (key, value) in storage.teachers[currentTeacher]?.students ?? [:] {
             studentsArray.append(key)
         }
+        print(studentsArray)
         return studentsArray
     }
     

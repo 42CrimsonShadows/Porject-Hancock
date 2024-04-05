@@ -118,6 +118,7 @@
 		C939B560229F305900D15A2B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939B55F229F305900D15A2B /* RegisterViewController.swift */; };
 		C99A9BE122A058A700554D9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A9BE022A058A700554D9A /* HomeViewController.swift */; };
 		C99A9BE322A06C0700554D9A /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A9BE222A06C0700554D9A /* InitViewController.swift */; };
+		E0B1F47F2BC0995200EBE706 /* ManagerDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B1F47E2BC0995200EBE706 /* ManagerDeleteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -237,6 +238,7 @@
 		C939B55F229F305900D15A2B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C99A9BE022A058A700554D9A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C99A9BE222A06C0700554D9A /* InitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
+		E0B1F47E2BC0995200EBE706 /* ManagerDeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerDeleteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +296,7 @@
 				51F46DDC2B927521001A891D /* StudentMenuViewController.swift */,
 				51F46DDE2B92753D001A891D /* ManagerMenuViewController.swift */,
 				51F46DE02B92774A001A891D /* StartMenuViewController.swift */,
+				E0B1F47E2BC0995200EBE706 /* ManagerDeleteViewController.swift */,
 			);
 			path = UpdatedAuthentication;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				A07974B322861DB000606889 /* StudentTableViewController.swift in Sources */,
 				A08A2D4522BED3A40076B814 /* ChapterViewController.swift in Sources */,
 				A0F8879E252B73870002B0F1 /* CreditsPageViewController.swift in Sources */,
+				E0B1F47F2BC0995200EBE706 /* ManagerDeleteViewController.swift in Sources */,
 				A02BCC3B22A86EA70059E3D8 /* activityViewController.swift in Sources */,
 				A7E62789249AAC560031126F /* LevelTwoActivityViewController.swift in Sources */,
 				A07974B12285FC4A00606889 /* StudentsTableViewCell.swift in Sources */,

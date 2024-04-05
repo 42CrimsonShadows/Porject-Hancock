@@ -27,7 +27,9 @@ class ManagerMenuViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let name = Service().GetCurrentManager()
-        ManagerLabel.text = name.split(separator: "_")[1] + " " + name.split(separator: "_")[0]
+        if(ManagerLabel != nil) {
+            ManagerLabel.text = name.split(separator: "_")[1] + " " + name.split(separator: "_")[0]
+        }
     }
 }
 

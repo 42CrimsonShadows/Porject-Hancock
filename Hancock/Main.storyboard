@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -1630,7 +1629,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
-                                    <action selector="logoutHandler:" destination="UWV-D1-EGe" eventType="touchUpInside" id="VKI-JS-VHy"/>
+                                    <segue destination="X3x-SE-cjU" kind="presentation" id="iUi-Kk-eGq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -4648,7 +4647,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="Manager Login">
                                                             <attributes>
-                                                                <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                                <font key="NSFont" metaFont="system" size="50"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
@@ -4665,7 +4664,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="New Manager">
                                                             <attributes>
-                                                                <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                                <font key="NSFont" metaFont="system" size="50"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
@@ -4691,13 +4690,13 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                         <rect key="frame" x="0.0" y="1161" width="1024" height="205"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p81-p8-fn4">
-                                                <rect key="frame" x="421.5" y="67" width="181" height="71"/>
+                                                <rect key="frame" x="426.5" y="67" width="171" height="71.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="Credits">
                                                             <attributes>
-                                                                <font key="NSFont" size="48" name="IrishGrover-Regular"/>
+                                                                <font key="NSFont" metaFont="system" size="48"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
@@ -4768,7 +4767,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Back">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -4801,7 +4800,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Select Manager">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -4839,7 +4838,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Login">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -4927,7 +4926,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Sign Out">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -4960,7 +4959,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Log In Student">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -4978,7 +4977,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="New Student">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -4996,7 +4995,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Manage Data">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -5034,7 +5033,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Delete Manager Profile">
                                                     <attributes>
-                                                        <font key="NSFont" size="40" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="40"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -5117,15 +5116,12 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Back">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                             <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="Qpl-IW-fnr" kind="presentation" id="SoN-qI-PFu"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -5158,13 +5154,16 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Create Student Profile">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                             <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="CreateStudent:" destination="FRP-Da-cCR" eventType="primaryActionTriggered" id="JqY-gx-raK"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Student Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oru-ky-PDY">
                                         <rect key="frame" x="119.5" y="326" width="785" height="168"/>
@@ -5221,6 +5220,12 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2lA-ZP-806"/>
+                    <connections>
+                        <outlet property="FailedAttempt" destination="Yf3-Ya-XXY" id="OAx-pz-94Y"/>
+                        <outlet property="StudentFirstName" destination="ocJ-iW-jta" id="tHp-Ua-taM"/>
+                        <outlet property="StudentLastName" destination="oru-ky-PDY" id="jIq-S1-RpZ"/>
+                        <segue destination="Qpl-IW-fnr" kind="presentation" identifier="LoggedInMenu" id="mx5-Gi-1bh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qnl-Fr-v5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5265,20 +5270,23 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0c6-2R-MFV">
-                                <rect key="frame" x="120" y="511" width="785" height="166"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5r-IG-dl1">
+                                <rect key="frame" x="153" y="597" width="717" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
-                                <menu key="menu" id="iju-uf-fSc">
-                                    <children>
-                                        <command title="Name 1" id="53k-r1-SYa"/>
-                                        <command title="Name 2" id="s3N-P6-3U6"/>
-                                    </children>
-                                </menu>
                                 <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Select Student">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="50"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="StudentNameSelect:" destination="X3x-SE-cjU" eventType="touchUpInside" id="rOQ-SU-KjI"/>
+                                    <action selector="SelectStudent:" destination="X3x-SE-cjU" eventType="touchUpInside" id="ay0-aw-vFG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -5288,7 +5296,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                     </view>
                     <navigationItem key="navigationItem" id="6ys-RW-sNv"/>
                     <connections>
-                        <outlet property="StudentName" destination="0c6-2R-MFV" id="XXN-Ub-sbx"/>
+                        <outlet property="StudentNameLabel" destination="x5r-IG-dl1" id="AdL-Yy-Q9m"/>
                         <segue destination="jmb-Cg-UZK" kind="presentation" identifier="studentSignedIn" modalTransitionStyle="crossDissolve" id="4Ls-Ad-bxq"/>
                     </connections>
                 </viewController>
@@ -5312,6 +5320,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                     <color key="baseBackgroundColor" red="0.94117647059999998" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="DeleteTeacher:" destination="mZD-hK-Oov" eventType="primaryActionTriggered" id="Pf4-97-y01"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kmx-gF-OgG">
                                 <rect key="frame" x="120" y="717" width="785" height="306"/>
@@ -5321,6 +5332,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qpl-IW-fnr" kind="presentation" id="uwI-LA-ajT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you sure? Deleting a profile is permanent." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4K-PJ-Owp">
                                 <rect key="frame" x="70" y="79" width="884" height="691"/>
@@ -5335,8 +5349,12 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="oq1-B3-3DZ"/>
+                    <connections>
+                        <segue destination="Qxo-cW-IOi" kind="presentation" identifier="DeletedManager" id="9ds-NK-BOi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hM1-TL-SVg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="mZD-hK-Oov" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-4530" y="1116"/>
         </scene>
@@ -5482,6 +5500,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ViewDataPressed:" destination="FCG-Tl-XAE" eventType="primaryActionTriggered" id="TsK-rq-FZu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Student" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzt-QA-k7C">
                                 <rect key="frame" x="311" y="-24" width="662" height="445"/>
@@ -5490,18 +5511,24 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="47b-Ui-ZEi">
-                                <rect key="frame" x="120" y="511" width="785" height="166"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPr-oD-ETN">
+                                <rect key="frame" x="153" y="597" width="717" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
-                                <menu key="menu" id="7nD-zg-JZ7">
-                                    <children>
-                                        <command title="Name 1" id="49H-pb-4A1"/>
-                                        <command title="Name 2" id="eS2-AS-c3N"/>
-                                    </children>
-                                </menu>
                                 <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Select Student">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="50"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="SelectStudent:" destination="FCG-Tl-XAE" eventType="touchUpInside" id="cLo-Y1-fz6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4EO-is-EjY"/>
@@ -5509,6 +5536,10 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="LfQ-8z-ynH"/>
+                    <connections>
+                        <outlet property="StudentNameLabel" destination="FPr-oD-ETN" id="QPz-Vv-3L6"/>
+                        <segue destination="DHT-8u-YYR" kind="presentation" identifier="StudentDataView" id="YOh-Mq-Oac"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUy-tl-Kxa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5551,6 +5582,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="FCG-Tl-XAE" kind="presentation" id="Qpe-lk-Her"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DpN-yP-mTb"/>
@@ -5622,7 +5656,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Create Manager">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -5655,7 +5689,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Back">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -5749,7 +5783,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Back">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -5819,8 +5853,10 @@ point the device toward a flat surface to see your Augmented Reality story conte
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6Sx-wx-bvL"/>
-        <segue reference="j2g-Mt-cqV"/>
+        <segue reference="Vg8-vJ-RSM"/>
+        <segue reference="imp-tm-VKr"/>
+        <segue reference="uwI-LA-ajT"/>
+        <segue reference="9ds-NK-BOi"/>
         <segue reference="aoi-rC-XX7"/>
         <segue reference="j5d-bO-yS9"/>
         <segue reference="nzC-1y-dQf"/>
@@ -5907,16 +5943,16 @@ point the device toward a flat surface to see your Augmented Reality story conte
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
