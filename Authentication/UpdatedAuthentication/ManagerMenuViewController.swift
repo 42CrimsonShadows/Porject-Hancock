@@ -16,6 +16,8 @@ class ManagerMenuViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        let name = Service().GetCurrentManager()
+        print("load: " + name)
     }
 }
 

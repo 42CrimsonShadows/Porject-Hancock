@@ -42,11 +42,19 @@ class Service {
 
     }
     
+    func GetCurrentManager() -> String {
+        return currentTeacher
+    }
+    
+    func GetCurrentStudent() -> String {
+        return currentStudent
+    }
+    
     func DeleteManager(pin: String) -> Bool{
         var tempStorage = DecodeData()
         if(tempStorage.teachers[currentTeacher] != nil && tempStorage.teachers[currentTeacher]?.pin == pin) {
             tempStorage.teachers.removeValue(forKey: currentTeacher)
-            currentTeacher = ""
+            LogOutManager()
             return true
         }
         return false
@@ -56,8 +64,7 @@ class Service {
         var tempStorage = DecodeData()
         if(tempStorage.teachers[currentTeacher]?.students[studentName] != nil && tempStorage.teachers[currentStudent]?.pin == pin) {
             tempStorage.teachers[currentTeacher]?.students.removeValue(forKey: studentName)
-            currentStudent = ""
-            currentSession = 0
+            LogOutStudent()
             return true
         }
         return false
@@ -69,6 +76,7 @@ class Service {
        let tempStorage = DecodeData()
         if(tempStorage.teachers[username] != nil && tempStorage.teachers[username]?.pin == pin) {
             currentTeacher = username
+            print(currentTeacher)
             return true
         }
         return false
@@ -85,6 +93,17 @@ class Service {
              return true
          }
          return false
+    }
+    
+    func LogOutManager() {
+        currentSession = 0
+        currentStudent = ""
+        currentTeacher = ""
+    }
+    
+    func LogOutStudent() {
+        currentSession = 0
+        currentStudent = ""
     }
     
      func GetManagers() -> [String] {
@@ -114,37 +133,35 @@ class Service {
     //END SECTION
     
     //Upload line accuracy and time to complete
-    static func updateCharacterData(localStorage: LocalStorage, teacherName: String, pin: String, studenName: String, session: Int, letter: String, score: Int32, timeToComplete: Int32, totalPointsEarned: Int32, totalPointsPossible: Int32){
+    func updateCharacterData(letter: String, score: Int32, timeToComplete: Int32, totalPointsEarned: Int32, totalPointsPossible: Int32){
         
         var tempStorage: LocalStorage = DecodeData()
 
             // Pass in faults later
         var letterStruct = LetterStruct(letter: letter, tokens: totalPointsEarned, faults: 0)
         
-        tempStorage.teachers[teacherName]?.students[studenName]?.sessions[session].letter.append(letterStruct)
+        tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions[currentSession].letter.append(letterStruct)
         
         EncodeData(DataToEncode: tempStorage)
     }
     
     //Function to upload imgs
         
-    static func updateImageData(localStorage: LocalStorage, teacherName: String, pin: String, studenName: String, session: Int, base64: String, title: String, description: String){
-        var testName: String = "Teacher"
-        var studentTest: String = "Student"
+    func updateImageData(base64: String, title: String, description: String){
         
         var tempStorage: LocalStorage = DecodeData()
-        print(tempStorage.teachers[testName]?.students[studentTest]?.sessions[session].freeDraw)
+        print(tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions[currentSession].freeDraw)
             if(title == "Free Draw"){
-                tempStorage.teachers[testName]?.students[studentTest]?.sessions[session].freeDraw.append(base64)
+                tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions[currentSession].freeDraw.append(base64)
             }
             else{
                 print("This is your data " + title)
                 let tempImitation = ImitationStruct(letter: title, image: base64)
-                tempStorage.teachers[testName]?.students[studentTest]?.sessions[session].imitation.append(tempImitation)
+                tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions[currentSession].imitation.append(tempImitation)
             }
         
         EncodeData(DataToEncode: tempStorage)
-        print(tempStorage.teachers[testName]?.students[studentTest]?.sessions[session].freeDraw)
+        print(tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions[currentSession].freeDraw)
     }
     
     //MARK: --READ(GET)

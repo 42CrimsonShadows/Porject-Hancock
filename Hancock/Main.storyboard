@@ -4648,7 +4648,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="Manager Login">
                                                             <attributes>
-                                                                <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                                <font key="NSFont" metaFont="system" size="50"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
@@ -4665,7 +4665,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="New Manager">
                                                             <attributes>
-                                                                <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                                <font key="NSFont" metaFont="system" size="50"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
@@ -4691,13 +4691,13 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                         <rect key="frame" x="0.0" y="1161" width="1024" height="205"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p81-p8-fn4">
-                                                <rect key="frame" x="421.5" y="67" width="181" height="71"/>
+                                                <rect key="frame" x="426.5" y="67" width="171" height="71.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="Credits">
                                                             <attributes>
-                                                                <font key="NSFont" size="48" name="IrishGrover-Regular"/>
+                                                                <font key="NSFont" metaFont="system" size="48"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
@@ -4768,7 +4768,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Back">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -4801,7 +4801,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Select Manager">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -4839,7 +4839,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Login">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -4927,7 +4927,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Sign Out">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -4957,7 +4957,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Log In Student">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -4975,7 +4975,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="New Student">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -4993,7 +4993,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Manage Data">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -5028,7 +5028,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Delete Manager Profile">
                                                     <attributes>
-                                                        <font key="NSFont" size="40" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="40"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -5104,7 +5104,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Back">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -5142,7 +5142,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Create Student Profile">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -5590,7 +5590,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Create Manager">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -5623,7 +5623,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Back">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -5717,7 +5717,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Back">
                                                     <attributes>
-                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="50"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
