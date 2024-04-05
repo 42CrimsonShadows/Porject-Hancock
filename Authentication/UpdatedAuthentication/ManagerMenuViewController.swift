@@ -9,6 +9,15 @@
 import UIKit
 
 class ManagerMenuViewController: UIViewController {
+    @IBOutlet weak var ManagerLabel: UILabel!
+    
+    //ManagerLabel GetManager from Service
+    
+    @IBAction func SignOutPressed(_ sender: UIButton) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.performSegue(withIdentifier: "managerSignOut", sender: self)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +25,6 @@ class ManagerMenuViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let name = Service().GetCurrentManager()
-        print("load: " + name)
     }
 }
 

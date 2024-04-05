@@ -4934,6 +4934,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             </attributedString>
                                             <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="SignOutPressed:" destination="Qpl-IW-fnr" eventType="touchUpInside" id="4BF-FR-dq9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -4965,7 +4968,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="jmb-Cg-UZK" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Pu6-xC-9FP"/>
+                                            <segue destination="X3x-SE-cjU" kind="presentation" modalTransitionStyle="crossDissolve" id="imp-tm-VKr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wR-or-m8q">
@@ -5000,6 +5003,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             </attributedString>
                                             <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="FCG-Tl-XAE" kind="presentation" modalTransitionStyle="crossDissolve" id="Vg8-vJ-RSM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -5035,6 +5041,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             </attributedString>
                                             <color key="baseBackgroundColor" red="0.94117647058823528" green="0.36470588235294116" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="pDP-a0-Ohr" kind="presentation" modalTransitionStyle="crossDissolve" id="j9n-Xf-8Xe"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -5065,10 +5074,14 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lJM-hw-qxO"/>
+                    <connections>
+                        <outlet property="ManagerLabel" destination="s9E-6w-GQM" id="4T6-ic-nyB"/>
+                        <segue destination="Qxo-cW-IOi" kind="presentation" identifier="managerSignOut" modalTransitionStyle="crossDissolve" id="WtF-MQ-qVw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BgF-VX-B3w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5183" y="-184"/>
+            <point key="canvasLocation" x="-5216" y="-183"/>
         </scene>
         <!--NewStudent-->
         <scene sceneID="vdp-lc-Mkc">
@@ -5110,6 +5123,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             </attributedString>
                                             <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Qpl-IW-fnr" kind="presentation" id="SoN-qI-PFu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -5226,6 +5242,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qpl-IW-fnr" kind="presentation" modalTransitionStyle="crossDissolve" id="OJH-u1-36h"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PpS-zc-dVj">
                                 <rect key="frame" x="120" y="906" width="785" height="221"/>
@@ -5235,6 +5254,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="LoginPressed:" destination="X3x-SE-cjU" eventType="touchUpInside" id="3tv-Tm-G0R"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Student" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukX-m6-rfz">
                                 <rect key="frame" x="311" y="-24" width="662" height="445"/>
@@ -5255,6 +5277,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     </children>
                                 </menu>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="StudentNameSelect:" destination="X3x-SE-cjU" eventType="touchUpInside" id="rOQ-SU-KjI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MLt-5R-rBE"/>
@@ -5262,6 +5287,10 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="6ys-RW-sNv"/>
+                    <connections>
+                        <outlet property="StudentName" destination="0c6-2R-MFV" id="XXN-Ub-sbx"/>
+                        <segue destination="jmb-Cg-UZK" kind="presentation" identifier="studentSignedIn" modalTransitionStyle="crossDissolve" id="4Ls-Ad-bxq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xiq-vw-r0j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5441,6 +5470,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qpl-IW-fnr" kind="presentation" modalTransitionStyle="crossDissolve" id="QRX-cX-Ft3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcv-g1-fxT">
                                 <rect key="frame" x="120" y="906" width="785" height="221"/>
@@ -5787,11 +5819,12 @@ point the device toward a flat surface to see your Augmented Reality story conte
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Bi7-Fg-eLq"/>
+        <segue reference="OJH-u1-36h"/>
+        <segue reference="WtF-MQ-qVw"/>
         <segue reference="aoi-rC-XX7"/>
         <segue reference="j5d-bO-yS9"/>
         <segue reference="nzC-1y-dQf"/>
-        <segue reference="Pu6-xC-9FP"/>
+        <segue reference="4Ls-Ad-bxq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1024.png" width="1024" height="1024"/>
@@ -5874,16 +5907,16 @@ point the device toward a flat surface to see your Augmented Reality story conte
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
