@@ -4911,65 +4911,158 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZl-hJ-vKs">
-                                <rect key="frame" x="62" y="80" width="329" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign Out" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
-                                    <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ah-iD-IEW">
-                                <rect key="frame" x="120" y="284" width="785" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Log In Student" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
-                                    <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="jmb-Cg-UZK" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Pu6-xC-9FP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wR-or-m8q">
-                                <rect key="frame" x="120" y="514" width="785" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="New Student" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
-                                    <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John Doe" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9E-6w-GQM">
-                                <rect key="frame" x="328" y="-28" width="622" height="319"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
-                                <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuO-jZ-CbO">
-                                <rect key="frame" x="120" y="744" width="785" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Manage Data" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
-                                    <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fms-AY-rqw">
-                                <rect key="frame" x="120" y="1068" width="785" height="124"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Delete Manager Profile" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
-                                    <color key="baseBackgroundColor" red="0.94117647058823528" green="0.36470588235294116" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                            </button>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucA-em-sh7" userLabel="Top">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="273"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9E-6w-GQM">
+                                        <rect key="frame" x="337" y="92" width="642" height="89"/>
+                                        <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
+                                        <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZl-hJ-vKs">
+                                        <rect key="frame" x="30" y="82" width="307" height="109"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Sign Out">
+                                                    <attributes>
+                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="YZl-hJ-vKs" firstAttribute="leading" secondItem="ucA-em-sh7" secondAttribute="leading" constant="30" id="3kY-1v-suS"/>
+                                    <constraint firstItem="YZl-hJ-vKs" firstAttribute="height" secondItem="ucA-em-sh7" secondAttribute="height" multiplier="0.4" id="7Om-7j-Xad"/>
+                                    <constraint firstItem="s9E-6w-GQM" firstAttribute="centerY" secondItem="ucA-em-sh7" secondAttribute="centerY" id="Eon-BP-pdM"/>
+                                    <constraint firstItem="YZl-hJ-vKs" firstAttribute="width" secondItem="ucA-em-sh7" secondAttribute="width" multiplier="0.3" id="GgT-xg-bfO"/>
+                                    <constraint firstItem="s9E-6w-GQM" firstAttribute="leading" secondItem="YZl-hJ-vKs" secondAttribute="trailing" id="RQt-9Q-bAI"/>
+                                    <constraint firstItem="YZl-hJ-vKs" firstAttribute="centerY" secondItem="ucA-em-sh7" secondAttribute="centerY" id="afl-7h-j2O"/>
+                                    <constraint firstItem="s9E-6w-GQM" firstAttribute="trailing" secondItem="ucA-em-sh7" secondAttribute="trailing" constant="-45" id="kbQ-hH-692"/>
+                                </constraints>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fP3-Mn-fB1" userLabel="Middle">
+                                <rect key="frame" x="0.0" y="273" width="1024" height="683"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ah-iD-IEW">
+                                        <rect key="frame" x="205" y="17.5" width="614" height="170.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Log In Student">
+                                                    <attributes>
+                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="jmb-Cg-UZK" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Pu6-xC-9FP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wR-or-m8q">
+                                        <rect key="frame" x="205" y="256.5" width="614" height="170.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="New Student">
+                                                    <attributes>
+                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="FRP-Da-cCR" kind="presentation" modalTransitionStyle="crossDissolve" id="NQh-pC-KHu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuO-jZ-CbO">
+                                        <rect key="frame" x="205" y="495.5" width="614" height="170.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Manage Data">
+                                                    <attributes>
+                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="yuO-jZ-CbO" firstAttribute="width" secondItem="fP3-Mn-fB1" secondAttribute="width" multiplier="0.6" id="242-bs-cs6"/>
+                                    <constraint firstItem="0wR-or-m8q" firstAttribute="centerY" secondItem="fP3-Mn-fB1" secondAttribute="centerY" id="Ceb-af-dcy"/>
+                                    <constraint firstItem="yuO-jZ-CbO" firstAttribute="height" secondItem="fP3-Mn-fB1" secondAttribute="height" multiplier="0.25" id="JAH-R3-JLD"/>
+                                    <constraint firstItem="yuO-jZ-CbO" firstAttribute="centerX" secondItem="fP3-Mn-fB1" secondAttribute="centerX" id="VuC-kH-haG"/>
+                                    <constraint firstItem="yuO-jZ-CbO" firstAttribute="centerY" secondItem="fP3-Mn-fB1" secondAttribute="centerY" multiplier="1.7" id="jXW-Qu-zgI"/>
+                                    <constraint firstItem="0wR-or-m8q" firstAttribute="width" secondItem="fP3-Mn-fB1" secondAttribute="width" multiplier="0.6" id="kMR-Y9-w7V"/>
+                                    <constraint firstItem="0wR-or-m8q" firstAttribute="height" secondItem="fP3-Mn-fB1" secondAttribute="height" multiplier="0.25" id="pfo-ui-qNz"/>
+                                    <constraint firstItem="7ah-iD-IEW" firstAttribute="width" secondItem="fP3-Mn-fB1" secondAttribute="width" multiplier="0.6" id="qyO-hk-LV3"/>
+                                    <constraint firstItem="0wR-or-m8q" firstAttribute="centerX" secondItem="fP3-Mn-fB1" secondAttribute="centerX" id="s7Z-fV-hfX"/>
+                                    <constraint firstItem="7ah-iD-IEW" firstAttribute="centerX" secondItem="fP3-Mn-fB1" secondAttribute="centerX" id="sli-ge-sJs"/>
+                                    <constraint firstItem="7ah-iD-IEW" firstAttribute="height" secondItem="fP3-Mn-fB1" secondAttribute="height" multiplier="0.25" id="tud-0l-bnb"/>
+                                    <constraint firstItem="7ah-iD-IEW" firstAttribute="centerY" secondItem="fP3-Mn-fB1" secondAttribute="centerY" multiplier="0.3" id="vUI-nx-ecU"/>
+                                </constraints>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxK-6I-wsA" userLabel="Bottom">
+                                <rect key="frame" x="0.0" y="956" width="1024" height="410"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fms-AY-rqw">
+                                        <rect key="frame" x="205" y="143.5" width="614" height="123"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Delete Manager Profile">
+                                                    <attributes>
+                                                        <font key="NSFont" size="40" name="IrishGrover-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.94117647058823528" green="0.36470588235294116" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="fms-AY-rqw" firstAttribute="height" secondItem="sxK-6I-wsA" secondAttribute="height" multiplier="0.3" id="3sR-h3-qOY"/>
+                                    <constraint firstItem="fms-AY-rqw" firstAttribute="centerY" secondItem="sxK-6I-wsA" secondAttribute="centerY" id="8D7-Cy-Qy2"/>
+                                    <constraint firstItem="fms-AY-rqw" firstAttribute="centerX" secondItem="sxK-6I-wsA" secondAttribute="centerX" id="Cak-at-QKB"/>
+                                    <constraint firstItem="fms-AY-rqw" firstAttribute="width" secondItem="sxK-6I-wsA" secondAttribute="width" multiplier="0.6" id="jSs-PJ-7jc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1AS-ng-Hhf"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ucA-em-sh7" firstAttribute="top" secondItem="1AS-ng-Hhf" secondAttribute="top" id="2bA-70-by8"/>
+                            <constraint firstItem="sxK-6I-wsA" firstAttribute="top" secondItem="fP3-Mn-fB1" secondAttribute="bottom" id="AOL-BG-tyd"/>
+                            <constraint firstItem="ucA-em-sh7" firstAttribute="width" secondItem="1AS-ng-Hhf" secondAttribute="width" id="Cgn-pC-T1P"/>
+                            <constraint firstItem="sxK-6I-wsA" firstAttribute="width" secondItem="1AS-ng-Hhf" secondAttribute="width" id="Ee0-v6-l85"/>
+                            <constraint firstItem="fP3-Mn-fB1" firstAttribute="top" secondItem="ucA-em-sh7" secondAttribute="bottom" id="GQc-aw-nxM"/>
+                            <constraint firstItem="ucA-em-sh7" firstAttribute="height" secondItem="1AS-ng-Hhf" secondAttribute="height" multiplier="0.2" id="OEZ-Eh-8vX"/>
+                            <constraint firstItem="1AS-ng-Hhf" firstAttribute="bottom" secondItem="sxK-6I-wsA" secondAttribute="bottom" id="TjY-p2-K5K"/>
+                            <constraint firstItem="sxK-6I-wsA" firstAttribute="centerX" secondItem="1AS-ng-Hhf" secondAttribute="centerX" id="clK-5A-5ze"/>
+                            <constraint firstItem="fP3-Mn-fB1" firstAttribute="centerX" secondItem="1AS-ng-Hhf" secondAttribute="centerX" id="hJl-9l-dJ4"/>
+                            <constraint firstItem="fP3-Mn-fB1" firstAttribute="width" secondItem="1AS-ng-Hhf" secondAttribute="width" id="tu9-0p-Sb3"/>
+                            <constraint firstItem="fP3-Mn-fB1" firstAttribute="height" secondItem="1AS-ng-Hhf" secondAttribute="height" multiplier="0.5" id="wbB-9F-cxY"/>
+                            <constraint firstItem="ucA-em-sh7" firstAttribute="centerX" secondItem="1AS-ng-Hhf" secondAttribute="centerX" id="x0l-zt-Q9L"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lJM-hw-qxO"/>
                 </viewController>
@@ -4985,56 +5078,131 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2z-rX-Hkd">
-                                <rect key="frame" x="62" y="80" width="241" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Back" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
-                                    <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVF-aa-AQQ">
-                                <rect key="frame" x="117" y="906" width="791" height="221"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Create Student Profile" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="60"/>
-                                    <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Student First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ocJ-iW-jta">
-                                <rect key="frame" x="120" y="450" width="785" height="166"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Student Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oru-ky-PDY">
-                                <rect key="frame" x="120" y="651" width="785" height="166"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Student" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CY1-2r-uEs">
-                                <rect key="frame" x="333" y="-3" width="639" height="445"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="150"/>
-                                <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please fill out all fields." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yf3-Ya-XXY">
-                                <rect key="frame" x="368" y="843" width="288" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.94117647059999998" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHY-fu-vEU" userLabel="Bottom">
+                                <rect key="frame" x="0.0" y="1093" width="1024" height="273"/>
+                                <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOg-Ga-GYE" userLabel="Top">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="273"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URd-qa-Rpd">
+                                        <rect key="frame" x="271" y="132" width="708" height="132.5"/>
+                                        <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="112"/>
+                                        <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6P-6m-jom">
+                                        <rect key="frame" x="30" y="2" width="949" height="132.5"/>
+                                        <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="112"/>
+                                        <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2z-rX-Hkd">
+                                        <rect key="frame" x="30" y="82" width="241" height="109"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Back">
+                                                    <attributes>
+                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="H2z-rX-Hkd" firstAttribute="centerY" secondItem="vOg-Ga-GYE" secondAttribute="centerY" id="5vR-Zd-fLj"/>
+                                    <constraint firstItem="URd-qa-Rpd" firstAttribute="trailing" secondItem="vOg-Ga-GYE" secondAttribute="trailing" constant="-45" id="D6q-ZN-M6O"/>
+                                    <constraint firstItem="h6P-6m-jom" firstAttribute="leading" secondItem="H2z-rX-Hkd" secondAttribute="leading" id="JHX-Nv-MeQ"/>
+                                    <constraint firstItem="H2z-rX-Hkd" firstAttribute="width" secondItem="vOg-Ga-GYE" secondAttribute="width" multiplier="0.235352" id="X0a-pM-S0h"/>
+                                    <constraint firstItem="h6P-6m-jom" firstAttribute="centerY" secondItem="vOg-Ga-GYE" secondAttribute="centerY" multiplier="0.5" id="Xis-5A-W05"/>
+                                    <constraint firstItem="H2z-rX-Hkd" firstAttribute="height" secondItem="vOg-Ga-GYE" secondAttribute="height" multiplier="0.4" id="iKP-kC-gNi"/>
+                                    <constraint firstItem="h6P-6m-jom" firstAttribute="trailing" secondItem="vOg-Ga-GYE" secondAttribute="trailing" constant="-45" id="jGU-q7-lGp"/>
+                                    <constraint firstItem="URd-qa-Rpd" firstAttribute="leading" secondItem="H2z-rX-Hkd" secondAttribute="trailing" id="n7H-of-zvb"/>
+                                    <constraint firstItem="URd-qa-Rpd" firstAttribute="centerY" secondItem="vOg-Ga-GYE" secondAttribute="centerY" multiplier="1.45" id="p9K-hm-SwV"/>
+                                    <constraint firstItem="H2z-rX-Hkd" firstAttribute="leading" secondItem="vOg-Ga-GYE" secondAttribute="leading" constant="30" id="s6z-pK-ZwB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Igr-2u-ezR" userLabel="Middle">
+                                <rect key="frame" x="0.0" y="273" width="1024" height="820"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill out all fields." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yf3-Ya-XXY">
+                                        <rect key="frame" x="256" y="514.5" width="512" height="36.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.94117647059999998" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVF-aa-AQQ">
+                                        <rect key="frame" x="116.5" y="585" width="791" height="224"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Create Student Profile">
+                                                    <attributes>
+                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Student Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oru-ky-PDY">
+                                        <rect key="frame" x="119.5" y="326" width="785" height="168"/>
+                                        <color key="backgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Student First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ocJ-iW-jta">
+                                        <rect key="frame" x="119.5" y="80" width="785" height="168.5"/>
+                                        <color key="backgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="oru-ky-PDY" firstAttribute="centerY" secondItem="Igr-2u-ezR" secondAttribute="centerY" id="1XL-ye-lD9"/>
+                                    <constraint firstItem="oru-ky-PDY" firstAttribute="height" secondItem="Igr-2u-ezR" secondAttribute="height" multiplier="0.205446" id="3Fo-Tn-At7"/>
+                                    <constraint firstItem="oru-ky-PDY" firstAttribute="centerX" secondItem="Igr-2u-ezR" secondAttribute="centerX" id="B0H-OS-tOT"/>
+                                    <constraint firstItem="Yf3-Ya-XXY" firstAttribute="centerY" secondItem="Igr-2u-ezR" secondAttribute="centerY" multiplier="1.3" id="ML6-UH-v8V"/>
+                                    <constraint firstItem="dVF-aa-AQQ" firstAttribute="centerY" secondItem="Igr-2u-ezR" secondAttribute="centerY" multiplier="1.7" id="OF4-X8-bV9"/>
+                                    <constraint firstItem="ocJ-iW-jta" firstAttribute="centerY" secondItem="Igr-2u-ezR" secondAttribute="centerY" multiplier="0.4" id="OVA-Ix-npA"/>
+                                    <constraint firstItem="Yf3-Ya-XXY" firstAttribute="centerX" secondItem="Igr-2u-ezR" secondAttribute="centerX" id="Qgs-U7-Fwp"/>
+                                    <constraint firstItem="oru-ky-PDY" firstAttribute="width" secondItem="Igr-2u-ezR" secondAttribute="width" multiplier="0.766602" id="Rc2-sO-P2d"/>
+                                    <constraint firstItem="dVF-aa-AQQ" firstAttribute="centerX" secondItem="Igr-2u-ezR" secondAttribute="centerX" id="TX0-Pr-lYe"/>
+                                    <constraint firstItem="dVF-aa-AQQ" firstAttribute="height" secondItem="Igr-2u-ezR" secondAttribute="height" multiplier="0.273515" id="Uwg-yG-Ov1"/>
+                                    <constraint firstItem="ocJ-iW-jta" firstAttribute="centerX" secondItem="Igr-2u-ezR" secondAttribute="centerX" id="Zmi-ob-gaL"/>
+                                    <constraint firstItem="ocJ-iW-jta" firstAttribute="width" secondItem="Igr-2u-ezR" secondAttribute="width" multiplier="0.766602" id="kHV-if-eIa"/>
+                                    <constraint firstItem="ocJ-iW-jta" firstAttribute="height" secondItem="Igr-2u-ezR" secondAttribute="height" multiplier="0.205446" id="n2D-Jd-bXP"/>
+                                    <constraint firstItem="dVF-aa-AQQ" firstAttribute="width" secondItem="Igr-2u-ezR" secondAttribute="width" multiplier="0.772461" id="qMt-vZ-Z7G"/>
+                                    <constraint firstItem="Yf3-Ya-XXY" firstAttribute="height" secondItem="Igr-2u-ezR" secondAttribute="height" multiplier="0.0445545" id="u3L-TE-FQ3"/>
+                                    <constraint firstItem="Yf3-Ya-XXY" firstAttribute="width" secondItem="Igr-2u-ezR" secondAttribute="width" multiplier="0.5" id="yXc-y6-lbJ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cFF-Py-j8j"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Igr-2u-ezR" firstAttribute="centerX" secondItem="cFF-Py-j8j" secondAttribute="centerX" id="0nu-Y5-qiB"/>
+                            <constraint firstItem="iHY-fu-vEU" firstAttribute="height" secondItem="cFF-Py-j8j" secondAttribute="height" multiplier="0.2" id="1DL-cD-6KC"/>
+                            <constraint firstItem="Igr-2u-ezR" firstAttribute="width" secondItem="cFF-Py-j8j" secondAttribute="width" id="5Aj-CT-NlI"/>
+                            <constraint firstItem="Igr-2u-ezR" firstAttribute="height" secondItem="cFF-Py-j8j" secondAttribute="height" multiplier="0.6" id="LU3-h5-GuK"/>
+                            <constraint firstItem="Igr-2u-ezR" firstAttribute="centerY" secondItem="cFF-Py-j8j" secondAttribute="centerY" id="NG7-8s-CKn"/>
+                            <constraint firstItem="vOg-Ga-GYE" firstAttribute="top" secondItem="cFF-Py-j8j" secondAttribute="top" id="TZv-Wc-iKP"/>
+                            <constraint firstItem="vOg-Ga-GYE" firstAttribute="width" secondItem="cFF-Py-j8j" secondAttribute="width" id="XVh-Zr-vQJ"/>
+                            <constraint firstItem="vOg-Ga-GYE" firstAttribute="centerX" secondItem="cFF-Py-j8j" secondAttribute="centerX" id="bXb-Vw-jgG"/>
+                            <constraint firstItem="cFF-Py-j8j" firstAttribute="bottom" secondItem="iHY-fu-vEU" secondAttribute="bottom" id="pfp-Nx-NrI"/>
+                            <constraint firstItem="iHY-fu-vEU" firstAttribute="width" secondItem="cFF-Py-j8j" secondAttribute="width" id="qAz-sg-M3C"/>
+                            <constraint firstItem="iHY-fu-vEU" firstAttribute="centerX" secondItem="cFF-Py-j8j" secondAttribute="centerX" id="xQ6-Ej-pbS"/>
+                            <constraint firstItem="vOg-Ga-GYE" firstAttribute="height" secondItem="cFF-Py-j8j" secondAttribute="height" multiplier="0.2" id="xX8-1k-Kqt"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2lA-ZP-806"/>
                 </viewController>
@@ -5619,7 +5787,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="j2g-Mt-cqV"/>
+        <segue reference="Bi7-Fg-eLq"/>
         <segue reference="aoi-rC-XX7"/>
         <segue reference="j5d-bO-yS9"/>
         <segue reference="nzC-1y-dQf"/>
