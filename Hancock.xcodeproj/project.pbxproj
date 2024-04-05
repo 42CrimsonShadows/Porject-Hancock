@@ -796,7 +796,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 5L9MS75TE2;
+				DEVELOPMENT_TEAM = 69V8S4WMW6;
 				INFOPLIST_FILE = Hancock/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.educational-games";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -805,7 +805,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jaydenquallio.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Submeonic.ABCStories;
 				PRODUCT_NAME = "ABC Go AR";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -823,7 +823,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 5L9MS75TE2;
+				DEVELOPMENT_TEAM = 69V8S4WMW6;
 				INFOPLIST_FILE = Hancock/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.educational-games";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -832,7 +832,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jaydenquallio.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Submeonic.ABCStories;
 				PRODUCT_NAME = "ABC Go AR";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
