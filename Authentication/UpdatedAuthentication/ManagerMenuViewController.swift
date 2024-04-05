@@ -14,6 +14,7 @@ class ManagerMenuViewController: UIViewController {
     //ManagerLabel GetManager from Service
     
     @IBAction func SignOutPressed(_ sender: UIButton) {
+        //clear current manager
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.performSegue(withIdentifier: "managerSignOut", sender: self)
         }
