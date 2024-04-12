@@ -51,7 +51,7 @@ class Service {
     }
     
     func GetPin() -> String {
-        var tempStorage = DecodeData()
+        let tempStorage = DecodeData()
         return tempStorage.teachers[currentTeacher]?.pin ?? ""
     }
     
@@ -59,6 +59,7 @@ class Service {
         var tempStorage = DecodeData()
         if(tempStorage.teachers[currentTeacher] != nil && tempStorage.teachers[currentTeacher]?.pin == pin) {
             tempStorage.teachers.removeValue(forKey: currentTeacher)
+            EncodeData(DataToEncode: tempStorage)
             LogOutManager()
             return true
         }
@@ -90,9 +91,10 @@ class Service {
         var tempStorage = DecodeData()
          if(tempStorage.teachers[currentTeacher]?.students[studentName] != nil) {
              currentStudent = studentName
-             let newSession = SessionStruct(letter: [], imitation: [], freeDraw: [])
+             let newSession = SessionStruct(date: Date(), letter: [], imitation: [], freeDraw: [])
              tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions.append(newSession)
              currentSession = (tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions.count ?? 1) - 1
+             print(String(currentSession) + " : " + String(Date().timeIntervalSinceReferenceDate))
              EncodeData(DataToEncode: tempStorage)
              return true
          }
@@ -106,6 +108,12 @@ class Service {
     }
     
     func LogOutStudent() {
+        var tempStorage = DecodeData()
+        if(tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions[currentSession] == nil) {
+            //If session is empty remove it
+            tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions.remove(at: currentSession)
+            EncodeData(DataToEncode: tempStorage)
+        }
         currentSession = 0
         currentStudent = ""
     }
@@ -138,15 +146,15 @@ class Service {
     //END SECTION
     
     //Upload line accuracy and time to complete
-    func updateCharacterData(letter: String, score: Int32, timeToComplete: Int32, totalPointsEarned: Int32, totalPointsPossible: Int32){
+    func updateCharacterData(letter: String, faults: Int32, totalPointsEarned: Int32, totalPointsPossible: Int32, image: String){
         
         var tempStorage: LocalStorage = DecodeData()
 
             // Pass in faults later
-        var letterStruct = LetterStruct(letter: letter, tokens: totalPointsEarned, faults: 0)
+        let letterStruct = LetterStruct(letter: letter, tokens: totalPointsEarned, possibleTokens: totalPointsPossible, faults: faults, offpath_image: image)
         
         tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions[currentSession].letter.append(letterStruct)
-        
+        print(letterStruct)
         EncodeData(DataToEncode: tempStorage)
     }
     
@@ -155,9 +163,14 @@ class Service {
     func updateImageData(base64: String, title: String, description: String){
         
         var tempStorage: LocalStorage = DecodeData()
-        print(tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions[currentSession].freeDraw)
             if(title == "Free Draw"){
-                tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions[currentSession].freeDraw.append(base64)
+                if(tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions[currentSession] != nil) {
+                    tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions[currentSession].freeDraw.append(base64)
+                    //print("appended: " + base64)
+                }
+                else {
+                    print("no such session")
+                }
             }
             else{
                 print("This is your data " + title)
@@ -166,7 +179,6 @@ class Service {
             }
         
         EncodeData(DataToEncode: tempStorage)
-        print(tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions[currentSession].freeDraw)
     }
     
     //MARK: --READ(GET)

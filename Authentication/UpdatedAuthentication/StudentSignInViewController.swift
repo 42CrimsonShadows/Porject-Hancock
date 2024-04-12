@@ -47,8 +47,14 @@ class StudentSignInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func LoginPressed(_ sender: UIButton) {
         //set Current Student
         if (username != ""){
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self.performSegue(withIdentifier: "studentSignedIn", sender: self)
+            let loggedin = Service().StudentLogin(studentName: username)
+            if(loggedin) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.performSegue(withIdentifier: "studentSignedIn", sender: self)
+                }
+            }
+            else {
+                print("failed")
             }
         }
     }

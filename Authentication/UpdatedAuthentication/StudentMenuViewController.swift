@@ -54,6 +54,23 @@ class StudentMenuViewController: UIViewController {
         }
     }
     
+    func DeleteStudent() {
+        let pin = Service().GetPin()
+        print("tried. pin : " + pin);
+        if (pin != "" && username != "") {
+            let result = Service().DeleteStudent(studentName: username, pin: pin)
+            if(result) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.performSegue(withIdentifier: "DeletedStudent", sender: self)
+                }
+            }
+            else {
+                //failed
+                print("failed");
+            }
+        }
+    }
+    
     
     
     

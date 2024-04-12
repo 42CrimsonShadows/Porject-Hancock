@@ -91,10 +91,14 @@ struct ImitationStruct: Codable{
 struct LetterStruct: Codable{
     var letter: String
     var tokens: Int32
+    var possibleTokens: Int32
     var faults: Int32
+    var offpath_image: String = ""
 }
 
 struct SessionStruct: Codable{
+    //Date
+    var date: Date
     // Array of letters
     var letter: [LetterStruct]
     

@@ -14,7 +14,8 @@ class ManagerDeleteViewController: UIViewController {
     
     //ManagerLabel GetManager from Service
 
-    @IBAction func DeleteTeacher(_ sender: UIButton) {
+
+    @IBAction func DeleteManager(_ sender: UIButton) {
         let pin = Service().GetPin()
         print("tried. pin : " + pin);
         if (pin != "") {
@@ -30,7 +31,6 @@ class ManagerDeleteViewController: UIViewController {
             }
         }
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -44,7 +44,8 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
     
     // Properties for tracking off-path touches
     private var isCurrentlyOffPath = false
-    private var offPathCount = 0
+    private var offPathCount: Int32 = 0
+    private var offPathImage: String = ""
     private var offPathLocations = [CGPoint]()
     private var hasGoneOffPath = false;
     
@@ -923,15 +924,15 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
                         
                         if let image = screenShot() {
                             if let pngData = image.pngData() {
-                                let base64String = pngData.base64EncodedString()
+                                offPathImage = pngData.base64EncodedString()
                                 // send character data to db with user credentials from login
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-//                                    Service.updateImageData(username: user, password: pass, base64: base64String, title: "Letter: \(selectedActivity)", description: "In Letter Activity")
-                                })
                                 print("Out of bounds on letter \(pngData)")
                             }
                         }
                     }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                        Service().updateCharacterData(letter: selectedActivity, faults: self.offPathCount, totalPointsEarned: self.letterCoins, totalPointsPossible: self.coinsPossible, image: self.offPathImage)
+                    })
                     
                     //play cheer
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
@@ -1039,6 +1040,7 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
             
             if alphaValue < alphaThreshold {
                 if !isCurrentlyOffPath {
+                    offPathCount += 1
                     hasGoneOffPath = true
                     isCurrentlyOffPath = true
                     canvasView.drawRedDot(at: touchPoint)
