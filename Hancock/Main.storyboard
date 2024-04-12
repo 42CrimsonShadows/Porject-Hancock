@@ -132,7 +132,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2JO-Y2-2iB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47" y="846"/>
+            <point key="canvasLocation" x="-1487" y="2964"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -578,7 +578,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-714" y="846"/>
+            <point key="canvasLocation" x="-2148" y="2964"/>
         </scene>
         <!--Registration-->
         <scene sceneID="NE0-vK-vox">
@@ -818,7 +818,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1419" y="1532"/>
+            <point key="canvasLocation" x="-2806" y="2964"/>
         </scene>
         <!--Level Two Activity View Controller-->
         <scene sceneID="e2w-4Z-pok">
@@ -5487,39 +5487,46 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpJ-Uw-ipm">
-                                <rect key="frame" x="120" y="79" width="785" height="691"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Manager Profile Deleted">
-                                        <attributes>
-                                            <color key="NSColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="150" name="IrishGrover-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4g-uf-Y1n">
-                                <rect key="frame" x="120" y="885" width="785" height="306"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4g-uf-Y1n">
+                                <rect key="frame" x="205" y="523" width="614" height="201.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Return">
                                             <attributes>
-                                                <font key="NSFont" size="75" name="IrishGrover-Regular"/>
+                                                <font key="NSFont" size="50" name="IrishGrover-Regular"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpJ-Uw-ipm">
+                                <rect key="frame" x="51" y="363.5" width="922" height="59.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Manager Profile Deleted">
+                                        <attributes>
+                                            <color key="NSColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dGZ-YM-9TB"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zpJ-Uw-ipm" firstAttribute="centerY" secondItem="dGZ-YM-9TB" secondAttribute="centerY" constant="-300" id="BTu-SH-ldR"/>
+                            <constraint firstItem="O4g-uf-Y1n" firstAttribute="height" secondItem="dGZ-YM-9TB" secondAttribute="height" multiplier="0.15" id="Pb7-co-OHT"/>
+                            <constraint firstItem="zpJ-Uw-ipm" firstAttribute="width" secondItem="dGZ-YM-9TB" secondAttribute="width" multiplier="0.9" id="apt-zq-hog"/>
+                            <constraint firstItem="O4g-uf-Y1n" firstAttribute="centerY" secondItem="dGZ-YM-9TB" secondAttribute="centerY" multiplier="0.9" id="dBk-s1-CeP"/>
+                            <constraint firstItem="O4g-uf-Y1n" firstAttribute="centerX" secondItem="dGZ-YM-9TB" secondAttribute="centerX" id="qkZ-JI-V5U"/>
+                            <constraint firstItem="zpJ-Uw-ipm" firstAttribute="centerX" secondItem="dGZ-YM-9TB" secondAttribute="centerX" id="y0Y-wv-s8U"/>
+                            <constraint firstItem="O4g-uf-Y1n" firstAttribute="width" secondItem="dGZ-YM-9TB" secondAttribute="width" multiplier="0.6" id="z9F-Nd-bOZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YQE-2s-3J5"/>
                 </viewController>
@@ -5535,48 +5542,83 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Av5-ji-ThL">
-                                <rect key="frame" x="120" y="1097" width="785" height="124"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Delete Student Profile">
-                                            <attributes>
-                                                <font key="NSFont" size="50" name="IrishGrover-Regular"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" red="0.94117647059999998" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGu-Yc-hBM">
-                                <rect key="frame" x="120" y="717" width="785" height="306"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Cancel" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
-                                    <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbW-dy-T3G">
-                                <rect key="frame" x="70" y="79" width="884" height="691"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Are you sure? Deleting a profile is permanent.">
-                                        <attributes>
-                                            <color key="NSColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="100" name="IrishGrover-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vab-dl-4YZ" userLabel="Bottom">
+                                <rect key="frame" x="0.0" y="962" width="1024" height="404"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Av5-ji-ThL">
+                                        <rect key="frame" x="205" y="141.5" width="614" height="121"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Delete Student Profile">
+                                                    <attributes>
+                                                        <font key="NSFont" size="40" name="IrishGrover-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.94117647059999998" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="Av5-ji-ThL" firstAttribute="width" secondItem="vab-dl-4YZ" secondAttribute="width" multiplier="0.6" id="Klj-rn-f4g"/>
+                                    <constraint firstItem="Av5-ji-ThL" firstAttribute="height" secondItem="vab-dl-4YZ" secondAttribute="height" multiplier="0.3" id="Q89-ew-OYK"/>
+                                    <constraint firstItem="Av5-ji-ThL" firstAttribute="centerX" secondItem="vab-dl-4YZ" secondAttribute="centerX" id="ZbH-P0-pnd"/>
+                                    <constraint firstItem="Av5-ji-ThL" firstAttribute="centerY" secondItem="vab-dl-4YZ" secondAttribute="centerY" id="iRI-Q4-8eU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gt-Xq-bVG" userLabel="Top">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="942"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbW-dy-T3G">
+                                        <rect key="frame" x="51" y="253.5" width="922" height="235.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Are you sure? Deleting a profile is permanent.">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGu-Yc-hBM">
+                                        <rect key="frame" x="205" y="489" width="614" height="170.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Cancel" cornerStyle="large">
+                                            <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
+                                            <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="WbW-dy-T3G" firstAttribute="centerY" secondItem="1gt-Xq-bVG" secondAttribute="centerY" constant="-100" id="Loq-5D-bjK"/>
+                                    <constraint firstItem="UGu-Yc-hBM" firstAttribute="width" secondItem="1gt-Xq-bVG" secondAttribute="width" multiplier="0.6" id="VbW-2E-OqT"/>
+                                    <constraint firstItem="WbW-dy-T3G" firstAttribute="width" secondItem="1gt-Xq-bVG" secondAttribute="width" multiplier="0.9" id="d9J-uW-GlB"/>
+                                    <constraint firstItem="WbW-dy-T3G" firstAttribute="height" secondItem="1gt-Xq-bVG" secondAttribute="height" multiplier="0.25" id="gu5-JG-MbR"/>
+                                    <constraint firstItem="UGu-Yc-hBM" firstAttribute="centerX" secondItem="1gt-Xq-bVG" secondAttribute="centerX" id="it8-OJ-ran"/>
+                                    <constraint firstItem="UGu-Yc-hBM" firstAttribute="top" secondItem="WbW-dy-T3G" secondAttribute="bottom" id="mgD-00-amI"/>
+                                    <constraint firstItem="WbW-dy-T3G" firstAttribute="centerX" secondItem="1gt-Xq-bVG" secondAttribute="centerX" id="qBB-FM-ilm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HYS-Q5-AjQ"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vab-dl-4YZ" firstAttribute="bottom" secondItem="HYS-Q5-AjQ" secondAttribute="bottom" id="1jY-Jw-Ok9"/>
+                            <constraint firstItem="1gt-Xq-bVG" firstAttribute="centerX" secondItem="HYS-Q5-AjQ" secondAttribute="centerX" id="Fsc-9y-CLT"/>
+                            <constraint firstItem="UGu-Yc-hBM" firstAttribute="height" secondItem="TJZ-kl-ALi" secondAttribute="height" multiplier="0.125" id="R3f-ye-Axz"/>
+                            <constraint firstItem="1gt-Xq-bVG" firstAttribute="top" secondItem="HYS-Q5-AjQ" secondAttribute="top" id="Uwo-Jq-L0X"/>
+                            <constraint firstItem="vab-dl-4YZ" firstAttribute="centerX" secondItem="HYS-Q5-AjQ" secondAttribute="centerX" id="aEh-Yx-4OJ"/>
+                            <constraint firstItem="1gt-Xq-bVG" firstAttribute="width" secondItem="HYS-Q5-AjQ" secondAttribute="width" id="d35-b4-pga"/>
+                            <constraint firstItem="1gt-Xq-bVG" firstAttribute="height" secondItem="HYS-Q5-AjQ" secondAttribute="height" multiplier="0.7" id="dOJ-kO-G4s"/>
+                            <constraint firstItem="vab-dl-4YZ" firstAttribute="top" secondItem="1gt-Xq-bVG" secondAttribute="bottom" id="mbj-J7-flb"/>
+                            <constraint firstItem="vab-dl-4YZ" firstAttribute="width" secondItem="HYS-Q5-AjQ" secondAttribute="width" id="uEn-w6-m1z"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Scd-zd-eeC"/>
                 </viewController>
@@ -5592,29 +5634,27 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEw-Qh-eLU">
-                                <rect key="frame" x="120" y="885" width="785" height="306"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEw-Qh-eLU">
+                                <rect key="frame" x="205" y="523" width="614" height="201.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Return">
                                             <attributes>
-                                                <font key="NSFont" size="75" name="IrishGrover-Regular"/>
+                                                <font key="NSFont" size="50" name="IrishGrover-Regular"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0p-kb-Cze">
-                                <rect key="frame" x="99" y="115" width="826" height="691"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0p-kb-Cze">
+                                <rect key="frame" x="51" y="363.5" width="922" height="59.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Student Profile Deleted">
                                         <attributes>
                                             <color key="NSColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="150" name="IrishGrover-Regular"/>
+                                            <font key="NSFont" size="50" name="IrishGrover-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -5625,6 +5665,15 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <viewLayoutGuide key="safeArea" id="Rkq-qq-Wri"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uEw-Qh-eLU" firstAttribute="height" secondItem="Rkq-qq-Wri" secondAttribute="height" multiplier="0.15" id="GaC-Ln-ZY1"/>
+                            <constraint firstItem="A0p-kb-Cze" firstAttribute="centerX" secondItem="Rkq-qq-Wri" secondAttribute="centerX" id="Mab-TY-wa7"/>
+                            <constraint firstItem="A0p-kb-Cze" firstAttribute="centerY" secondItem="Rkq-qq-Wri" secondAttribute="centerY" constant="-300" id="Rrt-Tx-taG"/>
+                            <constraint firstItem="uEw-Qh-eLU" firstAttribute="width" secondItem="Rkq-qq-Wri" secondAttribute="width" multiplier="0.6" id="WKa-Ee-3mY"/>
+                            <constraint firstItem="uEw-Qh-eLU" firstAttribute="centerY" secondItem="Rkq-qq-Wri" secondAttribute="centerY" multiplier="0.9" id="eN0-Qr-1VK"/>
+                            <constraint firstItem="uEw-Qh-eLU" firstAttribute="centerX" secondItem="Rkq-qq-Wri" secondAttribute="centerX" id="mO4-eD-vhM"/>
+                            <constraint firstItem="A0p-kb-Cze" firstAttribute="width" secondItem="Rkq-qq-Wri" secondAttribute="width" multiplier="0.9" id="typ-EI-FzC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hks-6O-Y0N"/>
                 </viewController>
@@ -6098,7 +6147,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Vg8-vJ-RSM"/>
+        <segue reference="Qpe-lk-Her"/>
         <segue reference="uwI-LA-ajT"/>
         <segue reference="9ds-NK-BOi"/>
         <segue reference="aoi-rC-XX7"/>
