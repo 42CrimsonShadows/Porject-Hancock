@@ -5098,7 +5098,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Create Student Profile">
+                                                <fragment content="Create Student ">
                                                     <attributes>
                                                         <font key="NSFont" size="50" name="IrishGrover-Regular"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -5242,72 +5242,133 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyw-GQ-jez">
-                                <rect key="frame" x="62" y="80" width="241" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Back">
-                                            <attributes>
-                                                <font key="NSFont" size="50" name="IrishGrover-Regular"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="Qpl-IW-fnr" kind="presentation" modalTransitionStyle="crossDissolve" id="OJH-u1-36h"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PpS-zc-dVj">
-                                <rect key="frame" x="120" y="906" width="785" height="221"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Login">
-                                            <attributes>
-                                                <font key="NSFont" size="75" name="IrishGrover-Regular"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="LoginPressed:" destination="X3x-SE-cjU" eventType="touchUpInside" id="3tv-Tm-G0R"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Student" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukX-m6-rfz">
-                                <rect key="frame" x="311" y="-24" width="662" height="445"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="150"/>
-                                <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5r-IG-dl1">
-                                <rect key="frame" x="153" y="597" width="717" height="171"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Select Student">
-                                            <attributes>
-                                                <font key="NSFont" size="50" name="IrishGrover-Regular"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="SelectStudent:" destination="X3x-SE-cjU" eventType="touchUpInside" id="ay0-aw-vFG"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7T-Mz-9Cq" userLabel="Top">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="239"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyw-GQ-jez">
+                                        <rect key="frame" x="30" y="71.5" width="175" height="95.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Back">
+                                                    <attributes>
+                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Qpl-IW-fnr" kind="presentation" modalTransitionStyle="crossDissolve" id="OJH-u1-36h"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxN-aZ-0FL">
+                                        <rect key="frame" x="205" y="119.5" width="584" height="119.5"/>
+                                        <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="112"/>
+                                        <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukX-m6-rfz">
+                                        <rect key="frame" x="205" y="0.0" width="584" height="119.5"/>
+                                        <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="112"/>
+                                        <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="ukX-m6-rfz" firstAttribute="width" secondItem="V7T-Mz-9Cq" secondAttribute="width" multiplier="0.7" id="0tb-rd-FXf"/>
+                                    <constraint firstItem="ukX-m6-rfz" firstAttribute="height" secondItem="V7T-Mz-9Cq" secondAttribute="height" multiplier="0.5" id="8U6-9T-sIf"/>
+                                    <constraint firstItem="xxN-aZ-0FL" firstAttribute="bottom" secondItem="V7T-Mz-9Cq" secondAttribute="bottom" id="A4S-gW-TG7"/>
+                                    <constraint firstItem="ukX-m6-rfz" firstAttribute="top" secondItem="V7T-Mz-9Cq" secondAttribute="top" id="HJJ-XR-yhd"/>
+                                    <constraint firstItem="xxN-aZ-0FL" firstAttribute="leading" secondItem="eyw-GQ-jez" secondAttribute="trailing" id="Igu-1r-LZb"/>
+                                    <constraint firstItem="ukX-m6-rfz" firstAttribute="leading" secondItem="eyw-GQ-jez" secondAttribute="trailing" id="KDB-nV-yc2"/>
+                                    <constraint firstItem="eyw-GQ-jez" firstAttribute="centerY" secondItem="V7T-Mz-9Cq" secondAttribute="centerY" id="S9I-63-vQs"/>
+                                    <constraint firstItem="ukX-m6-rfz" firstAttribute="bottom" secondItem="xxN-aZ-0FL" secondAttribute="top" id="UTf-Cy-hL3"/>
+                                    <constraint firstItem="xxN-aZ-0FL" firstAttribute="width" secondItem="V7T-Mz-9Cq" secondAttribute="width" multiplier="0.7" id="ZXu-sU-Ziw"/>
+                                    <constraint firstItem="eyw-GQ-jez" firstAttribute="height" secondItem="V7T-Mz-9Cq" secondAttribute="height" multiplier="0.4" id="naP-Bg-NtJ"/>
+                                    <constraint firstItem="ukX-m6-rfz" firstAttribute="trailing" secondItem="V7T-Mz-9Cq" secondAttribute="trailing" constant="-45" id="qPa-n2-AE3"/>
+                                    <constraint firstItem="eyw-GQ-jez" firstAttribute="leading" secondItem="V7T-Mz-9Cq" secondAttribute="leading" constant="30" id="suH-Yx-AYt"/>
+                                    <constraint firstItem="xxN-aZ-0FL" firstAttribute="trailing" secondItem="V7T-Mz-9Cq" secondAttribute="trailing" constant="-45" id="xJn-Jh-ixa"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QrE-EU-1N9" userLabel="Bottom">
+                                <rect key="frame" x="0.0" y="716.5" width="834" height="477.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PpS-zc-dVj">
+                                        <rect key="frame" x="167" y="149" width="500" height="179.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Login">
+                                                    <attributes>
+                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="LoginPressed:" destination="X3x-SE-cjU" eventType="touchUpInside" id="3tv-Tm-G0R"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="PpS-zc-dVj" firstAttribute="centerY" secondItem="QrE-EU-1N9" secondAttribute="centerY" id="Ou3-st-en9"/>
+                                    <constraint firstItem="PpS-zc-dVj" firstAttribute="centerX" secondItem="QrE-EU-1N9" secondAttribute="centerX" id="chN-zj-u9N"/>
+                                    <constraint firstItem="PpS-zc-dVj" firstAttribute="width" secondItem="QrE-EU-1N9" secondAttribute="width" multiplier="0.6" id="ekR-LZ-Wnm"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdL-L1-mSK" userLabel="Middle">
+                                <rect key="frame" x="0.0" y="239" width="834" height="477.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5r-IG-dl1">
+                                        <rect key="frame" x="125" y="164" width="584" height="149"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Select Student">
+                                                    <attributes>
+                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="SelectStudent:" destination="X3x-SE-cjU" eventType="touchUpInside" id="ay0-aw-vFG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="x5r-IG-dl1" firstAttribute="centerX" secondItem="UdL-L1-mSK" secondAttribute="centerX" id="IME-Qs-7ze"/>
+                                    <constraint firstItem="x5r-IG-dl1" firstAttribute="width" secondItem="UdL-L1-mSK" secondAttribute="width" multiplier="0.7" id="M9A-Fl-9LP"/>
+                                    <constraint firstItem="x5r-IG-dl1" firstAttribute="centerY" secondItem="UdL-L1-mSK" secondAttribute="centerY" id="pMH-Y9-SAa"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MLt-5R-rBE"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QrE-EU-1N9" firstAttribute="width" secondItem="Ko2-BA-p63" secondAttribute="width" id="2YO-Cz-FK1"/>
+                            <constraint firstItem="x5r-IG-dl1" firstAttribute="height" secondItem="Ko2-BA-p63" secondAttribute="height" multiplier="0.125" id="A1w-PJ-SBF"/>
+                            <constraint firstItem="UdL-L1-mSK" firstAttribute="top" secondItem="V7T-Mz-9Cq" secondAttribute="bottom" id="B4L-a2-7xk"/>
+                            <constraint firstItem="UdL-L1-mSK" firstAttribute="width" secondItem="Ko2-BA-p63" secondAttribute="width" id="OOW-gZ-l8J"/>
+                            <constraint firstItem="V7T-Mz-9Cq" firstAttribute="centerX" secondItem="MLt-5R-rBE" secondAttribute="centerX" id="SwN-7s-r1o"/>
+                            <constraint firstItem="V7T-Mz-9Cq" firstAttribute="height" secondItem="Ko2-BA-p63" secondAttribute="height" multiplier="0.2" id="U2R-uX-9FL"/>
+                            <constraint firstItem="PpS-zc-dVj" firstAttribute="height" secondItem="Ko2-BA-p63" secondAttribute="height" multiplier="0.15" id="Z5r-AB-M8D"/>
+                            <constraint firstItem="QrE-EU-1N9" firstAttribute="centerX" secondItem="MLt-5R-rBE" secondAttribute="centerX" id="iDc-h4-3yx"/>
+                            <constraint firstItem="UdL-L1-mSK" firstAttribute="height" secondItem="Ko2-BA-p63" secondAttribute="height" multiplier="0.4" id="kpa-Zw-WrL"/>
+                            <constraint firstItem="V7T-Mz-9Cq" firstAttribute="top" secondItem="MLt-5R-rBE" secondAttribute="top" id="lji-bN-mHK"/>
+                            <constraint firstItem="QrE-EU-1N9" firstAttribute="bottom" secondItem="MLt-5R-rBE" secondAttribute="bottom" id="ort-uA-c34"/>
+                            <constraint firstItem="V7T-Mz-9Cq" firstAttribute="width" secondItem="Ko2-BA-p63" secondAttribute="width" id="ukm-km-TX2"/>
+                            <constraint firstItem="QrE-EU-1N9" firstAttribute="top" secondItem="UdL-L1-mSK" secondAttribute="bottom" id="vJg-1h-RcC"/>
+                            <constraint firstItem="UdL-L1-mSK" firstAttribute="centerX" secondItem="MLt-5R-rBE" secondAttribute="centerX" id="y5H-4c-9UK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6ys-RW-sNv"/>
                     <connections>
@@ -5316,8 +5377,14 @@ point the device toward a flat surface to see your Augmented Reality story conte
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xiq-vw-r0j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Li1-85-j4Z" userLabel="Top">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <viewLayoutGuide key="safeArea" id="kd5-Ht-0zn"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="-4530" y="-922"/>
+            <point key="canvasLocation" x="-4530.2158273381301" y="-922.1105527638191"/>
         </scene>
         <!--ConfirmDeleteManagerProfile-->
         <scene sceneID="hlr-h6-AFj">
@@ -5950,10 +6017,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NQh-pC-KHu"/>
         <segue reference="Vg8-vJ-RSM"/>
-        <segue reference="mx5-Gi-1bh"/>
-        <segue reference="MjK-3O-xzl"/>
+        <segue reference="OJH-u1-36h"/>
+        <segue reference="j2g-Mt-cqV"/>
         <segue reference="aoi-rC-XX7"/>
         <segue reference="2O5-wy-OoL"/>
         <segue reference="nzC-1y-dQf"/>
