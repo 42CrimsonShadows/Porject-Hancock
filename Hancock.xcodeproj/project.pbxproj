@@ -14,6 +14,9 @@
 		34DC042622B2DA36001C70DB /* ReticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DC042422B2DA36001C70DB /* ReticleView.swift */; };
 		34DC9AB42433E3A40039D726 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DC9AB32433E3A40039D726 /* Service.swift */; };
 		34DC9AB92433FFC20039D726 /* Data.Bodies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DC9AB82433FFC20039D726 /* Data.Bodies.swift */; };
+		4F37363B2BC9AF110004809D /* StudentDataSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37363A2BC9AF110004809D /* StudentDataSelectionViewController.swift */; };
+		4F37363D2BC9E6C30004809D /* StudentDataReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37363C2BC9E6C30004809D /* StudentDataReportViewController.swift */; };
+		4F37363F2BC9EA4D0004809D /* ConfirmDeleteStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37363E2BC9EA4D0004809D /* ConfirmDeleteStudentViewController.swift */; };
 		51F46DD52B926E1A001A891D /* ManagerSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F46DD42B926E1A001A891D /* ManagerSignInViewController.swift */; };
 		51F46DD72B926E70001A891D /* ManagerRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F46DD62B926E70001A891D /* ManagerRegisterViewController.swift */; };
 		51F46DD92B926EC7001A891D /* StudentSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F46DD82B926EC7001A891D /* StudentSignInViewController.swift */; };
@@ -130,6 +133,9 @@
 		34DC042422B2DA36001C70DB /* ReticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReticleView.swift; sourceTree = "<group>"; };
 		34DC9AB32433E3A40039D726 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		34DC9AB82433FFC20039D726 /* Data.Bodies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.Bodies.swift; sourceTree = "<group>"; };
+		4F37363A2BC9AF110004809D /* StudentDataSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDataSelectionViewController.swift; sourceTree = "<group>"; };
+		4F37363C2BC9E6C30004809D /* StudentDataReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDataReportViewController.swift; sourceTree = "<group>"; };
+		4F37363E2BC9EA4D0004809D /* ConfirmDeleteStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDeleteStudentViewController.swift; sourceTree = "<group>"; };
 		51F46DD42B926E1A001A891D /* ManagerSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerSignInViewController.swift; path = Authentication/ManagerSignInViewController.swift; sourceTree = SOURCE_ROOT; };
 		51F46DD62B926E70001A891D /* ManagerRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerRegisterViewController.swift; path = Authentication/ManagerRegisterViewController.swift; sourceTree = SOURCE_ROOT; };
 		51F46DD82B926EC7001A891D /* StudentSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSignInViewController.swift; sourceTree = "<group>"; };
@@ -297,6 +303,9 @@
 				51F46DDE2B92753D001A891D /* ManagerMenuViewController.swift */,
 				51F46DE02B92774A001A891D /* StartMenuViewController.swift */,
 				E0B1F47E2BC0995200EBE706 /* ManagerDeleteViewController.swift */,
+				4F37363A2BC9AF110004809D /* StudentDataSelectionViewController.swift */,
+				4F37363C2BC9E6C30004809D /* StudentDataReportViewController.swift */,
+				4F37363E2BC9EA4D0004809D /* ConfirmDeleteStudentViewController.swift */,
 			);
 			path = UpdatedAuthentication;
 			sourceTree = "<group>";
@@ -643,6 +652,7 @@
 				3446B59522B8201600C785BE /* Formatters.swift in Sources */,
 				51F46DDF2B92753D001A891D /* ManagerMenuViewController.swift in Sources */,
 				51F46DD52B926E1A001A891D /* ManagerSignInViewController.swift in Sources */,
+				4F37363F2BC9EA4D0004809D /* ConfirmDeleteStudentViewController.swift in Sources */,
 				A05D40C92505C3730089CDC7 /* LetterMatchingPGQViewController.swift in Sources */,
 				A00E7B5A22CA8D25009BA733 /* UIViewExtension.swift in Sources */,
 				51F46DDB2B926EE1001A891D /* StudentRegisterViewController.swift in Sources */,
@@ -651,6 +661,7 @@
 				C939B55E229F302500D15A2B /* SignInViewController.swift in Sources */,
 				A00678EC22AEEB5B00846A2D /* line.swift in Sources */,
 				51F46DD72B926E70001A891D /* ManagerRegisterViewController.swift in Sources */,
+				4F37363D2BC9E6C30004809D /* StudentDataReportViewController.swift in Sources */,
 				A78A6C5324A0F7E200F32D3D /* LevelTwoMenuViewController.swift in Sources */,
 				C99A9BE322A06C0700554D9A /* InitViewController.swift in Sources */,
 				A07974B322861DB000606889 /* StudentTableViewController.swift in Sources */,
@@ -659,6 +670,7 @@
 				E0B1F47F2BC0995200EBE706 /* ManagerDeleteViewController.swift in Sources */,
 				A02BCC3B22A86EA70059E3D8 /* activityViewController.swift in Sources */,
 				A7E62789249AAC560031126F /* LevelTwoActivityViewController.swift in Sources */,
+				4F37363B2BC9AF110004809D /* StudentDataSelectionViewController.swift in Sources */,
 				A07974B12285FC4A00606889 /* StudentsTableViewCell.swift in Sources */,
 				51F46DD92B926EC7001A891D /* StudentSignInViewController.swift in Sources */,
 				34DC9AB42433E3A40039D726 /* Service.swift in Sources */,

@@ -48,6 +48,7 @@ class StudentMenuViewController: UIViewController {
     @IBAction func ViewDataPressed(_ sender: UIButton) {
         //set Current Student
         if (username != ""){
+        Service().SetCurrentStudent(studentName: username)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.performSegue(withIdentifier: "StudentDataView", sender: self)
             }

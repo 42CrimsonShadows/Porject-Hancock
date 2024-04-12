@@ -12,6 +12,8 @@ public var currentTeacher : String = ""
 public var currentStudent : String = ""
 public var currentSession : Int = 0
 
+private var characterToReport : String = ""
+
 class Service {
     
     //MARK: --CREATE(POST)
@@ -55,6 +57,10 @@ class Service {
         return tempStorage.teachers[currentTeacher]?.pin ?? ""
     }
     
+    func SetCurrentStudent(studentName: String) {
+        currentStudent = studentName
+    }
+    
     func DeleteManager(pin: String) -> Bool{
         var tempStorage = DecodeData()
         if(tempStorage.teachers[currentTeacher] != nil && tempStorage.teachers[currentTeacher]?.pin == pin) {
@@ -67,9 +73,11 @@ class Service {
     }
     
     func DeleteStudent(studentName : String, pin: String) -> Bool{
+        print("name: " + studentName + ", pin: " + pin)
         var tempStorage = DecodeData()
-        if(tempStorage.teachers[currentTeacher]?.students[studentName] != nil && tempStorage.teachers[currentStudent]?.pin == pin) {
+        if(tempStorage.teachers[currentTeacher]?.students[studentName] != nil && tempStorage.teachers[currentTeacher]?.pin == pin) {
             tempStorage.teachers[currentTeacher]?.students.removeValue(forKey: studentName)
+            EncodeData(DataToEncode: tempStorage)
             LogOutStudent()
             return true
         }
@@ -90,8 +98,8 @@ class Service {
      func StudentLogin(studentName: String) -> Bool{
         var tempStorage = DecodeData()
          if(tempStorage.teachers[currentTeacher]?.students[studentName] != nil) {
-             currentStudent = studentName
-             let newSession = SessionStruct(date: Date(), letter: [], imitation: [], freeDraw: [])
+             SetCurrentStudent(studentName: studentName)
+             let newSession = SessionStruct(letter: [], imitation: [], freeDraw: [])
              tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions.append(newSession)
              currentSession = (tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions.count ?? 1) - 1
              print(String(currentSession) + " : " + String(Date().timeIntervalSinceReferenceDate))
@@ -179,6 +187,13 @@ class Service {
             }
         
         EncodeData(DataToEncode: tempStorage)
+    }
+    //MARK: -- VIEW DATA
+    func SetCharacterToReport(character: String) {
+        characterToReport = character
+    }
+    func GetCharacterToReport() -> String {
+        return characterToReport
     }
     
     //MARK: --READ(GET)
