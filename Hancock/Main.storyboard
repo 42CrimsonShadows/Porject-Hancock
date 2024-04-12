@@ -103,7 +103,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CreditsPage" translatesAutoresizingMaskIntoConstraints="NO" id="dfJ-by-OUe">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <rect key="frame" x="0.0" y="20" width="1024" height="1346"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8R-n9-eu7">
                                 <rect key="frame" x="20" y="20" width="131" height="52"/>
@@ -349,6 +349,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
         <!--Login-->
         <scene sceneID="1KO-3Y-sYB">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N3q-2t-rfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Login" modalPresentationStyle="fullScreen" id="ofX-cZ-dmU" customClass="SignInViewController" customModule="ABC_Go_AR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PX9-DM-pSP">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
@@ -460,7 +461,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="RegisterButton:" destination="ofX-cZ-dmU" eventType="touchUpInside" id="nRZ-eF-3Wb"/>
-                                                                    <segue destination="yUW-2T-k1V" kind="presentation" identifier="toRegisterPage" id="36Q-7A-Vdg"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdK-4M-Vz9">
@@ -537,7 +537,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                 </state>
                                                 <connections>
                                                     <action selector="creditsButtonTapped:" destination="ofX-cZ-dmU" eventType="touchUpInside" id="OC0-oO-KKg"/>
-                                                    <segue destination="QLt-S4-oXg" kind="presentation" identifier="creditsTapped" modalPresentationStyle="fullScreen" id="K6n-jU-z3D"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -576,16 +575,16 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <outlet property="ErrorLabel" destination="3jy-CJ-rcy" id="XGA-he-EF8"/>
                         <outlet property="IDField" destination="Wyd-BM-4fX" id="ejE-HR-RDm"/>
                         <outlet property="PassField" destination="h5L-rN-fiH" id="Nwh-tr-ezf"/>
-                        <segue destination="jmb-Cg-UZK" kind="presentation" identifier="toHomePage" modalPresentationStyle="fullScreen" id="bhk-P7-Ls4"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N3q-2t-rfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-714" y="846"/>
         </scene>
         <!--Registration-->
         <scene sceneID="NE0-vK-vox">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="juF-hh-CnF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yQJ-4o-fte" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController title="Registration" modalPresentationStyle="fullScreen" id="yUW-2T-k1V" customClass="RegisterViewController" customModule="ABC_Go_AR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vTK-V2-f2S">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
@@ -739,9 +738,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                                 <state key="normal" title="Already a user? Login!">
                                                                     <color key="titleColor" systemColor="systemGreenColor"/>
                                                                 </state>
-                                                                <connections>
-                                                                    <segue destination="ofX-cZ-dmU" kind="presentation" identifier="toLogin" id="2O5-wy-OoL"/>
-                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1f-uT-lNQ">
                                                                 <rect key="frame" x="0.0" y="70" width="300" height="60"/>
@@ -821,8 +817,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <outlet property="UsernameField" destination="oP6-ET-bmP" id="eLO-EF-Qze"/>
                     </connections>
                 </viewController>
-                <exit id="yQJ-4o-fte" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="juF-hh-CnF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1419" y="1532"/>
         </scene>
@@ -1654,7 +1648,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <segue destination="Xae-Mk-QY7" kind="presentation" identifier="toChapterPageUpper" id="qTA-fI-fbo"/>
                         <segue destination="lDZ-QH-5ri" kind="presentation" identifier="toChapterPageLower" id="aSh-W5-PKA"/>
                         <segue destination="COb-DA-oVC" kind="presentation" identifier="toPracticePage" id="nLc-ZZ-ho6"/>
-                        <segue destination="ofX-cZ-dmU" kind="presentation" identifier="backToLogin" id="j5d-bO-yS9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1w3-xt-zQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -5389,65 +5382,93 @@ point the device toward a flat surface to see your Augmented Reality story conte
         <!--ConfirmDeleteManagerProfile-->
         <scene sceneID="hlr-h6-AFj">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="pDP-a0-Ohr" userLabel="ConfirmDeleteManagerProfile" customClass="ManagerMenuViewController" customModule="ABC_Go_AR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="pDP-a0-Ohr" userLabel="ConfirmDeleteManagerProfile" customClass="ManagerDeleteViewController" customModule="ABC_Go_AR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gii-vg-3gB">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOK-HF-nzI">
-                                <rect key="frame" x="120" y="1097" width="785" height="124"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Delete Manager Profile">
-                                            <attributes>
-                                                <font key="NSFont" size="50" name="IrishGrover-Regular"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" red="0.94117647059999998" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="DeleteTeacher:" destination="mZD-hK-Oov" eventType="primaryActionTriggered" id="Pf4-97-y01"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kmx-gF-OgG">
-                                <rect key="frame" x="120" y="717" width="785" height="306"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Cancel">
-                                            <attributes>
-                                                <font key="NSFont" size="75" name="IrishGrover-Regular"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="Qpl-IW-fnr" kind="presentation" id="uwI-LA-ajT"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4K-PJ-Owp">
-                                <rect key="frame" x="70" y="79" width="884" height="691"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Are you sure? Deleting a profile is permanent.">
-                                        <attributes>
-                                            <color key="NSColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="100" name="IrishGrover-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-yL-cNO" userLabel="Top">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="956"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure? Deleting a profile is permanent." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4K-PJ-Owp">
+                                        <rect key="frame" x="51" y="258.5" width="922" height="239"/>
+                                        <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
+                                        <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kmx-gF-OgG">
+                                        <rect key="frame" x="205" y="537.5" width="614" height="205"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Cancel">
+                                                    <attributes>
+                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Qpl-IW-fnr" kind="presentation" id="uwI-LA-ajT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="Kmx-gF-OgG" firstAttribute="top" secondItem="i4K-PJ-Owp" secondAttribute="bottom" constant="40" id="1Ci-bZ-WIR"/>
+                                    <constraint firstItem="Kmx-gF-OgG" firstAttribute="centerX" secondItem="KQZ-yL-cNO" secondAttribute="centerX" id="1Ox-1l-cgz"/>
+                                    <constraint firstItem="Kmx-gF-OgG" firstAttribute="width" secondItem="KQZ-yL-cNO" secondAttribute="width" multiplier="0.6" id="Jdo-5e-jC5"/>
+                                    <constraint firstItem="i4K-PJ-Owp" firstAttribute="width" secondItem="KQZ-yL-cNO" secondAttribute="width" multiplier="0.9" id="Mek-EV-2Ii"/>
+                                    <constraint firstItem="i4K-PJ-Owp" firstAttribute="height" secondItem="KQZ-yL-cNO" secondAttribute="height" multiplier="0.25" id="Y84-df-0Mc"/>
+                                    <constraint firstItem="i4K-PJ-Owp" firstAttribute="centerY" secondItem="KQZ-yL-cNO" secondAttribute="centerY" constant="-100" id="jYS-OU-Ysz"/>
+                                    <constraint firstItem="i4K-PJ-Owp" firstAttribute="centerX" secondItem="KQZ-yL-cNO" secondAttribute="centerX" id="m2E-MR-BIY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXE-kL-nzI" userLabel="Bottom">
+                                <rect key="frame" x="0.0" y="956" width="1024" height="410"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOK-HF-nzI">
+                                        <rect key="frame" x="205" y="143.5" width="614" height="123"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Delete Manager Profile">
+                                                    <attributes>
+                                                        <font key="NSFont" size="40" name="IrishGrover-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.94117647059999998" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="DeleteManagerPressed:" destination="pDP-a0-Ohr" eventType="primaryActionTriggered" id="IpK-M9-vV5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="xOK-HF-nzI" firstAttribute="centerY" secondItem="PXE-kL-nzI" secondAttribute="centerY" id="4xc-Yu-YcC"/>
+                                    <constraint firstItem="xOK-HF-nzI" firstAttribute="width" secondItem="PXE-kL-nzI" secondAttribute="width" multiplier="0.6" id="7On-n7-7xq"/>
+                                    <constraint firstItem="xOK-HF-nzI" firstAttribute="height" secondItem="PXE-kL-nzI" secondAttribute="height" multiplier="0.3" id="S7v-8g-a9h"/>
+                                    <constraint firstItem="xOK-HF-nzI" firstAttribute="centerX" secondItem="PXE-kL-nzI" secondAttribute="centerX" id="eK1-45-PQn"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XfJ-U9-cmb"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PXE-kL-nzI" firstAttribute="top" secondItem="KQZ-yL-cNO" secondAttribute="bottom" id="43o-GW-adj"/>
+                            <constraint firstItem="PXE-kL-nzI" firstAttribute="centerX" secondItem="XfJ-U9-cmb" secondAttribute="centerX" id="69U-Eg-6hk"/>
+                            <constraint firstItem="Kmx-gF-OgG" firstAttribute="height" secondItem="XfJ-U9-cmb" secondAttribute="height" multiplier="0.15" id="8Qc-EM-lOO"/>
+                            <constraint firstItem="KQZ-yL-cNO" firstAttribute="height" secondItem="XfJ-U9-cmb" secondAttribute="height" multiplier="0.7" id="NHd-qS-7uo"/>
+                            <constraint firstItem="PXE-kL-nzI" firstAttribute="width" secondItem="XfJ-U9-cmb" secondAttribute="width" id="Ppe-hj-LhJ"/>
+                            <constraint firstItem="KQZ-yL-cNO" firstAttribute="centerX" secondItem="XfJ-U9-cmb" secondAttribute="centerX" id="V1w-e8-krC"/>
+                            <constraint firstItem="KQZ-yL-cNO" firstAttribute="width" secondItem="XfJ-U9-cmb" secondAttribute="width" id="Z7O-p9-Mcv"/>
+                            <constraint firstItem="KQZ-yL-cNO" firstAttribute="top" secondItem="XfJ-U9-cmb" secondAttribute="top" id="oEa-qf-959"/>
+                            <constraint firstItem="PXE-kL-nzI" firstAttribute="bottom" secondItem="XfJ-U9-cmb" secondAttribute="bottom" id="z36-D6-2eL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oq1-B3-3DZ"/>
                     <connections>
@@ -5455,7 +5476,6 @@ point the device toward a flat surface to see your Augmented Reality story conte
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hM1-TL-SVg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="mZD-hK-Oov" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-4530" y="1116"/>
         </scene>
@@ -5697,14 +5717,14 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <segue destination="Qpl-IW-fnr" kind="presentation" modalTransitionStyle="crossDissolve" id="QRX-cX-Ft3"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzt-QA-k7C">
-                                        <rect key="frame" x="262" y="132.5" width="717" height="132.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzt-QA-k7C">
+                                        <rect key="frame" x="262" y="136.5" width="717" height="136.5"/>
                                         <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="112"/>
                                         <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ko-Po-6J7" userLabel="Select">
-                                        <rect key="frame" x="262" y="0.0" width="717" height="132.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ko-Po-6J7">
+                                        <rect key="frame" x="262" y="0.0" width="717" height="136.5"/>
                                         <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="112"/>
                                         <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5714,6 +5734,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 <constraints>
                                     <constraint firstItem="1Ko-Po-6J7" firstAttribute="trailing" secondItem="fdm-NS-TnR" secondAttribute="trailing" constant="-45" id="2JF-4r-mqZ"/>
                                     <constraint firstItem="1Ko-Po-6J7" firstAttribute="width" secondItem="fdm-NS-TnR" secondAttribute="width" multiplier="0.7" id="DMf-fF-p3g"/>
+                                    <constraint firstItem="gzt-QA-k7C" firstAttribute="bottom" secondItem="fdm-NS-TnR" secondAttribute="bottom" id="DwM-40-iNC"/>
                                     <constraint firstItem="gzt-QA-k7C" firstAttribute="leading" secondItem="lUu-Ho-GZM" secondAttribute="trailing" id="Oxo-gx-HnP"/>
                                     <constraint firstItem="1Ko-Po-6J7" firstAttribute="leading" secondItem="lUu-Ho-GZM" secondAttribute="trailing" id="QWC-2U-rVR"/>
                                     <constraint firstItem="1Ko-Po-6J7" firstAttribute="top" secondItem="fdm-NS-TnR" secondAttribute="top" id="Qki-ZA-VVu"/>
@@ -5722,6 +5743,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <constraint firstItem="gzt-QA-k7C" firstAttribute="width" secondItem="fdm-NS-TnR" secondAttribute="width" multiplier="0.7" id="ffT-gP-Bbu"/>
                                     <constraint firstItem="lUu-Ho-GZM" firstAttribute="leading" secondItem="fdm-NS-TnR" secondAttribute="leading" constant="30" id="ifh-ol-HBS"/>
                                     <constraint firstItem="gzt-QA-k7C" firstAttribute="trailing" secondItem="fdm-NS-TnR" secondAttribute="trailing" constant="-45" id="rFM-y8-7Hk"/>
+                                    <constraint firstItem="1Ko-Po-6J7" firstAttribute="height" secondItem="fdm-NS-TnR" secondAttribute="height" multiplier="0.5" id="ud3-Da-gMn"/>
                                     <constraint firstItem="lUu-Ho-GZM" firstAttribute="height" secondItem="fdm-NS-TnR" secondAttribute="height" multiplier="0.4" id="wMc-mX-JkD"/>
                                 </constraints>
                             </view>
@@ -6077,12 +6099,10 @@ point the device toward a flat surface to see your Augmented Reality story conte
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Vg8-vJ-RSM"/>
-        <segue reference="QRX-cX-Ft3"/>
-        <segue reference="j2g-Mt-cqV"/>
+        <segue reference="uwI-LA-ajT"/>
+        <segue reference="9ds-NK-BOi"/>
         <segue reference="aoi-rC-XX7"/>
-        <segue reference="2O5-wy-OoL"/>
         <segue reference="nzC-1y-dQf"/>
-        <segue reference="4Ls-Ad-bxq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1024.png" width="1024" height="1024"/>

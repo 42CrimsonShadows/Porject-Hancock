@@ -15,7 +15,7 @@ class ManagerDeleteViewController: UIViewController {
     //ManagerLabel GetManager from Service
 
 
-    @IBAction func DeleteManager(_ sender: UIButton) {
+    @IBAction func DeleteManagerPressed(_ sender: UIButton) {
         let pin = Service().GetPin()
         print("tried. pin : " + pin);
         if (pin != "") {
