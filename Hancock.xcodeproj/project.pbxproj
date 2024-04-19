@@ -817,7 +817,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.CTJ.ABCStories;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carterjones.ABCStories;
 				PRODUCT_NAME = "ABC Go AR";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -844,7 +844,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.CTJ.ABCStories;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carterjones.ABCStories;
 				PRODUCT_NAME = "ABC Go AR";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

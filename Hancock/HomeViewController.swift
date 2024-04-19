@@ -36,6 +36,8 @@ class HomeViewController: UIViewController {
         print("Successfully logged out")
         user = ""
         pass = ""
+        Service().LogOutStudent()
+        Service().LogOutManager()
         performSegue(withIdentifier: "backToLogin", sender: self)
     }
     

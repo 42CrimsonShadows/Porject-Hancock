@@ -103,7 +103,7 @@ struct SessionStruct: Codable{
     var letter: [LetterStruct]
     
     //var imitation
-    var imitation: [ImitationStruct]
+    var imitation: [LetterStruct]
     
     // Base64 Images
     var freeDraw: [String]
@@ -124,6 +124,12 @@ struct LocalStorage: Codable{
 //MARK: --Progress reports
 // I think this might be done on the website.
 
-
-
-
+struct CharacterReport: Codable {
+    var date: Date
+    var totalScore: Int32
+    var totalPossibleScore: Int32
+    var totalFaults: Int32
+    var attemptCount: Int32
+    var attempts: [LetterStruct]
+}
+let possibleExercises = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "-", "/", "\\", "|", "cross+", "crossx", "square", "circle", "triangle"]

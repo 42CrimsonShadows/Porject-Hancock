@@ -10,22 +10,20 @@ import UIKit
 
 private var selectedCharacter = "" // Renamed to be more descriptive
 
-private let characters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "-", "/", "\\", "|", "cross+", "crossx", "square", "circle", "triangle"]
-
 class StudentDataSelectionViewController: UIViewController {
     @IBOutlet weak var StudentLabel: UILabel!
     @IBOutlet weak var CharacterLabel: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         let name = Service().GetCurrentStudent()
         if(StudentLabel != nil) {
             StudentLabel.text = name.split(separator: "_")[1] + " " + name.split(separator: "_")[0]
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     @IBAction func SelectCharacter(_ sender: UIButton) {
         let alertController = UIAlertController(title: "Select Character", message: nil, preferredStyle: .actionSheet)
@@ -34,12 +32,12 @@ class StudentDataSelectionViewController: UIViewController {
             .foregroundColor: UIColor.white
         ]
         
-        characters.forEach { character in
-            alertController.addAction(UIAlertAction(title: character, style: .default, handler: { [weak self] _ in
+        possibleExercises.forEach { exercise in
+            alertController.addAction(UIAlertAction(title: exercise, style: .default, handler: { [weak self] _ in
                 guard let self = self else { return }
-                let attributedString = NSAttributedString(string: character, attributes: attributes)
+                let attributedString = NSAttributedString(string: exercise, attributes: attributes)
                 self.CharacterLabel.setAttributedTitle(attributedString, for: .normal)
-                selectedCharacter = character
+                selectedCharacter = exercise
             }))
         }
         
@@ -59,6 +57,7 @@ class StudentDataSelectionViewController: UIViewController {
         //set Current Student
         if (selectedCharacter != ""){
         Service().SetCharacterToReport(character: selectedCharacter)
+            Service().PrintAllReports()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.performSegue(withIdentifier: "StudentDataReport", sender: self)
             }

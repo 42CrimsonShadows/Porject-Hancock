@@ -99,10 +99,16 @@ class Service {
         var tempStorage = DecodeData()
          if(tempStorage.teachers[currentTeacher]?.students[studentName] != nil) {
              SetCurrentStudent(studentName: studentName)
-             let newSession = SessionStruct(letter: [], imitation: [], freeDraw: [])
+             let newSession = SessionStruct(date: Date(), letter: [], imitation: [], freeDraw: [])
              tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions.append(newSession)
              currentSession = (tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions.count ?? 1) - 1
-             print(String(currentSession) + " : " + String(Date().timeIntervalSinceReferenceDate))
+             
+             let dateFormatter = DateFormatter()
+             dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+             dateFormatter.timeZone = TimeZone.current
+             let localDateString = dateFormatter.string(from: Date())
+             
+             print(String(currentSession) + " : " + localDateString)
              EncodeData(DataToEncode: tempStorage)
              return true
          }
@@ -117,7 +123,8 @@ class Service {
     
     func LogOutStudent() {
         var tempStorage = DecodeData()
-        if(tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions[currentSession] == nil) {
+        var current = tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions[currentSession]
+        if(current?.letter.count == 0 && current?.imitation.count == 0) {
             //If session is empty remove it
             tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions.remove(at: currentSession)
             EncodeData(DataToEncode: tempStorage)
@@ -182,7 +189,7 @@ class Service {
             }
             else{
                 print("This is your data " + title)
-                let tempImitation = ImitationStruct(letter: title, image: base64)
+                let tempImitation = LetterStruct(letter: title, tokens: -1, possibleTokens: -1, faults: -1, offpath_image: base64)
                 tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions[currentSession].imitation.append(tempImitation)
             }
         
@@ -195,6 +202,53 @@ class Service {
     func GetCharacterToReport() -> String {
         return characterToReport
     }
+    func PrintAllReports() {
+        let characters = possibleExercises
+        var reports: [String : Int32] = [:]
+        for character in characters {
+            reports.updateValue(Int32(GetCharacterReport(character: character).count), forKey: character)
+        }
+        print(reports)
+    }
+    func GetCharacterReport(character: String) -> [CharacterReport] {
+        let tempStorage: LocalStorage = DecodeData()
+        if let currentStudentSessions = tempStorage.teachers[currentTeacher]?.students[currentStudent]?.sessions {
+            //Global stats
+            var reports: [CharacterReport] = []
+            
+            for session in currentStudentSessions {
+                // Access session safely
+//                print("currentStudentSessions: ", currentStudentSessions)
+                //Session Stats
+                var sessionCharacterReport = CharacterReport(date: session.date, totalScore: 0, totalPossibleScore: 0, totalFaults: 0, attemptCount: 0, attempts: [])
+                for attempt in session.letter {
+                    if(attempt.letter == character) {
+                        sessionCharacterReport.attempts.append(attempt)
+                        sessionCharacterReport.attemptCount += 1
+                        sessionCharacterReport.totalPossibleScore += attempt.possibleTokens
+                        sessionCharacterReport.totalScore += attempt.tokens
+                        sessionCharacterReport.totalFaults += attempt.faults
+                    }
+                }
+                
+//                for imitation in session.imitation {
+//                    if(imitation.letter == character) {
+//                        sessionCharacterReport.attempts.append(imitation)
+//                    }
+//                }
+                if(sessionCharacterReport.attempts.count > 0) {
+                    reports.append(sessionCharacterReport)
+                }
+            }
+            return reports
+        } else {
+            print("currentStudentSessions is nil or invalid")
+        }
+        return []
+    }
+//    func GetFreeDrawReport() -> [String] {
+//        
+//    }
     
     //MARK: --READ(GET)
     //These functions will return a value from the database
