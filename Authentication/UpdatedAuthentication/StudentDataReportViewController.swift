@@ -22,24 +22,32 @@ class StudentDataReportViewController: UIViewController {
     //h1
         //font size
         //height
-    let primaryHeaderFontSize: CGFloat = 42
     let primaryHeaderRowHeight = 45
+    let primaryHeaderFont = UIFont(name: "Irish Grover", size: 42) ?? UIFont.systemFont(ofSize: 42)
+
     //h2
         //font size
         //height
-    let secondaryHeaderFontSize: CGFloat = 36
     let secondaryHeaderRowHeight = 40
+    let secondaryHeaderFont = UIFont(name: "Irish Grover", size: 36) ?? UIFont.systemFont(ofSize: 36)
+    
     //p
         //font size
         //height
-    let paragraphFontSize: CGFloat = 28
     let paragraphRowHeight = 30
+    let paragraphFont = UIFont(name: "Irish Grover", size: 28) ?? UIFont.systemFont(ofSize: 28)
+    
+    let textColor = UIColor(red: 72/255, green: 77/255, blue: 109/255, alpha: 1)
+//    let textColor = UIColor.white
+//    let backgroundColor = UIColor(red: 140/255, green: 122/255, blue: 169/255, alpha: 1)
    
     var col1: Int = -1
     var col2: Int = -1
     var col3: Int = -1
+    
     //img
-    //TODO
+    let imgHeight = 250
+    let imgWidth = 250
 
     //padding
     let padding = 50
@@ -87,6 +95,7 @@ class StudentDataReportViewController: UIViewController {
         if previousSessionView != nil {
             scrollView.contentSize = CGSize(width: scrollView.bounds.width, height: CGFloat(sessionBlockYValue + padding * 10))
         }
+//        scrollView.backgroundColor = backgroundColor
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -100,25 +109,29 @@ class StudentDataReportViewController: UIViewController {
         
         let dateLabel = UILabel()
         dateLabel.text = dateFormatter.string(from: characterReport.date)
-        dateLabel.font = UIFont.systemFont(ofSize: primaryHeaderFontSize)
+        dateLabel.textColor = textColor
+        dateLabel.font = primaryHeaderFont
         dateLabel.frame = CGRect(x: 0, y: Int(sessionView.frame.origin.y), width: col1, height: primaryHeaderRowHeight)
         sessionView.addSubview(dateLabel)
         
         let attemptsLabel = UILabel()
         attemptsLabel.text = "Attempts: \(characterReport.attemptCount)"
-        attemptsLabel.font = UIFont.systemFont(ofSize: paragraphFontSize)
+        attemptsLabel.textColor = textColor
+        attemptsLabel.font = paragraphFont
         attemptsLabel.frame = CGRect(x: 0, y: Int(dateLabel.frame.minY) + padding, width: col3, height: paragraphRowHeight)
         sessionView.addSubview(attemptsLabel)
         
         let avgErrorsLabel = UILabel()
         avgErrorsLabel.text = "AVG Errors: \(characterReport.totalFaults / characterReport.attemptCount)"
-        avgErrorsLabel.font = UIFont.systemFont(ofSize: paragraphFontSize)
+        avgErrorsLabel.textColor = textColor
+        avgErrorsLabel.font = paragraphFont
         avgErrorsLabel.frame = CGRect(x: col3, y: Int(dateLabel.frame.minY) + padding, width: col3, height: paragraphRowHeight)
         sessionView.addSubview(avgErrorsLabel)
         
         let avgScoreLabel = UILabel()
         avgScoreLabel.text = "AVG Score: \(characterReport.totalScore / characterReport.attemptCount) / \(characterReport.totalPossibleScore / characterReport.attemptCount)"
-        avgScoreLabel.font = UIFont.systemFont(ofSize: paragraphFontSize)
+        avgScoreLabel.textColor = textColor
+        avgScoreLabel.font = paragraphFont
         avgScoreLabel.frame = CGRect(x: col3 * 2, y: Int(dateLabel.frame.minY) + padding, width: col3, height: paragraphRowHeight)
         sessionView.addSubview(avgScoreLabel)
         
@@ -149,24 +162,27 @@ class StudentDataReportViewController: UIViewController {
         
         let attemptLabel = UILabel()
         attemptLabel.text = "Attempt: \(attemptNumber)"
-        attemptLabel.font = UIFont.systemFont(ofSize: secondaryHeaderFontSize)
+        attemptLabel.textColor = textColor
+        attemptLabel.font = secondaryHeaderFont
         attemptLabel.frame = CGRect(x: 0, y: padding * 3, width: col3, height: secondaryHeaderRowHeight)
         
         let errorLabel = UILabel()
         errorLabel.text = "Errors: \(attempt.faults)"
-        errorLabel.font = UIFont.systemFont(ofSize: paragraphFontSize)
+        errorLabel.textColor = textColor
+        errorLabel.font = paragraphFont
         errorLabel.frame = CGRect(x: 0, y: Int(attemptLabel.frame.minY + attemptLabel.frame.height) + padding, width: col3, height: paragraphRowHeight)
         
         let scoreLabel = UILabel()
         scoreLabel.text = "Score: \(attempt.tokens) / \(attempt.possibleTokens)"
-        scoreLabel.font = UIFont.systemFont(ofSize: paragraphFontSize)
+        scoreLabel.textColor = textColor
+        scoreLabel.font = paragraphFont
         scoreLabel.frame = CGRect(x: 0, y: Int(errorLabel.frame.minY + attemptLabel.frame.height) + padding, width: col3, height: paragraphRowHeight)
         
  
         let encodedImage = Data(base64Encoded: attempt.offpath_image)
         let image = UIImage(data: encodedImage!)
         let imageView = UIImageView(image: image)
-        imageView.frame = CGRect(x: col2, y: Int(attemptLabel.frame.minY), width: 250, height: 250)
+        imageView.frame = CGRect(x: col2, y: Int(attemptLabel.frame.minY), width: imgWidth, height: imgHeight)
 
         attemptContainer.frame = CGRect(x: 0, y: (imageView.frame.height + CGFloat(padding)) * CGFloat(attemptNumber - 1), width: parentView.frame.width, height: imageView.frame.height)
         
