@@ -1,3 +1,4 @@
+
 //
 //  StudentDataReportViewController.swift
 //  Hancock
@@ -5,6 +6,7 @@
 //  Created by Carter Jones on 4/12/24.
 //  Copyright © 2024 Chris Ross. All rights reserved.
 //
+// sorry.
 
 import UIKit
 
@@ -40,10 +42,12 @@ class StudentDataReportViewController: UIViewController {
     //TODO
 
     //padding
-    let padding = 20
+    let padding = 50
     //sessionBlockYValue
     var sessionBlockYValue: Int = -1
     let sessionBlockYValueIncrement = 50
+    
+    let dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,24 +55,38 @@ class StudentDataReportViewController: UIViewController {
         col2 = Int(scrollView.frame.width / 2)
         col3 = Int(scrollView.frame.width / 3)
         sessionBlockYValue = padding
-        
+
+        dateFormatter.dateFormat = "MMMM dd, yyyy"
+        dateFormatter.timeZone = TimeZone.current
+
         let name = Service().GetCurrentStudent()
-        if(StudentLabel != nil) {
+        if let StudentLabel = StudentLabel {
             StudentLabel.text = name.split(separator: "_")[1] + " " + name.split(separator: "_")[0]
         }
-        if(CharacterLabel != nil) {
+        if let CharacterLabel = CharacterLabel {
             CharacterLabel.text = character
         }
-        
+
         let characterReports = Service().GetCharacterReport(character: character)
-        
+
+        var previousSessionView: UIView? = nil
         for characterReport in characterReports {
-            createSessionBlock(characterReport: characterReport)
-            print("found new session")
+            let sessionView = createSessionBlock(characterReport: characterReport)
+            scrollView.addSubview(sessionView)
+
+            // Position the session view relative to the previous one
+            if let previousSessionView = previousSessionView {
+                sessionView.frame.origin.y = previousSessionView.frame.maxY //+ CGFloat(padding)
+            } else {
+                sessionView.frame.origin.y = 0
+            }
+            previousSessionView = sessionView
         }
-                
-        // Set the content size of the scroll view to accommodate all the subviews
-        scrollView.contentSize = CGSize(width: scrollView.bounds.width, height: CGFloat(sessionBlockYValue + padding))
+
+        // Set the content size of the scroll view to fit all session views and their contents
+        if previousSessionView != nil {
+            scrollView.contentSize = CGSize(width: scrollView.bounds.width, height: CGFloat(sessionBlockYValue + padding * 10))
+        }
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -76,51 +94,63 @@ class StudentDataReportViewController: UIViewController {
     
     
     //create session block
-    func createSessionBlock(characterReport: CharacterReport) {
-        //DateFormatter settings <- this should be done outside of a looped method
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM dd, yyyy"
-        dateFormatter.timeZone = TimeZone.current
+    func createSessionBlock(characterReport: CharacterReport) -> UIView {
+        let sessionView = UIView()
+        sessionView.frame = CGRect(x: 0, y: sessionBlockYValue/2, width: 0, height: 0)
         
         let dateLabel = UILabel()
         dateLabel.text = dateFormatter.string(from: characterReport.date)
         dateLabel.font = UIFont.systemFont(ofSize: primaryHeaderFontSize)
-        dateLabel.frame = CGRect(x: padding, y: sessionBlockYValue, width: col1, height: primaryHeaderRowHeight)
+        dateLabel.frame = CGRect(x: 0, y: Int(sessionView.frame.origin.y), width: col1, height: primaryHeaderRowHeight)
+        sessionView.addSubview(dateLabel)
         
         let attemptsLabel = UILabel()
         attemptsLabel.text = "Attempts: \(characterReport.attemptCount)"
         attemptsLabel.font = UIFont.systemFont(ofSize: paragraphFontSize)
-        attemptsLabel.frame = CGRect(x: 0, y: Int(dateLabel.frame.height + CGFloat(padding)), width: col3, height: paragraphRowHeight)
-        dateLabel.addSubview(attemptsLabel)
+        attemptsLabel.frame = CGRect(x: 0, y: Int(dateLabel.frame.minY) + padding, width: col3, height: paragraphRowHeight)
+        sessionView.addSubview(attemptsLabel)
         
         let avgErrorsLabel = UILabel()
         avgErrorsLabel.text = "AVG Errors: \(characterReport.totalFaults / characterReport.attemptCount)"
         avgErrorsLabel.font = UIFont.systemFont(ofSize: paragraphFontSize)
-        avgErrorsLabel.frame = CGRect(x: col3, y: Int(dateLabel.frame.height + CGFloat(padding)), width: col3, height: paragraphRowHeight)
-        dateLabel.addSubview(avgErrorsLabel)
+        avgErrorsLabel.frame = CGRect(x: col3, y: Int(dateLabel.frame.minY) + padding, width: col3, height: paragraphRowHeight)
+        sessionView.addSubview(avgErrorsLabel)
         
         let avgScoreLabel = UILabel()
         avgScoreLabel.text = "AVG Score: \(characterReport.totalScore / characterReport.attemptCount) / \(characterReport.totalPossibleScore / characterReport.attemptCount)"
         avgScoreLabel.font = UIFont.systemFont(ofSize: paragraphFontSize)
-        avgScoreLabel.frame = CGRect(x: col3 * 2, y: Int(dateLabel.frame.height + CGFloat(padding)), width: col3, height: paragraphRowHeight)
-        dateLabel.addSubview(avgScoreLabel)
+        avgScoreLabel.frame = CGRect(x: col3 * 2, y: Int(dateLabel.frame.minY) + padding, width: col3, height: paragraphRowHeight)
+        sessionView.addSubview(avgScoreLabel)
         
         //add attempts
+        let attemptsContainer = UIView()
+        attemptsContainer.frame = CGRect(x: 0, y: Int(avgScoreLabel.frame.minY), width: col1, height: 0)
         var attemptCounter = 0
         for attempt in characterReport.attempts {
             attemptCounter += 1
-            createAttemptBlock(parentView: attemptsLabel, attempt: attempt, attemptNumber: attemptCounter)
+            createAttemptBlock(parentView: attemptsContainer, attempt: attempt, attemptNumber: attemptCounter)
         }
+        sessionView.addSubview(attemptsContainer)
         
-        scrollView.addSubview(dateLabel)
-        sessionBlockYValue += sessionBlockYValueIncrement
+        sessionView.frame = CGRect(x: sessionView.frame.origin.x,
+                                   y: sessionView.frame.origin.y,
+                                   width: CGFloat(col1),
+                                   height: CGFloat(padding) + attemptsContainer.frame.height)
+        print(sessionView.frame.height)
+        print(sessionView.frame.origin.y)
+        
+        scrollView.addSubview(sessionView)
+        sessionBlockYValue += Int(sessionView.frame.height) + padding
+        
+        return sessionView
     }
     func createAttemptBlock(parentView: UIView, attempt: LetterStruct, attemptNumber: Int) {
-        //TODO ADD IMAGE SUPPORT
+        let attemptContainer = UIView()
+        
         let attemptLabel = UILabel()
         attemptLabel.text = "Attempt: \(attemptNumber)"
         attemptLabel.font = UIFont.systemFont(ofSize: secondaryHeaderFontSize)
-        attemptLabel.frame = CGRect(x: 0, y: sessionBlockYValue + (padding * 3), width: col3, height: secondaryHeaderRowHeight)
+        attemptLabel.frame = CGRect(x: 0, y: padding * 3, width: col3, height: secondaryHeaderRowHeight)
         
         let errorLabel = UILabel()
         errorLabel.text = "Errors: \(attempt.faults)"
@@ -133,15 +163,24 @@ class StudentDataReportViewController: UIViewController {
         scoreLabel.frame = CGRect(x: 0, y: Int(errorLabel.frame.minY + attemptLabel.frame.height) + padding, width: col3, height: paragraphRowHeight)
         
  
-            let encodedImage = Data(base64Encoded: attempt.offpath_image)
-            let image = UIImage(data: encodedImage!)
-            let imageView = UIImageView(image: image)
-            imageView.frame = CGRect(x: col2, y: sessionBlockYValue + (padding), width: 250, height: 200)
+        let encodedImage = Data(base64Encoded: attempt.offpath_image)
+        let image = UIImage(data: encodedImage!)
+        let imageView = UIImageView(image: image)
+        imageView.frame = CGRect(x: col2, y: Int(attemptLabel.frame.minY), width: 250, height: 250)
 
+        attemptContainer.frame = CGRect(x: 0, y: (imageView.frame.height + CGFloat(padding)) * CGFloat(attemptNumber - 1), width: parentView.frame.width, height: imageView.frame.height)
         
-        parentView.addSubview(attemptLabel)
-        parentView.addSubview(errorLabel)
-        parentView.addSubview(scoreLabel)
-        parentView.addSubview(imageView)
+        attemptContainer.addSubview(attemptLabel)
+        attemptContainer.addSubview(errorLabel)
+        attemptContainer.addSubview(scoreLabel)
+        attemptContainer.addSubview(imageView)
+        
+        parentView.addSubview(attemptContainer)
+        parentView.frame = CGRect(x: parentView.frame.origin.x,
+                                   y: parentView.frame.origin.y,
+                                   width: parentView.frame.width,
+                                  height:  attemptContainer.frame.height + CGFloat(padding))
+        
+        sessionBlockYValue += 250
     }
 }

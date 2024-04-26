@@ -17,6 +17,7 @@
 		4F37363B2BC9AF110004809D /* StudentDataSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37363A2BC9AF110004809D /* StudentDataSelectionViewController.swift */; };
 		4F37363D2BC9E6C30004809D /* StudentDataReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37363C2BC9E6C30004809D /* StudentDataReportViewController.swift */; };
 		4F37363F2BC9EA4D0004809D /* ConfirmDeleteStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F37363E2BC9EA4D0004809D /* ConfirmDeleteStudentViewController.swift */; };
+		4FA52F152BDC3E8900CE9E1A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA52F142BDC3E8800CE9E1A /* File.swift */; };
 		51F46DD52B926E1A001A891D /* ManagerSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F46DD42B926E1A001A891D /* ManagerSignInViewController.swift */; };
 		51F46DD72B926E70001A891D /* ManagerRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F46DD62B926E70001A891D /* ManagerRegisterViewController.swift */; };
 		51F46DD92B926EC7001A891D /* StudentSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F46DD82B926EC7001A891D /* StudentSignInViewController.swift */; };
@@ -136,6 +137,7 @@
 		4F37363A2BC9AF110004809D /* StudentDataSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDataSelectionViewController.swift; sourceTree = "<group>"; };
 		4F37363C2BC9E6C30004809D /* StudentDataReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDataReportViewController.swift; sourceTree = "<group>"; };
 		4F37363E2BC9EA4D0004809D /* ConfirmDeleteStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDeleteStudentViewController.swift; sourceTree = "<group>"; };
+		4FA52F142BDC3E8800CE9E1A /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		51F46DD42B926E1A001A891D /* ManagerSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerSignInViewController.swift; path = Authentication/ManagerSignInViewController.swift; sourceTree = SOURCE_ROOT; };
 		51F46DD62B926E70001A891D /* ManagerRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManagerRegisterViewController.swift; path = Authentication/ManagerRegisterViewController.swift; sourceTree = SOURCE_ROOT; };
 		51F46DD82B926EC7001A891D /* StudentSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSignInViewController.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				E0B1F47E2BC0995200EBE706 /* ManagerDeleteViewController.swift */,
 				4F37363A2BC9AF110004809D /* StudentDataSelectionViewController.swift */,
 				4F37363C2BC9E6C30004809D /* StudentDataReportViewController.swift */,
+				4FA52F142BDC3E8800CE9E1A /* File.swift */,
 				4F37363E2BC9EA4D0004809D /* ConfirmDeleteStudentViewController.swift */,
 			);
 			path = UpdatedAuthentication;
@@ -661,6 +664,7 @@
 				C939B55E229F302500D15A2B /* SignInViewController.swift in Sources */,
 				A00678EC22AEEB5B00846A2D /* line.swift in Sources */,
 				51F46DD72B926E70001A891D /* ManagerRegisterViewController.swift in Sources */,
+				4FA52F152BDC3E8900CE9E1A /* File.swift in Sources */,
 				4F37363D2BC9E6C30004809D /* StudentDataReportViewController.swift in Sources */,
 				A78A6C5324A0F7E200F32D3D /* LevelTwoMenuViewController.swift in Sources */,
 				C99A9BE322A06C0700554D9A /* InitViewController.swift in Sources */,
@@ -808,7 +812,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 3Y45S5S24K;
+				DEVELOPMENT_TEAM = MX8T3846G6;
 				INFOPLIST_FILE = Hancock/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.educational-games";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -817,7 +821,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mitchelloliarny.ABCStories;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cartertjones.ABCStories;
 				PRODUCT_NAME = "ABC Go AR";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -835,7 +839,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 3Y45S5S24K;
+				DEVELOPMENT_TEAM = MX8T3846G6;
 				INFOPLIST_FILE = Hancock/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.educational-games";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -844,7 +848,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mitchelloliarny.ABCStories;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cartertjones.ABCStories;
 				PRODUCT_NAME = "ABC Go AR";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
