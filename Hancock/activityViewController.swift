@@ -919,17 +919,16 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
                     //play last ding
                     self.canvasView.playAudioFXFile(file: chapterSelectedSoundDict!["CoinDing4"]!, type: "mp3")
                     
-                    if (hasGoneOffPath) {
-                        print(selectedActivity)
-                        
+
+                    
                         if let image = screenShot() {
                             if let pngData = image.pngData() {
                                 offPathImage = pngData.base64EncodedString()
                                 // send character data to db with user credentials from login
-                                print("Out of bounds on letter \(pngData)")
+                                print("Appended Image Data")
                             }
                         }
-                    }
+                    
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                         Service().updateCharacterData(letter: selectedActivity, faults: self.offPathCount, totalPointsEarned: self.letterCoins, totalPointsPossible: self.coinsPossible, image: self.offPathImage)
                     })

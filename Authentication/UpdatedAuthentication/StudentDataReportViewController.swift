@@ -88,19 +88,19 @@ class StudentDataReportViewController: UIViewController {
         dateLabel.frame = CGRect(x: padding, y: sessionBlockYValue, width: col1, height: primaryHeaderRowHeight)
         
         let attemptsLabel = UILabel()
-        attemptsLabel.text = "Attempts: -1"
+        attemptsLabel.text = "Attempts: \(characterReport.attemptCount)"
         attemptsLabel.font = UIFont.systemFont(ofSize: paragraphFontSize)
         attemptsLabel.frame = CGRect(x: 0, y: Int(dateLabel.frame.height + CGFloat(padding)), width: col3, height: paragraphRowHeight)
         dateLabel.addSubview(attemptsLabel)
         
         let avgErrorsLabel = UILabel()
-        avgErrorsLabel.text = "AVG Errors: -1"
+        avgErrorsLabel.text = "AVG Errors: \(characterReport.totalFaults / characterReport.attemptCount)"
         avgErrorsLabel.font = UIFont.systemFont(ofSize: paragraphFontSize)
         avgErrorsLabel.frame = CGRect(x: col3, y: Int(dateLabel.frame.height + CGFloat(padding)), width: col3, height: paragraphRowHeight)
         dateLabel.addSubview(avgErrorsLabel)
         
         let avgScoreLabel = UILabel()
-        avgScoreLabel.text = "AVG Score: -1"
+        avgScoreLabel.text = "AVG Score: \(characterReport.totalScore / characterReport.attemptCount) / \(characterReport.totalPossibleScore / characterReport.attemptCount)"
         avgScoreLabel.font = UIFont.systemFont(ofSize: paragraphFontSize)
         avgScoreLabel.frame = CGRect(x: col3 * 2, y: Int(dateLabel.frame.height + CGFloat(padding)), width: col3, height: paragraphRowHeight)
         dateLabel.addSubview(avgScoreLabel)
@@ -118,22 +118,30 @@ class StudentDataReportViewController: UIViewController {
     func createAttemptBlock(parentView: UIView, attempt: LetterStruct, attemptNumber: Int) {
         //TODO ADD IMAGE SUPPORT
         let attemptLabel = UILabel()
-        attemptLabel.text = "Attempt: " + String(attemptNumber)
+        attemptLabel.text = "Attempt: \(attemptNumber)"
         attemptLabel.font = UIFont.systemFont(ofSize: secondaryHeaderFontSize)
         attemptLabel.frame = CGRect(x: 0, y: sessionBlockYValue + (padding * 3), width: col3, height: secondaryHeaderRowHeight)
         
         let errorLabel = UILabel()
-        errorLabel.text = "Errors: " + String(attempt.faults)
+        errorLabel.text = "Errors: \(attempt.faults)"
         errorLabel.font = UIFont.systemFont(ofSize: paragraphFontSize)
         errorLabel.frame = CGRect(x: 0, y: Int(attemptLabel.frame.minY + attemptLabel.frame.height) + padding, width: col3, height: paragraphRowHeight)
         
         let scoreLabel = UILabel()
-        scoreLabel.text = "Score: " + String(attempt.tokens) + " / " + String(attempt.possibleTokens)
+        scoreLabel.text = "Score: \(attempt.tokens) / \(attempt.possibleTokens)"
         scoreLabel.font = UIFont.systemFont(ofSize: paragraphFontSize)
         scoreLabel.frame = CGRect(x: 0, y: Int(errorLabel.frame.minY + attemptLabel.frame.height) + padding, width: col3, height: paragraphRowHeight)
+        
+ 
+            let encodedImage = Data(base64Encoded: attempt.offpath_image)
+            let image = UIImage(data: encodedImage!)
+            let imageView = UIImageView(image: image)
+            imageView.frame = CGRect(x: col2, y: sessionBlockYValue + (padding), width: 250, height: 200)
+
         
         parentView.addSubview(attemptLabel)
         parentView.addSubview(errorLabel)
         parentView.addSubview(scoreLabel)
+        parentView.addSubview(imageView)
     }
 }

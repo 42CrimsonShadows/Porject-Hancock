@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
             endingLineNumber = "81"
-            landmarkName = "ManagerLogin(username:pin:)"
+            landmarkName = "DeleteStudent(studentName:pin:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
