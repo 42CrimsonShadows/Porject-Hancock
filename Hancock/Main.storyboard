@@ -23,10 +23,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="76" translatesAutoresizingMaskIntoConstraints="NO" id="PAv-Ec-jxH">
-                                <rect key="frame" x="100" y="250" width="824" height="716.5"/>
+                                <rect key="frame" x="100" y="251.5" width="824" height="713"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directions Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ff-Dd-Stu">
-                                        <rect key="frame" x="334.5" y="0.0" width="155" height="24.5"/>
+                                        <rect key="frame" x="344.5" y="0.0" width="135" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="1Ff-Dd-Stu" secondAttribute="height" multiplier="196:31" id="d6j-LJ-uyh"/>
                                         </constraints>
@@ -35,7 +35,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="headTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfQ-RG-IAa">
-                                        <rect key="frame" x="97.5" y="100.5" width="629" height="65"/>
+                                        <rect key="frame" x="97.5" y="97" width="629" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="lfQ-RG-IAa" secondAttribute="height" multiplier="79:8" id="urr-w4-pP9"/>
                                             <constraint firstAttribute="height" constant="65" id="zkG-uz-rdL"/>
@@ -48,7 +48,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ARexample" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pb4-03-3Gr">
-                                        <rect key="frame" x="71" y="241.5" width="682.5" height="475"/>
+                                        <rect key="frame" x="71" y="238" width="682.5" height="475"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="475" id="8Gb-U0-FIs"/>
                                         </constraints>
@@ -60,7 +60,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJk-j4-2T1">
-                                <rect key="frame" x="893" y="1262" width="81" height="54"/>
+                                <rect key="frame" x="903" y="1268.5" width="71" height="47.5"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aJk-j4-2T1" secondAttribute="height" multiplier="3:2" id="nds-qb-PU6"/>
@@ -402,7 +402,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                         <rect key="frame" x="0.0" y="267" width="1024" height="832"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qeE-w1-cd2" userLabel="Form Stack">
-                                                <rect key="frame" x="362" y="218" width="300" height="396.5"/>
+                                                <rect key="frame" x="362" y="226" width="300" height="380.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jy-CJ-rcy" userLabel="ErrorLabel">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
@@ -414,7 +414,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCg-eB-0IQ">
-                                                        <rect key="frame" x="0.0" y="60" width="300" height="41.5"/>
+                                                        <rect key="frame" x="0.0" y="60" width="300" height="33.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="300" id="Vuh-Bi-U2N"/>
                                                         </constraints>
@@ -423,7 +423,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Wyd-BM-4fX">
-                                                        <rect key="frame" x="0.0" y="111.5" width="300" height="34"/>
+                                                        <rect key="frame" x="0.0" y="103.5" width="300" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="300" id="GC9-Mm-04y"/>
                                                         </constraints>
@@ -432,7 +432,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                         <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ss6-ng-3dX">
-                                                        <rect key="frame" x="0.0" y="155.5" width="300" height="41.5"/>
+                                                        <rect key="frame" x="0.0" y="147.5" width="300" height="33.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="300" id="NYE-J8-y3H"/>
                                                         </constraints>
@@ -441,7 +441,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" clearsOnBeginEditing="YES" minimumFontSize="15" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="h5L-rN-fiH">
-                                                        <rect key="frame" x="0.0" y="207" width="300" height="34"/>
+                                                        <rect key="frame" x="0.0" y="191" width="300" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="300" id="QmW-gc-exR"/>
                                                         </constraints>
@@ -450,7 +450,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                                         <textInputTraits key="textInputTraits" returnKeyType="continue" secureTextEntry="YES" textContentType="password"/>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j2Q-1l-d3i" userLabel="Button Stack">
-                                                        <rect key="frame" x="0.0" y="251" width="300" height="145.5"/>
+                                                        <rect key="frame" x="0.0" y="235" width="300" height="145.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPt-yu-6XE">
                                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="36"/>
@@ -4684,7 +4684,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                         <rect key="frame" x="0.0" y="1161" width="1024" height="205"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p81-p8-fn4">
-                                                <rect key="frame" x="421.5" y="67" width="181" height="71"/>
+                                                <rect key="frame" x="423" y="67.5" width="178" height="70"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <attributedString key="attributedTitle">
@@ -4908,7 +4908,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="273"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9E-6w-GQM">
-                                        <rect key="frame" x="337" y="92" width="642" height="89"/>
+                                        <rect key="frame" x="337" y="93" width="642" height="87.5"/>
                                         <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="75"/>
                                         <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5117,13 +5117,13 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="273"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URd-qa-Rpd">
-                                        <rect key="frame" x="271" y="132" width="708" height="132.5"/>
+                                        <rect key="frame" x="271" y="133" width="708" height="130.5"/>
                                         <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="112"/>
                                         <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6P-6m-jom">
-                                        <rect key="frame" x="30" y="2" width="949" height="132.5"/>
+                                        <rect key="frame" x="30" y="3" width="949" height="130.5"/>
                                         <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="112"/>
                                         <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5141,6 +5141,9 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             </attributedString>
                                             <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Qpl-IW-fnr" kind="presentation" id="cnZ-9c-fen"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94509804249999996" green="0.93333333730000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -5503,7 +5506,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpJ-Uw-ipm">
-                                <rect key="frame" x="51" y="363.5" width="922" height="59.5"/>
+                                <rect key="frame" x="51" y="364" width="922" height="58.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Manager Profile Deleted">
                                         <attributes>
@@ -5662,7 +5665,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0p-kb-Cze">
-                                <rect key="frame" x="51" y="353.5" width="922" height="59.5"/>
+                                <rect key="frame" x="51" y="354" width="922" height="58.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Student Profile Deleted">
                                         <attributes>
@@ -6055,7 +6058,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manager" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUg-mB-dmr" userLabel="Manager">
-                                        <rect key="frame" x="262" y="136.5" width="717" height="132.5"/>
+                                        <rect key="frame" x="262" y="136.5" width="717" height="130.5"/>
                                         <fontDescription key="fontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="112"/>
                                         <color key="textColor" red="0.28235294119999998" green="0.30196078430000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -6266,7 +6269,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
     <inferredMetricsTieBreakers>
         <segue reference="Z6d-p2-Njz"/>
         <segue reference="ME5-nQ-0B5"/>
-        <segue reference="QRX-cX-Ft3"/>
+        <segue reference="cnZ-9c-fen"/>
         <segue reference="5vR-2e-n8O"/>
         <segue reference="NrP-LR-XCc"/>
         <segue reference="nzC-1y-dQf"/>
@@ -6352,16 +6355,16 @@ point the device toward a flat surface to see your Augmented Reality story conte
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
