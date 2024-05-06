@@ -77,6 +77,7 @@ class ManagerSignInViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround() 
         EnterPin.delegate = self
     }
     

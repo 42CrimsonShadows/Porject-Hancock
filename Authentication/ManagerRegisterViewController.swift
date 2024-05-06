@@ -52,6 +52,7 @@ class ManagerRegistrationViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround() 
         SetPin.delegate = self
     }
     

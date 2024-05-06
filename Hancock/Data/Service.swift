@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 public var currentTeacher : String = ""
 public var currentStudent : String = ""
 public var currentSession : Int = 0
 
 private var characterToReport : String = ""
+
 
 class Service {
     
@@ -393,6 +395,18 @@ func DecodeData() -> LocalStorage {
             EncodeData(DataToEncode: tempStorage)
             return tempStorage
         }
+    }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
     

@@ -34,6 +34,7 @@ class ManagerDeleteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround() 
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -16,6 +16,8 @@ class StudentDataSelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        selectedCharacter = ""
+        self.hideKeyboardWhenTappedAround() 
         let name = Service().GetCurrentStudent()
         if(StudentLabel != nil) {
             StudentLabel.text = name.split(separator: "_")[1] + " " + name.split(separator: "_")[0]

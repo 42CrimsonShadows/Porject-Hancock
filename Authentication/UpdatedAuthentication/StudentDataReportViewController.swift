@@ -59,6 +59,8 @@ class StudentDataReportViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround() 
+        
         col1 = Int(scrollView.frame.width)
         col2 = Int(scrollView.frame.width / 2)
         col3 = Int(scrollView.frame.width / 3)
