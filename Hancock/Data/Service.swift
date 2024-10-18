@@ -133,6 +133,7 @@ class Service {
         }
         currentSession = 0
         currentStudent = ""
+        totalCoins = 0
     }
     
      func GetManagers() -> [String] {

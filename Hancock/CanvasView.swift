@@ -23,6 +23,8 @@ class CanvasView: UIView {
     var Line4: Bool = false
     var Line5: Bool = false
     
+    var currentLine: String = ""
+    
     var lineColor = UIColor.blue.cgColor
     var checkPointColor = UIColor.darkGray.cgColor
     var dotPointColor = UIColor.black.cgColor

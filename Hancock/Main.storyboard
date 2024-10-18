@@ -3,7 +3,7 @@
     <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -5170,7 +5170,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                             <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="Qpl-IW-fnr" kind="presentation" id="cnZ-9c-fen"/>
+                                            <segue destination="Qpl-IW-fnr" kind="presentation" modalTransitionStyle="crossDissolve" id="cnZ-9c-fen"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -5264,7 +5264,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                         <outlet property="FailedAttempt" destination="Yf3-Ya-XXY" id="OAx-pz-94Y"/>
                         <outlet property="StudentFirstName" destination="ocJ-iW-jta" id="tHp-Ua-taM"/>
                         <outlet property="StudentLastName" destination="oru-ky-PDY" id="jIq-S1-RpZ"/>
-                        <segue destination="Qpl-IW-fnr" kind="presentation" identifier="LoggedInMenu" id="mx5-Gi-1bh"/>
+                        <segue destination="Qpl-IW-fnr" kind="presentation" identifier="LoggedInMenu" modalTransitionStyle="crossDissolve" id="mx5-Gi-1bh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qnl-Fr-v5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -5638,12 +5638,18 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGu-Yc-hBM">
                                         <rect key="frame" x="205" y="497.5" width="614" height="171"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Cancel" cornerStyle="large">
-                                            <fontDescription key="titleFontDescription" name="IrishGrover-Regular" family="Irish Grover" pointSize="50"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Cancel">
+                                                    <attributes>
+                                                        <font key="NSFont" size="50" name="IrishGrover-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="DHT-8u-YYR" kind="presentation" id="cHV-KD-Kcj"/>
+                                            <segue destination="DHT-8u-YYR" kind="presentation" modalTransitionStyle="crossDissolve" id="cHV-KD-Kcj"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -5676,7 +5682,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                     </view>
                     <navigationItem key="navigationItem" id="Scd-zd-eeC"/>
                     <connections>
-                        <segue destination="qta-NY-88L" kind="presentation" identifier="ToStudentDeleted" id="Pnq-By-c0g"/>
+                        <segue destination="qta-NY-88L" kind="presentation" identifier="ToStudentDeleted" modalTransitionStyle="crossDissolve" id="Pnq-By-c0g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FbH-5V-RvS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -5705,7 +5711,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <color key="baseBackgroundColor" red="0.54901960780000003" green="0.47843137250000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="FCG-Tl-XAE" kind="presentation" id="ME5-nQ-0B5"/>
+                                    <segue destination="FCG-Tl-XAE" kind="presentation" modalTransitionStyle="crossDissolve" id="ME5-nQ-0B5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0p-kb-Cze">
@@ -5884,7 +5890,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                     <navigationItem key="navigationItem" id="LfQ-8z-ynH"/>
                     <connections>
                         <outlet property="StudentNameLabel" destination="FPr-oD-ETN" id="QPz-Vv-3L6"/>
-                        <segue destination="DHT-8u-YYR" kind="presentation" identifier="StudentDataView" id="YOh-Mq-Oac"/>
+                        <segue destination="DHT-8u-YYR" kind="presentation" identifier="StudentDataView" modalTransitionStyle="crossDissolve" id="YOh-Mq-Oac"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUy-tl-Kxa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -5921,7 +5927,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <color key="baseBackgroundColor" red="0.94117647059999998" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="GSx-JZ-9aB" kind="presentation" id="CxB-yR-YZ9"/>
+                                    <segue destination="GSx-JZ-9aB" kind="presentation" modalTransitionStyle="crossDissolve" id="CxB-yR-YZ9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8s2-Uf-d4v">
@@ -5940,7 +5946,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="FCG-Tl-XAE" kind="presentation" id="Qpe-lk-Her"/>
+                                    <segue destination="FCG-Tl-XAE" kind="presentation" modalTransitionStyle="crossDissolve" id="Qpe-lk-Her"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxP-qq-ay9">
@@ -5994,7 +6000,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                     <connections>
                         <outlet property="CharacterLabel" destination="LxP-qq-ay9" id="aj4-fv-nj1"/>
                         <outlet property="StudentLabel" destination="3WT-zu-SCs" id="Rmc-dY-UdK"/>
-                        <segue destination="cJM-Nc-HWg" kind="presentation" identifier="StudentDataReport" id="ovR-qy-bNd"/>
+                        <segue destination="cJM-Nc-HWg" kind="presentation" identifier="StudentDataReport" modalTransitionStyle="crossDissolve" id="ovR-qy-bNd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXl-3K-fAv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -6306,7 +6312,7 @@ point the device toward a flat surface to see your Augmented Reality story conte
                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="DHT-8u-YYR" kind="presentation" id="Z6d-p2-Njz"/>
+                                    <segue destination="DHT-8u-YYR" kind="presentation" modalTransitionStyle="crossDissolve" id="Z6d-p2-Njz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[]" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxx-1A-tJy">
@@ -6336,13 +6342,14 @@ point the device toward a flat surface to see your Augmented Reality story conte
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DTW-df-mfc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3823.2421874999995" y="-184.04099560761347"/>
+            <point key="canvasLocation" x="-3823" y="-183"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YOh-Mq-Oac"/>
+        <segue reference="ovR-qy-bNd"/>
+        <segue reference="Z6d-p2-Njz"/>
         <segue reference="Qpe-lk-Her"/>
-        <segue reference="OJH-u1-36h"/>
+        <segue reference="mx5-Gi-1bh"/>
         <segue reference="j2g-Mt-cqV"/>
         <segue reference="NrP-LR-XCc"/>
         <segue reference="nzC-1y-dQf"/>

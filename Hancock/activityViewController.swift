@@ -321,6 +321,8 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
         canvasView.Line4 = false
         canvasView.Line5 = false
         
+        canvasView.currentLine = "Line1"
+        
         testImage.alpha = 0.90
         
         //FIXME: if the chapter is one of the line chapters play the first narration
@@ -911,6 +913,7 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
                         //separatorView.isHidden = true
                     }
                 }
+                
                 // adding total amount of coins possible to get
                 coinsPossible += 2
                 
@@ -947,21 +950,19 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
                 }
                 
                 //removing coins from total if the line was not completed
-                guard let lastPoint = touches.first?.location(in: canvasView) else { return }
-                if canvasView.CGPointDistance(from: lastPoint, to: targetPoint) > 25 {
+                if (!checkLineChanged()) {
                     if canvasView.coin1Collected == true {
                         totalCoins -= 1
+                        coinsPossible -= 1
                         letterCoins -= 1
                         setupCoinLabel()
-                        
-                        if canvasView.coin2Collected == true {
-                            totalCoins -= 1
-                            letterCoins -= 1
-                            setupCoinLabel()
-                        }
                     }
-                    // subtracting total amount of coins possible if line wasn't finished
-                    coinsPossible -= 2
+                    if canvasView.coin2Collected == true {
+                        totalCoins -= 1
+                        coinsPossible -= 1
+                        letterCoins -= 1
+                        setupCoinLabel()
+                    }
                 }
                 //reset collected booleans
                 canvasView.coin1Collected = false
@@ -1326,6 +1327,31 @@ class activityViewController: UIViewController, UIPencilInteractionDelegate {
         return image
     }
 
+    private func checkLineChanged() -> Bool {
+        var newLine = ""
+        if (canvasView.Line1) {
+            newLine = "Line1"
+        }
+        else if (canvasView.Line2) {
+            newLine = "Line2"
+        }
+        else if (canvasView.Line3) {
+            newLine = "Line3"
+        }
+        else if (canvasView.Line4) {
+            newLine = "Line4"
+        }
+        else if (canvasView.Line5) {
+            newLine = "Line5"
+        }
+        
+        
+        if (newLine != canvasView.currentLine) {
+            canvasView.currentLine = newLine
+            return true
+        }
+        return false
+    }
 }
 
 extension CGPoint {
